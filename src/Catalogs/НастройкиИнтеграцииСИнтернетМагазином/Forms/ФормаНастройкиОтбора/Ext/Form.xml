@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ShowTitle>true</ShowTitle>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаЗавершитьРедактирование" id="5">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗавершитьРедактирование</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Установить</v8:content>
+					</v8:item>
+				</Title>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ФормаЗавершитьРедактированиеРасширеннаяПодсказка" id="7"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаБаннер" id="24">
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<BackColor>pal:Yellow</BackColor>
+			<ExtendedTooltip name="ГруппаБаннерРасширеннаяПодсказка" id="25"/>
+			<ChildItems>
+				<PictureDecoration name="Декорация21" id="26">
+					<TextColor>pal:Yellow</TextColor>
+					<Picture>
+						<xr:Ref>CommonPicture.ПредупреждениеБаннер</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</Picture>
+					<PictureColor>pal:Yellow</PictureColor>
+					<ContextMenu name="Декорация21КонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="Декорация21РасширеннаяПодсказка" id="28"/>
+				</PictureDecoration>
+				<UsualGroup name="Группа10" id="29">
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="30"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация23" id="31">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>После изменения "Отбора" необходимо выполнить "Полный обмен данными" с сайтом.</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="Декорация23КонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="Декорация23РасширеннаяПодсказка" id="33"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТаблицаНастроекКомпоновки" id="1">
+			<Autofill>true</Autofill>
+			<SelectionMode>SingleRow</SelectionMode>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<InitialRowActivation>Activate</InitialRowActivation>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>КомпоновщикНастроекКомпоновкиДанных.UserSettings</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица настроек компоновки</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>HierarchicalList</ExcludedCommand>
+				<ExcludedCommand>List</ExcludedCommand>
+				<ExcludedCommand>Tree</ExcludedCommand>
+			</CommandSet>
+			<ViewMode>All</ViewMode>
+			<ComplexSettingsViewMode>Show</ComplexSettingsViewMode>
+			<ContextMenu name="ТаблицаНастроекКомпоновкиКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ТаблицаНастроекКомпоновкиКоманднаяПанель" id="3">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаНастроекКомпоновкиРасширеннаяПодсказка" id="9"/>
+			<SearchStringAddition name="ТаблицаНастроекКомпоновкиСтрокаПоиска" id="10">
+				<AdditionSource>
+					<Item>ТаблицаНастроекКомпоновки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаНастроекКомпоновкиСтрокаПоискаКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="ТаблицаНастроекКомпоновкиСтрокаПоискаРасширеннаяПодсказка" id="12"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаНастроекКомпоновкиСостояниеПросмотра" id="13">
+				<AdditionSource>
+					<Item>ТаблицаНастроекКомпоновки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаНастроекКомпоновкиСостояниеПросмотраКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="ТаблицаНастроекКомпоновкиСостояниеПросмотраРасширеннаяПодсказка" id="15"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаНастроекКомпоновкиУправлениеПоиском" id="16">
+				<AdditionSource>
+					<Item>ТаблицаНастроекКомпоновки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаНастроекКомпоновкиУправлениеПоискомКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="ТаблицаНастроекКомпоновкиУправлениеПоискомРасширеннаяПодсказка" id="18"/>
+			</SearchControlAddition>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="КомпоновщикНастроекКомпоновкиДанных" id="1">
+			<Type>
+				<v8:Type>dcsset:SettingsComposer</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗавершитьРедактирование" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить редактирование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершить редактирование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗавершитьРедактирование</Action>
+			<ActionPurpose>Finish</ActionPurpose>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="НастройкаКомпоновки">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

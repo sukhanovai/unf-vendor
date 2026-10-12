@@ -1,0 +1,538 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<ShowTitle>true</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗакрыть" id="61">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Применить</v8:content>
+					</v8:item>
+				</Title>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="62"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СтраницаГенерацияПромокодов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Массовая генерация</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СтраницаГенерацияПромокодовРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПараметрыГенерации" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры генерации</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<HorizontalSpacing>Double</HorizontalSpacing>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<United>false</United>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПараметрыГенерацииРасширеннаяПодсказка" id="8"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаРедактируемыеПараметры" id="77">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа редактируемые параметры</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа редактируемые параметры</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаРедактируемыеПараметрыРасширеннаяПодсказка" id="78"/>
+							<ChildItems>
+								<InputField name="ШаблонПромокода" id="3">
+									<DataPath>ШаблонПромокода</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<MaxWidth>30</MaxWidth>
+									<ContextMenu name="ШаблонПромокодаКонтекстноеМеню" id="4"/>
+									<ExtendedTooltip name="ШаблонПромокодаРасширеннаяПодсказка" id="5"/>
+									<Events>
+										<Event name="OnChange">ШаблонПромокодаПриИзменении</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаНастройкаГенерации" id="9">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Настройка генерации</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<VerticalSpacing>Double</VerticalSpacing>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаНастройкаГенерацииРасширеннаяПодсказка" id="10"/>
+									<ChildItems>
+										<InputField name="КоличествоПромокодов" id="11">
+											<DataPath>КоличествоПромокодов</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Количество для генерации</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Top</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сколько промокодов нужно сгенерировать</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<MaxWidth>30</MaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<SpinButton>true</SpinButton>
+											<MinValue xsi:type="xs:decimal">1</MinValue>
+											<ContextMenu name="КоличествоПромокодовКонтекстноеМеню" id="12"/>
+											<ExtendedTooltip name="КоличествоПромокодовРасширеннаяПодсказка" id="13"/>
+										</InputField>
+										<UsualGroup name="Группа1" id="80">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="81"/>
+											<ChildItems>
+												<InputField name="КоличествоСимволов" id="15">
+													<DataPath>КоличествоСимволов</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Длина переменной части</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Промокод будет составлен из случайной комбинации перечисленных символов.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<MaxWidth>30</MaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<SpinButton>true</SpinButton>
+													<MinValue xsi:type="xs:decimal">1</MinValue>
+													<ContextMenu name="КоличествоСимволовКонтекстноеМеню" id="16"/>
+													<ExtendedTooltip name="КоличествоСимволовРасширеннаяПодсказка" id="17"/>
+												</InputField>
+												<InputField name="МаскаПромокода" id="19">
+													<DataPath>МаскаПромокода</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Маска промокода</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>В шаблоне можно настроить префикс и постфикс промокода, Секция [Промокод] обязательна. Например:
+ИмяБлогера_[Промокод]_Акция.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<MaxWidth>30</MaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<ContextMenu name="МаскаПромокодаКонтекстноеМеню" id="20"/>
+													<ExtendedTooltip name="МаскаПромокодаРасширеннаяПодсказка" id="21"/>
+													<Events>
+														<Event name="OnChange">МаскаПромокодаПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Группа2" id="82">
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="83"/>
+											<ChildItems>
+												<InputField name="АктивироватьЧерезДней" id="23">
+													<DataPath>АктивироватьЧерезДней</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Активировать через</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<MaxWidth>30</MaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<SpinButton>true</SpinButton>
+													<EditFormat>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН='0 дней (в день активации)'; ЧФ='Ч дней'</v8:content>
+														</v8:item>
+													</EditFormat>
+													<ContextMenu name="АктивироватьЧерезДнейКонтекстноеМеню" id="24"/>
+													<ExtendedTooltip name="АктивироватьЧерезДнейРасширеннаяПодсказка" id="25"/>
+												</InputField>
+												<InputField name="КоличествоДнейДействия" id="27">
+													<DataPath>КоличествоДнейДействия</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Срок действия</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>N - неиспользованные промокоды будут заблокированы через n дней после создания
+0 - промокоды будут действовать бессрочно</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<MaxWidth>30</MaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<SpinButton>true</SpinButton>
+													<EditFormat>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН='0 дней (без ограничения)'; ЧФ='Ч дней'</v8:content>
+														</v8:item>
+													</EditFormat>
+													<ContextMenu name="КоличествоДнейДействияКонтекстноеМеню" id="28"/>
+													<ExtendedTooltip name="КоличествоДнейДействияРасширеннаяПодсказка" id="29"/>
+												</InputField>
+												<InputField name="КоличествоРазПрименения" id="31">
+													<DataPath>КоличествоРазПрименения</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Один код можно применить</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Top</TitleLocation>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>N - один и тот же промокод можно применить N раз (для однократных промокодов использовать 1)
+0 - не ограниченное применение</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<MaxWidth>30</MaxWidth>
+													<HorizontalStretch>true</HorizontalStretch>
+													<SpinButton>true</SpinButton>
+													<EditFormat>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>ЧН='0 раз (не ограничено)'; ЧФ='Ч раз'</v8:content>
+														</v8:item>
+													</EditFormat>
+													<ContextMenu name="КоличествоРазПримененияКонтекстноеМеню" id="32"/>
+													<ExtendedTooltip name="КоличествоРазПримененияРасширеннаяПодсказка" id="33">
+														<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+													</ExtendedTooltip>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСловарьСимволов" id="40">
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Словарь символов</v8:content>
+								</v8:item>
+							</Title>
+							<Width>24</Width>
+							<Group>HorizontalIfPossible</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСловарьСимволовРасширеннаяПодсказка" id="41"/>
+							<ChildItems>
+								<Table name="СловарьСимволов" id="42">
+									<Representation>List</Representation>
+									<TitleLocation>Auto</TitleLocation>
+									<SelectionMode>SingleRow</SelectionMode>
+									<RowSelectionMode>Cell</RowSelectionMode>
+									<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>СловарьСимволов</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="СловарьСимволовКонтекстноеМеню" id="43"/>
+									<AutoCommandBar name="СловарьСимволовКоманднаяПанель" id="44">
+										<ChildItems>
+											<ButtonGroup name="СловарьСимволовГруппа1" id="69">
+												<ExtendedTooltip name="СловарьСимволовГруппа1РасширеннаяПодсказка" id="70"/>
+												<ChildItems>
+													<Button name="СловарьСимволовПереместитьВверх" id="65">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Item.СловарьСимволов.StandardCommand.MoveUp</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="СловарьСимволовПереместитьВверхРасширеннаяПодсказка" id="66"/>
+													</Button>
+													<Button name="СловарьСимволовПереместитьВниз" id="67">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Item.СловарьСимволов.StandardCommand.MoveDown</CommandName>
+														<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+														<ExtendedTooltip name="СловарьСимволовПереместитьВнизРасширеннаяПодсказка" id="68"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
+											<Button name="СловарьСимволовУдалить" id="63">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.СловарьСимволов.StandardCommand.Delete</CommandName>
+												<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+												<ExtendedTooltip name="СловарьСимволовУдалитьРасширеннаяПодсказка" id="64"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="СловарьСимволовРасширеннаяПодсказка" id="45"/>
+									<SearchStringAddition name="СловарьСимволовСтрокаПоиска" id="46">
+										<AdditionSource>
+											<Item>СловарьСимволов</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<Width>1</Width>
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<MaxWidth>7</MaxWidth>
+										<ContextMenu name="СловарьСимволовСтрокаПоискаКонтекстноеМеню" id="47"/>
+										<ExtendedTooltip name="СловарьСимволовСтрокаПоискаРасширеннаяПодсказка" id="48"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СловарьСимволовСостояниеПросмотра" id="49">
+										<AdditionSource>
+											<Item>СловарьСимволов</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<MaxWidth>5</MaxWidth>
+										<ContextMenu name="СловарьСимволовСостояниеПросмотраКонтекстноеМеню" id="50"/>
+										<ExtendedTooltip name="СловарьСимволовСостояниеПросмотраРасширеннаяПодсказка" id="51"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СловарьСимволовУправлениеПоиском" id="52">
+										<AdditionSource>
+											<Item>СловарьСимволов</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СловарьСимволовУправлениеПоискомКонтекстноеМеню" id="53"/>
+										<ExtendedTooltip name="СловарьСимволовУправлениеПоискомРасширеннаяПодсказка" id="54"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="СловарьСимволовСимвол" id="73">
+											<DataPath>СловарьСимволов.Символ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+											<ContextMenu name="СловарьСимволовСимволКонтекстноеМеню" id="74"/>
+											<ExtendedTooltip name="СловарьСимволовСимволРасширеннаяПодсказка" id="75"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="АктивироватьЧерезДней" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Активировать через дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоДнейДействия" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество дней действия</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоПромокодов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество промокодов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоРазПрименения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество раз применения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоСимволов" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество символов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>5</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="МаскаПромокода" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маска промокода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ШаблонПромокода" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаблон промокода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ШаблоныГенерацииПромокодов</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СловарьСимволов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Словарь символов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Символ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Символ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗакрытьФорму" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
+			<ActionPurpose>Finish</ActionPurpose>
+		</Command>
+	</Commands>
+</Form>

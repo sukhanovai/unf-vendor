@@ -1,0 +1,842 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Интеграции с Интернет-магазинами</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandSet>
+		<ExcludedCommand>Copy</ExcludedCommand>
+	</CommandSet>
+	<ShowTitle>true</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСправка" id="61">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="62"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<SelectionMode>SingleRow</SelectionMode>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<InitialRowActivation>Activate</InitialRowActivation>
+			<EnableStartDrag>true</EnableStartDrag>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<CommandSet>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+			</CommandSet>
+			<CurrentRowUse>SelectionPresentation</CurrentRowUse>
+			<ShowCommandBar>auto</ShowCommandBar>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Наименование" id="16">
+					<DataPath>Список.Наименование</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаВыгрузка" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выгрузка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа выгрузка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ShowTitle>true</ShowTitle>
+					<ExtendedTooltip name="ГруппаВыгрузкаРасширеннаяПодсказка" id="28"/>
+					<ChildItems>
+						<PictureField name="РезультатВыгрузки" id="38">
+							<DataPath>Список.РезультатВыгрузки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.КаналыПродажСостоянияОбменаДанными</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</Border>
+							<ContextMenu name="РезультатВыгрузкиКонтекстноеМеню" id="39"/>
+							<ExtendedTooltip name="РезультатВыгрузкиРасширеннаяПодсказка" id="40"/>
+						</PictureField>
+						<LabelField name="ДатаВыгрузки" id="41">
+							<DataPath>Список.ДатаВыгрузки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата выгрузки</v8:content>
+								</v8:item>
+							</Title>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДП='Выгрузка не выполнялась'</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДатаВыгрузкиКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ДатаВыгрузкиРасширеннаяПодсказка" id="43"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ДатаУспешнойВыгрузки" id="44">
+					<DataPath>Список.ДатаУспешнойВыгрузки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата успешной выгрузки</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаУспешнойВыгрузкиКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ДатаУспешнойВыгрузкиРасширеннаяПодсказка" id="46"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаЗагрузка" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа загрузка</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа загрузка</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ShowTitle>true</ShowTitle>
+					<ExtendedTooltip name="ГруппаЗагрузкаРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<PictureField name="РезультатЗагрузки" id="29">
+							<DataPath>Список.РезультатЗагрузки</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.КаналыПродажСостоянияОбменаДанными</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</Border>
+							<ContextMenu name="РезультатЗагрузкиКонтекстноеМеню" id="30"/>
+							<ExtendedTooltip name="РезультатЗагрузкиРасширеннаяПодсказка" id="31"/>
+						</PictureField>
+						<LabelField name="ДатаЗагрузки" id="32">
+							<DataPath>Список.ДатаЗагрузки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата загрузки</v8:content>
+								</v8:item>
+							</Title>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДП='Загрузка не выполнялась'</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДатаЗагрузкиКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="ДатаЗагрузкиРасширеннаяПодсказка" id="34"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ДатаУспешнойЗагрузки" id="35">
+					<DataPath>Список.ДатаУспешнойЗагрузки</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата успешной загрузки</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДатаУспешнойЗагрузкиКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ДатаУспешнойЗагрузкиРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="47">
+					<DataPath>Список.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="49"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникНастройкиИнтеграцииСИнтернетМагазином.Ссылка КАК Ссылка,
+	СправочникНастройкиИнтеграцииСИнтернетМагазином.Наименование КАК Наименование,
+	СправочникНастройкиИнтеграцииСИнтернетМагазином.ТипИсточникаИнтеграции КАК ТипИсточникаИнтеграции,
+	СправочникНастройкиИнтеграцииСИнтернетМагазином.ТипСайта КАК ТипСайта,
+	СостоянияОбменовИнтернетМагазинаВыгрузка.ДатаОкончания КАК ДатаВыгрузки,
+	ВЫБОР
+		КОГДА СостоянияОбменовИнтернетМагазинаВыгрузка.РезультатВыполненияОбмена = ЗНАЧЕНИЕ(Перечисление.РезультатыВыполненияОбмена.Выполнено)
+			ТОГДА 0
+		КОГДА СостоянияОбменовИнтернетМагазинаВыгрузка.РезультатВыполненияОбмена ЕСТЬ NULL
+			Тогда 1
+		КОГДА СостоянияОбменовИнтернетМагазинаВыгрузка.РезультатВыполненияОбмена = ЗНАЧЕНИЕ(Перечисление.РезультатыВыполненияОбмена.Предупреждение_СообщениеОбменаБылоРанееПринято)
+			ТОГДА 1
+		КОГДА СостоянияОбменовИнтернетМагазинаВыгрузка.РезультатВыполненияОбмена = ЗНАЧЕНИЕ(Перечисление.РезультатыВыполненияОбмена.ВыполненоСПредупреждениями)
+			ТОГДА 1
+		ИНАЧЕ 2
+	КОНЕЦ КАК РезультатВыгрузки,
+	СостоянияОбменовИнтернетМагазинаЗагрузка.ДатаОкончания КАК ДатаЗагрузки,
+	ВЫБОР
+		КОГДА СостоянияОбменовИнтернетМагазинаЗагрузка.РезультатВыполненияОбмена = ЗНАЧЕНИЕ(Перечисление.РезультатыВыполненияОбмена.Выполнено)
+			ТОГДА 0
+		КОГДА СостоянияОбменовИнтернетМагазинаЗагрузка.РезультатВыполненияОбмена ЕСТЬ NULL
+			ТОГДА 1
+		КОГДА СостоянияОбменовИнтернетМагазинаЗагрузка.РезультатВыполненияОбмена = ЗНАЧЕНИЕ(Перечисление.РезультатыВыполненияОбмена.Предупреждение_СообщениеОбменаБылоРанееПринято)
+			ТОГДА 1
+		КОГДА СостоянияОбменовИнтернетМагазинаЗагрузка.РезультатВыполненияОбмена = ЗНАЧЕНИЕ(Перечисление.РезультатыВыполненияОбмена.ВыполненоСПредупреждениями)
+			ТОГДА 1
+		ИНАЧЕ 2
+	КОНЕЦ КАК РезультатЗагрузки,
+	СостоянияУспешныхОбменовИнтернетМагазинаЗагрузка.ДатаОкончания КАК ДатаУспешнойЗагрузки,
+	СостоянияУспешныхОбменовИнтернетМагазинаВыгрузка.ДатаОкончания КАК ДатаУспешнойВыгрузки
+ИЗ
+	Справочник.НастройкиИнтеграцииСИнтернетМагазином КАК СправочникНастройкиИнтеграцииСИнтернетМагазином
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияОбменовИнтернетМагазина КАК СостоянияОбменовИнтернетМагазинаВыгрузка
+		ПО СправочникНастройкиИнтеграцииСИнтернетМагазином.Ссылка = СостоянияОбменовИнтернетМагазинаВыгрузка.НастройкаИнтеграции
+			И (СостоянияОбменовИнтернетМагазинаВыгрузка.ДействиеПриОбмене = ЗНАЧЕНИЕ(Перечисление.ДействияПриОбмене.ВыгрузкаДанных))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияОбменовИнтернетМагазина КАК СостоянияОбменовИнтернетМагазинаЗагрузка
+		ПО СправочникНастройкиИнтеграцииСИнтернетМагазином.Ссылка = СостоянияОбменовИнтернетМагазинаЗагрузка.НастройкаИнтеграции
+			И (СостоянияОбменовИнтернетМагазинаЗагрузка.ДействиеПриОбмене = ЗНАЧЕНИЕ(Перечисление.ДействияПриОбмене.ЗагрузкаДанных))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияУспешныхОбменовИнтернетМагазина КАК СостоянияУспешныхОбменовИнтернетМагазинаЗагрузка
+		ПО СправочникНастройкиИнтеграцииСИнтернетМагазином.Ссылка = СостоянияУспешныхОбменовИнтернетМагазинаЗагрузка.НастройкаИнтеграции
+			И (СостоянияУспешныхОбменовИнтернетМагазинаЗагрузка.ДействиеПриОбмене = ЗНАЧЕНИЕ(Перечисление.ДействияПриОбмене.ЗагрузкаДанных))
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.СостоянияУспешныхОбменовИнтернетМагазина КАК СостоянияУспешныхОбменовИнтернетМагазинаВыгрузка
+		ПО СправочникНастройкиИнтеграцииСИнтернетМагазином.Ссылка = СостоянияУспешныхОбменовИнтернетМагазинаВыгрузка.НастройкаИнтеграции
+			И (СостоянияУспешныхОбменовИнтернетМагазинаВыгрузка.ДействиеПриОбмене = ЗНАЧЕНИЕ(Перечисление.ДействияПриОбмене.ВыгрузкаДанных))</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СкладДляПодстановкиВЗаказы</dcssch:dataPath>
+					<dcssch:field>СкладДляПодстановкиВЗаказы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КаталогВыгрузки</dcssch:dataPath>
+					<dcssch:field>КаталогВыгрузки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаУспешнойЗагрузки</dcssch:dataPath>
+					<dcssch:field>ДатаУспешнойЗагрузки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата успешной загрузки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Код</dcssch:dataPath>
+					<dcssch:field>Код</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КлючИнтеграции</dcssch:dataPath>
+					<dcssch:field>КлючИнтеграции</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПодчиненныеДокументы</dcssch:dataPath>
+					<dcssch:field>ПодчиненныеДокументы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НастройкиВыгрузкиДопРеквизитовНоменклатуры</dcssch:dataPath>
+					<dcssch:field>НастройкиВыгрузкиДопРеквизитовНоменклатуры</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыгружатьКартинки</dcssch:dataPath>
+					<dcssch:field>ВыгружатьКартинки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидЗаказа</dcssch:dataPath>
+					<dcssch:field>ВидЗаказа</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ФайлЗагрузки</dcssch:dataPath>
+					<dcssch:field>ФайлЗагрузки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НастройкиПоискаКонтрагентов</dcssch:dataPath>
+					<dcssch:field>НастройкиПоискаКонтрагентов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НастройкиВыгрузкиРеквизитов</dcssch:dataPath>
+					<dcssch:field>НастройкиВыгрузкиРеквизитов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидЦенУслуг</dcssch:dataPath>
+					<dcssch:field>ВидЦенУслуг</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыгружатьДнейГрафика</dcssch:dataPath>
+					<dcssch:field>ВыгружатьДнейГрафика</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыгружатьИзменения</dcssch:dataPath>
+					<dcssch:field>ВыгружатьИзменения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КоличествоПовторений</dcssch:dataPath>
+					<dcssch:field>КоличествоПовторений</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыгружатьНаСайт</dcssch:dataPath>
+					<dcssch:field>ВыгружатьНаСайт</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыгружатьИзмененияНоменклатуры</dcssch:dataPath>
+					<dcssch:field>ВыгружатьИзмененияНоменклатуры</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыгружатьОстаткиПоСкладам</dcssch:dataPath>
+					<dcssch:field>ВыгружатьОстаткиПоСкладам</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбменТоварами</dcssch:dataPath>
+					<dcssch:field>ОбменТоварами</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторРегламентногоЗадания</dcssch:dataPath>
+					<dcssch:field>ИдентификаторРегламентногоЗадания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыполнятьПолнуюВыгрузкуПринудительно</dcssch:dataPath>
+					<dcssch:field>ВыполнятьПолнуюВыгрузкуПринудительно</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГруппаДляНовойНоменклатуры</dcssch:dataPath>
+					<dcssch:field>ГруппаДляНовойНоменклатуры</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГруппаДляНовыхКонтрагентов</dcssch:dataPath>
+					<dcssch:field>ГруппаДляНовыхКонтрагентов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПротоколОбменаCMS</dcssch:dataPath>
+					<dcssch:field>ПротоколОбменаCMS</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ГруппаДоступаДляНовыхКонтрагентов</dcssch:dataPath>
+					<dcssch:field>ГруппаДоступаДляНовыхКонтрагентов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НаименованиеНоменклатурыДляВыгрузки</dcssch:dataPath>
+					<dcssch:field>НаименованиеНоменклатурыДляВыгрузки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаНачалаВыгрузкиЗаказов</dcssch:dataPath>
+					<dcssch:field>ДатаНачалаВыгрузкиЗаказов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПробиватьЧекиПоОнлайнОплатам</dcssch:dataPath>
+					<dcssch:field>ПробиватьЧекиПоОнлайнОплатам</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторКаталогаУслуг</dcssch:dataPath>
+					<dcssch:field>ИдентификаторКаталогаУслуг</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РегистрироватьИзменения</dcssch:dataPath>
+					<dcssch:field>РегистрироватьИзменения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторРегламентногоЗаданияПечатьЧеков</dcssch:dataPath>
+					<dcssch:field>ИдентификаторРегламентногоЗаданияПечатьЧеков</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПереходURLАдминЗоны</dcssch:dataPath>
+					<dcssch:field>ПереходURLАдминЗоны</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтруктураКаталога</dcssch:dataPath>
+					<dcssch:field>СтруктураКаталога</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИспользоватьРегламентныеЗадания</dcssch:dataPath>
+					<dcssch:field>ИспользоватьРегламентныеЗадания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Комментарий</dcssch:dataPath>
+					<dcssch:field>Комментарий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОрганизацияДляПодстановкиВЗаказы</dcssch:dataPath>
+					<dcssch:field>ОрганизацияДляПодстановкиВЗаказы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КонтрагентДляПодстановкиВЗаказы</dcssch:dataPath>
+					<dcssch:field>КонтрагентДляПодстановкиВЗаказы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СпособУстановкиДатыОтгрузкиЗаказаКоличествоДней</dcssch:dataPath>
+					<dcssch:field>СпособУстановкиДатыОтгрузкиЗаказаКоличествоДней</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НастройкиВыгрузкиДопРеквизитовЗаказов</dcssch:dataPath>
+					<dcssch:field>НастройкиВыгрузкиДопРеквизитовЗаказов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НастройкиВыгрузкиОстатковПоставщиковНаСайт</dcssch:dataPath>
+					<dcssch:field>НастройкиВыгрузкиОстатковПоставщиковНаСайт</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидыЦен</dcssch:dataPath>
+					<dcssch:field>ВидыЦен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбменЗаказами</dcssch:dataPath>
+					<dcssch:field>ОбменЗаказами</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыгружатьОстаток</dcssch:dataPath>
+					<dcssch:field>ВыгружатьОстаток</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыгружатьТоварыТолькоСНеНулевойЦеной</dcssch:dataPath>
+					<dcssch:field>ВыгружатьТоварыТолькоСНеНулевойЦеной</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбменЗаписьНаУслуги</dcssch:dataPath>
+					<dcssch:field>ОбменЗаписьНаУслуги</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбновлятьТолькоНеПроведенныеЗаказыПриЗагрузке</dcssch:dataPath>
+					<dcssch:field>ОбновлятьТолькоНеПроведенныеЗаказыПриЗагрузке</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОнлайнОплаты</dcssch:dataPath>
+					<dcssch:field>ОнлайнОплаты</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОтборГруппыКатегорииНоменклатуры</dcssch:dataPath>
+					<dcssch:field>ОтборГруппыКатегорииНоменклатуры</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>МетодОценкиДляПодстановкиВНоменклатуру</dcssch:dataPath>
+					<dcssch:field>МетодОценкиДляПодстановкиВНоменклатуру</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПереходАдресСайта</dcssch:dataPath>
+					<dcssch:field>ПереходАдресСайта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СохраненнаяТаблицаКаталогов</dcssch:dataPath>
+					<dcssch:field>СохраненнаяТаблицаКаталогов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РазмерПорции</dcssch:dataPath>
+					<dcssch:field>РазмерПорции</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РежимВыгрузкиЦен</dcssch:dataPath>
+					<dcssch:field>РежимВыгрузкиЦен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеЗаказа</dcssch:dataPath>
+					<dcssch:field>СостояниеЗаказа</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеЗаказНаряда</dcssch:dataPath>
+					<dcssch:field>СостояниеЗаказНаряда</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОтправлятьАнонимнуюСтатистику</dcssch:dataPath>
+					<dcssch:field>ОтправлятьАнонимнуюСтатистику</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаСоздания</dcssch:dataPath>
+					<dcssch:field>ДатаСоздания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СпособИдентификацииКонтрагентов</dcssch:dataPath>
+					<dcssch:field>СпособИдентификацииКонтрагентов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СпособУстановкиДатыОтгрузкиЗаказа</dcssch:dataPath>
+					<dcssch:field>СпособУстановкиДатыОтгрузкиЗаказа</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВидЦеныДляПодстановкиВЗаказы</dcssch:dataPath>
+					<dcssch:field>ВидЦеныДляПодстановкиВЗаказы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СчетУчетаЗапасовДляПодстановкиВНоменклатуру</dcssch:dataPath>
+					<dcssch:field>СчетУчетаЗапасовДляПодстановкиВНоменклатуру</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбязательноеНаличиеФотографий</dcssch:dataPath>
+					<dcssch:field>ОбязательноеНаличиеФотографий</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НастройкиВыгрузкиДопРеквизитовНоменклатурыИспользовать</dcssch:dataPath>
+					<dcssch:field>НастройкиВыгрузкиДопРеквизитовНоменклатурыИспользовать</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИспользоватьОптимизированныйОбменКартинок</dcssch:dataPath>
+					<dcssch:field>ИспользоватьОптимизированныйОбменКартинок</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВалютаДляПодстановкиВЗаказы</dcssch:dataPath>
+					<dcssch:field>ВалютаДляПодстановкиВЗаказы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НастройкаЗавершена</dcssch:dataPath>
+					<dcssch:field>НастройкаЗавершена</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыгружатьЦены</dcssch:dataPath>
+					<dcssch:field>ВыгружатьЦены</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыгружатьОстатокПоставщиков</dcssch:dataPath>
+					<dcssch:field>ВыгружатьОстатокПоставщиков</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>АдресСайта</dcssch:dataPath>
+					<dcssch:field>АдресСайта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Логин</dcssch:dataPath>
+					<dcssch:field>Логин</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Пароль</dcssch:dataPath>
+					<dcssch:field>Пароль</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаВыгрузки</dcssch:dataPath>
+					<dcssch:field>ДатаВыгрузки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата выгрузки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОбмениватьсяСтатусамиЗаказа</dcssch:dataPath>
+					<dcssch:field>ОбмениватьсяСтатусамиЗаказа</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИспользоватьДоставку</dcssch:dataPath>
+					<dcssch:field>ИспользоватьДоставку</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УчетнаяЗаписьДляОповещения</dcssch:dataPath>
+					<dcssch:field>УчетнаяЗаписьДляОповещения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИспользоватьОповещения</dcssch:dataPath>
+					<dcssch:field>ИспользоватьОповещения</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОтправлятьСкрытуюКопиюВПоддержку</dcssch:dataPath>
+					<dcssch:field>ОтправлятьСкрытуюКопиюВПоддержку</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УзелОбменаТовары</dcssch:dataPath>
+					<dcssch:field>УзелОбменаТовары</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УзелОбменаУслуги</dcssch:dataPath>
+					<dcssch:field>УзелОбменаУслуги</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УзелОбменаЗаказы</dcssch:dataPath>
+					<dcssch:field>УзелОбменаЗаказы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УзелОбменаССайтом</dcssch:dataPath>
+					<dcssch:field>УзелОбменаССайтом</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИдентификаторСайта1СUMI</dcssch:dataPath>
+					<dcssch:field>ИдентификаторСайта1СUMI</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПрефиксДокументов</dcssch:dataPath>
+					<dcssch:field>ПрефиксДокументов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДобавлятьОтносительныеПутиИзображенийБезДвоичныхДанных</dcssch:dataPath>
+					<dcssch:field>ДобавлятьОтносительныеПутиИзображенийБезДвоичныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ОжидатьЗавершенияИмпортаФайловСервером</dcssch:dataPath>
+					<dcssch:field>ОжидатьЗавершенияИмпортаФайловСервером</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РасписаниеРегламентногоЗадания</dcssch:dataPath>
+					<dcssch:field>РасписаниеРегламентногоЗадания</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВариантОбновленияЗаказовИнтернетМагазина</dcssch:dataPath>
+					<dcssch:field>ВариантОбновленияЗаказовИнтернетМагазина</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>НеобходимоВыполнитьПолныйОбмен</dcssch:dataPath>
+					<dcssch:field>НеобходимоВыполнитьПолныйОбмен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВариантУстановкиСкидкиДляИнтернетМагазина</dcssch:dataPath>
+					<dcssch:field>ВариантУстановкиСкидкиДляИнтернетМагазина</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РасписаниеРегламентногоЗаданияПолныйОбмен</dcssch:dataPath>
+					<dcssch:field>РасписаниеРегламентногоЗаданияПолныйОбмен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИспользоватьПолныйОбмен</dcssch:dataPath>
+					<dcssch:field>ИспользоватьПолныйОбмен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПричинаОтмены</dcssch:dataPath>
+					<dcssch:field>ПричинаОтмены</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТипБулевоЗначенияДляВыгрузки</dcssch:dataPath>
+					<dcssch:field>ТипБулевоЗначенияДляВыгрузки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВыгружатьЗаказыНаСайт</dcssch:dataPath>
+					<dcssch:field>ВыгружатьЗаказыНаСайт</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаНачалаВыгрузкиЗаказовКоличествоДней</dcssch:dataPath>
+					<dcssch:field>ДатаНачалаВыгрузкиЗаказовКоличествоДней</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаНачалаВыгрузкиЗаказовДинамическая</dcssch:dataPath>
+					<dcssch:field>ДатаНачалаВыгрузкиЗаказовДинамическая</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СоответствиеСтатусовЗаказов</dcssch:dataPath>
+					<dcssch:field>СоответствиеСтатусовЗаказов</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СоответствиеВидовОплат</dcssch:dataPath>
+					<dcssch:field>СоответствиеВидовОплат</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СоответствиеСлужбДоставки</dcssch:dataPath>
+					<dcssch:field>СоответствиеСлужбДоставки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СоответствиеПолейНоменклатуры</dcssch:dataPath>
+					<dcssch:field>СоответствиеПолейНоменклатуры</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СтруктурныеЕдиницы</dcssch:dataPath>
+					<dcssch:field>СтруктурныеЕдиницы</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СостояниеНастроек</dcssch:dataPath>
+					<dcssch:field>СостояниеНастроек</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаУспешнойВыгрузки</dcssch:dataPath>
+					<dcssch:field>ДатаУспешнойВыгрузки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата успешной выгрузки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПодпискиНаСобытие</dcssch:dataPath>
+					<dcssch:field>ПодпискиНаСобытие</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СоответствиеДополнительныхПолейНоменклатуры</dcssch:dataPath>
+					<dcssch:field>СоответствиеДополнительныхПолейНоменклатуры</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТипИсточникаИнтеграции</dcssch:dataPath>
+					<dcssch:field>ТипИсточникаИнтеграции</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТипСайта</dcssch:dataPath>
+					<dcssch:field>ТипСайта</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезультатВыгрузки</dcssch:dataPath>
+					<dcssch:field>РезультатВыгрузки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат выгрузки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДатаЗагрузки</dcssch:dataPath>
+					<dcssch:field>ДатаЗагрузки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата загрузки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>РезультатЗагрузки</dcssch:dataPath>
+					<dcssch:field>РезультатЗагрузки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Результат загрузки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<MainTable>Catalog.НастройкиИнтеграцииСИнтернетМагазином</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Ссылка.ПометкаУдаления</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+							<dcsset:userSettingID>4f583ce3-381f-4d42-8335-ed56e3769633</dcsset:userSettingID>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>Catalog.НастройкиИнтеграцииСИнтернетМагазином.Command.ВыполнитьОбменДанными</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>Catalog.НастройкиИнтеграцииСИнтернетМагазином.Command.ВыполнитьОбменДаннымиПолный</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+			<Item>
+				<Command>Catalog.НастройкиИнтеграцииСИнтернетМагазином.Command.ПоказатьЛогиСобытийОбмена</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

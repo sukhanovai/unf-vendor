@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Перенос шаблонов этикеток и ценников</v8:content>
+		</v8:item>
+	</Title>
+	<Height>95</Height>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ShowTitle>true</ShowTitle>
+	<ShowCommandBar>false</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Описание" id="80">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ОписаниеРасширеннаяПодсказка" id="81"/>
+			<ChildItems>
+				<LabelDecoration name="ПодсказкаОбщая" id="12">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Для переноса шаблонов старого формата в новый, нужно:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ПодсказкаОбщаяКонтекстноеМеню" id="13"/>
+					<ExtendedTooltip name="ПодсказкаОбщаяРасширеннаяПодсказка" id="14"/>
+				</LabelDecoration>
+				<UsualGroup name="ГруппаШаг1" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг1</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<HorizontalSpacing>Single</HorizontalSpacing>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг1РасширеннаяПодсказка" id="5"/>
+					<ChildItems>
+						<PictureDecoration name="НомерШаг1" id="6">
+							<Width>3</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер шаг1</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.Этап01</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="НомерШаг1КонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="НомерШаг1РасширеннаяПодсказка" id="8"/>
+						</PictureDecoration>
+						<LabelDecoration name="ТекстШаг1" id="9">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перейти к шаблонам.</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<ContextMenu name="ТекстШаг1КонтекстноеМеню" id="10"/>
+							<ExtendedTooltip name="ТекстШаг1РасширеннаяПодсказка" id="11"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШаг1Контент" id="84">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг1 отступ</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг1КонтентРасширеннаяПодсказка" id="85"/>
+					<ChildItems>
+						<LabelDecoration name="ОтступШаг1" id="86">
+							<Width>3</Width>
+							<ContextMenu name="ОтступШаг1КонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ОтступШаг1РасширеннаяПодсказка" id="88"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаШаг1Отступ" id="82">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шаг1 отступ</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШаг1ОтступРасширеннаяПодсказка" id="83"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаШаг1" id="47">
+									<Width>47</Width>
+									<Height>7</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка шаг 1</v8:content>
+										</v8:item>
+									</Title>
+									<PictureSize>Proportionally</PictureSize>
+									<Zoomable>true</Zoomable>
+									<Picture>
+										<xr:Ref>CommonPicture.ПереносШаблоновЭтикетокИЦенниковШаг1</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаШаг1КонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="КартинкаШаг1РасширеннаяПодсказка" id="49"/>
+								</PictureDecoration>
+								<LabelDecoration name="ПодсказкаШаг1Или" id="53">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>или</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<ContextMenu name="ПодсказкаШаг1ИлиКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ПодсказкаШаг1ИлиРасширеннаяПодсказка" id="55"/>
+								</LabelDecoration>
+								<PictureDecoration name="КартинкаШаг1Или" id="50">
+									<Width>70</Width>
+									<Height>10</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка шаг 1</v8:content>
+										</v8:item>
+									</Title>
+									<PictureSize>Proportionally</PictureSize>
+									<Zoomable>true</Zoomable>
+									<Picture>
+										<xr:Ref>CommonPicture.ПереносШаблоновЭтикетокИЦенниковШаг1Вариант2</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаШаг1ИлиКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="КартинкаШаг1ИлиРасширеннаяПодсказка" id="52"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШаг2" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг2</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<HorizontalSpacing>Single</HorizontalSpacing>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг2РасширеннаяПодсказка" id="16"/>
+					<ChildItems>
+						<PictureDecoration name="НомерШаг2" id="17">
+							<Width>3</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер шаг2</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.Этап02</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="НомерШаг2КонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="НомерШаг2РасширеннаяПодсказка" id="19"/>
+						</PictureDecoration>
+						<LabelDecoration name="ТекстШаг2" id="20">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>90</MaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выгрузить необходимый шаблон в файл. Обработка «Печать этикеток и ценников» использует шаблоны типов: 
+«Этикетка (ценник) принтера этикеток» и «Этикетка (ценник) для товара».</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<ContextMenu name="ТекстШаг2КонтекстноеМеню" id="21"/>
+							<ExtendedTooltip name="ТекстШаг2РасширеннаяПодсказка" id="22"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШаг2Контент" id="89">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг2 отступ</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг2КонтентРасширеннаяПодсказка" id="90"/>
+					<ChildItems>
+						<LabelDecoration name="ОтступШаг2" id="91">
+							<Width>3</Width>
+							<ContextMenu name="ОтступШаг2КонтекстноеМеню" id="92"/>
+							<ExtendedTooltip name="ОтступШаг2РасширеннаяПодсказка" id="93"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаШаг2Отступ" id="94">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шаг2 отступ</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШаг2ОтступРасширеннаяПодсказка" id="95"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаШаг2" id="59">
+									<Width>51</Width>
+									<Height>10</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка шаг2</v8:content>
+										</v8:item>
+									</Title>
+									<PictureSize>Proportionally</PictureSize>
+									<Zoomable>true</Zoomable>
+									<Picture>
+										<xr:Ref>CommonPicture.ПереносШаблоновЭтикетокИЦенниковШаг2</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаШаг2КонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="КартинкаШаг2РасширеннаяПодсказка" id="61"/>
+								</PictureDecoration>
+								<LabelDecoration name="ПодсказкаШаг2Или" id="62">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>или</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<ContextMenu name="ПодсказкаШаг2ИлиКонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ПодсказкаШаг2ИлиРасширеннаяПодсказка" id="64"/>
+								</LabelDecoration>
+								<PictureDecoration name="КартинкаШаг2Или" id="56">
+									<Width>66</Width>
+									<Height>13</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка шаг 2</v8:content>
+										</v8:item>
+									</Title>
+									<PictureSize>Proportionally</PictureSize>
+									<Zoomable>true</Zoomable>
+									<Picture>
+										<xr:Ref>CommonPicture.ПереносШаблоновЭтикетокИЦенниковШаг2Вариант2</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаШаг2ИлиКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="КартинкаШаг2ИлиРасширеннаяПодсказка" id="58"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШаг3" id="23">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг3</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<HorizontalSpacing>Single</HorizontalSpacing>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг3РасширеннаяПодсказка" id="24"/>
+					<ChildItems>
+						<PictureDecoration name="НомерШаг3" id="25">
+							<Width>3</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер шаг3</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.Этап03</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="НомерШаг3КонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="НомерШаг3РасширеннаяПодсказка" id="27"/>
+						</PictureDecoration>
+						<LabelDecoration name="ТекстШаг3" id="28">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>82</MaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отключить использование старой обработки «Печать этикеток и ценников» в настройках программы, сняв флаг с пункта настройки «Старая обработка печать ценников».</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<ContextMenu name="ТекстШаг3КонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ТекстШаг3РасширеннаяПодсказка" id="30"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШаг3Контент" id="96">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг3 контент</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг3КонтентРасширеннаяПодсказка" id="97"/>
+					<ChildItems>
+						<LabelDecoration name="ОтступШаг3" id="98">
+							<Width>3</Width>
+							<ContextMenu name="ОтступШаг3КонтекстноеМеню" id="99"/>
+							<ExtendedTooltip name="ОтступШаг3РасширеннаяПодсказка" id="100"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаШаг3Отступ" id="101">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шаг3 отступ</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШаг3ОтступРасширеннаяПодсказка" id="102"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаШаг3" id="65">
+									<Width>85</Width>
+									<Height>18</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка шаг 3</v8:content>
+										</v8:item>
+									</Title>
+									<PictureSize>Proportionally</PictureSize>
+									<Zoomable>true</Zoomable>
+									<Picture>
+										<xr:Ref>CommonPicture.ПереносШаблоновЭтикетокИЦенниковШаг3</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаШаг3КонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="КартинкаШаг3РасширеннаяПодсказка" id="67"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШаг4" id="31">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг4</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<HorizontalSpacing>Single</HorizontalSpacing>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг4РасширеннаяПодсказка" id="32"/>
+					<ChildItems>
+						<PictureDecoration name="НомерШаг4" id="33">
+							<Width>3</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер шаг4</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.Этап04</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="НомерШаг4КонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="НомерШаг4РасширеннаяПодсказка" id="35"/>
+						</PictureDecoration>
+						<LabelDecoration name="ТекстШаг4" id="36">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Перейти к шаблонам нового формата.</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<ContextMenu name="ТекстШаг4КонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ТекстШаг4РасширеннаяПодсказка" id="38"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШаг4Контент" id="103">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг4 контент</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг4КонтентРасширеннаяПодсказка" id="104"/>
+					<ChildItems>
+						<LabelDecoration name="ОтступШаг4" id="105">
+							<Width>3</Width>
+							<ContextMenu name="ОтступШаг4КонтекстноеМеню" id="106"/>
+							<ExtendedTooltip name="ОтступШаг4РасширеннаяПодсказка" id="107"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаШаг4Отступ" id="108">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шаг4 отступ</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШаг4ОтступРасширеннаяПодсказка" id="109"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаШаг4" id="68">
+									<Width>83</Width>
+									<Height>13</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка шаг 4</v8:content>
+										</v8:item>
+									</Title>
+									<PictureSize>Proportionally</PictureSize>
+									<Zoomable>true</Zoomable>
+									<Picture>
+										<xr:Ref>CommonPicture.ПереносШаблоновЭтикетокИЦенниковШаг4</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаШаг4КонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="КартинкаШаг4РасширеннаяПодсказка" id="70"/>
+								</PictureDecoration>
+								<LabelDecoration name="ПодсказкаШаг4Или" id="71">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>или</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<ContextMenu name="ПодсказкаШаг4ИлиКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ПодсказкаШаг4ИлиРасширеннаяПодсказка" id="73"/>
+								</LabelDecoration>
+								<PictureDecoration name="КартинкаШаг4Или" id="74">
+									<Width>78</Width>
+									<Height>11</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка шаг 4</v8:content>
+										</v8:item>
+									</Title>
+									<PictureSize>Proportionally</PictureSize>
+									<Zoomable>true</Zoomable>
+									<Picture>
+										<xr:Ref>CommonPicture.ПереносШаблоновЭтикетокИЦенниковШаг1Вариант2</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаШаг4ИлиКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="КартинкаШаг4ИлиРасширеннаяПодсказка" id="76"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШаг5" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг5</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<HorizontalSpacing>Single</HorizontalSpacing>
+					<Behavior>Usual</Behavior>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг5РасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<PictureDecoration name="НомерШаг5" id="41">
+							<Width>3</Width>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Номер шаг5</v8:content>
+								</v8:item>
+							</Title>
+							<Picture>
+								<xr:Ref>CommonPicture.Этап05</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="НомерШаг5КонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="НомерШаг5РасширеннаяПодсказка" id="43"/>
+						</PictureDecoration>
+						<LabelDecoration name="ТекстШаг5" id="44">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Создать шаблон и загрузить ранее выгруженный шаблон из файла.
+Расширение файла в зависимости от типа шаблона:
+   (*.xml) - «Этикетка (ценник) принтера этикеток»
+   (*.mxl) - «Этикетка (ценник) для товара»</v8:content>
+								</v8:item>
+							</Title>
+							<GroupVerticalAlign>Center</GroupVerticalAlign>
+							<ContextMenu name="ТекстШаг5КонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ТекстШаг5РасширеннаяПодсказка" id="46"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШаг5Контент" id="110">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаг5 контент</v8:content>
+						</v8:item>
+					</Title>
+					<Group>HorizontalIfPossible</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШаг5КонтентРасширеннаяПодсказка" id="111"/>
+					<ChildItems>
+						<LabelDecoration name="ОтступШаг5" id="112">
+							<Width>3</Width>
+							<ContextMenu name="ОтступШаг5КонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="ОтступШаг5РасширеннаяПодсказка" id="114"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаШаг5Отступ" id="115">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа шаг5 отступ</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаШаг5ОтступРасширеннаяПодсказка" id="116"/>
+							<ChildItems>
+								<PictureDecoration name="КартинкаШаг5" id="77">
+									<Width>49</Width>
+									<Height>19</Height>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Картинка шаг 5</v8:content>
+										</v8:item>
+									</Title>
+									<PictureSize>Proportionally</PictureSize>
+									<Zoomable>true</Zoomable>
+									<Picture>
+										<xr:Ref>CommonPicture.ПереносШаблоновЭтикетокИЦенниковШаг5</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="КартинкаШаг5КонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="КартинкаШаг5РасширеннаяПодсказка" id="79"/>
+								</PictureDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes/>
+</Form>

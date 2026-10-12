@@ -1,0 +1,1999 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<ButtonGroup name="НавигацияНачало" id="571">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Навигация начало</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Навигация начало</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="НавигацияНачалоРасширеннаяПодсказка" id="572"/>
+				<ChildItems>
+					<Button name="ПереходНазад" id="38">
+						<Type>CommandBarButton</Type>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<AutoMaxHeight>false</AutoMaxHeight>
+						<CommandName>Form.Command.ПереходЗаполнение</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.СтрелкаВлевоБольшая</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПереходНазадРасширеннаяПодсказка" id="292"/>
+					</Button>
+					<Button name="ПереходВыполнил" id="41">
+						<Type>CommandBarButton</Type>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<AutoMaxHeight>false</AutoMaxHeight>
+						<CommandName>Form.Command.ПереходВыполнил</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.СтрелкаВправоБольшая</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПереходВыполнилРасширеннаяПодсказка" id="333"/>
+					</Button>
+					<Button name="ОтправитьВКонтролирующийОрган" id="106">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<DefaultButton>true</DefaultButton>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<AutoMaxHeight>false</AutoMaxHeight>
+						<CommandName>Form.Command.ОтправитьОтчетность</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.СтрелкаВправоБольшая</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отправить</v8:content>
+							</v8:item>
+						</Title>
+						<ButtonImportance>Main</ButtonImportance>
+						<ExtendedTooltip name="ОтправитьВКонтролирующийОрганРасширеннаяПодсказка" id="315"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<ButtonGroup name="НавигацияОкончание" id="579">
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Навигация окончание</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Навигация окончание</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="НавигацияОкончаниеРасширеннаяПодсказка" id="580"/>
+				<ChildItems>
+					<Button name="ФормаПереходДекларацияПоУСН" id="595">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПереходДекларацияПоУСН</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Вернуться к Декларации УСН</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ФормаПереходДекларацияПоУСНРасширеннаяПодсказка" id="596"/>
+					</Button>
+					<Button name="Закрыть" id="421">
+						<Type>CommandBarButton</Type>
+						<Representation>Text</Representation>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<AutoMaxHeight>false</AutoMaxHeight>
+						<CommandName>Form.StandardCommand.Close</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Готово</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ЗакрытьРасширеннаяПодсказка" id="422"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<ButtonGroup name="НавигацияОзнакомится" id="585">
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Навигация продолжение</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Навигация продолжение</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="НавигацияОзнакомитсяРасширеннаяПодсказка" id="586"/>
+				<ChildItems>
+					<Button name="ФормаПереходДекларацияПоУСН1" id="597">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПереходДекларацияПоУСН</CommandName>
+						<ExtendedTooltip name="ФормаПереходДекларацияПоУСН1РасширеннаяПодсказка" id="598"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<ButtonGroup name="НавигацияЗадачаПроверена" id="589">
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Навигация задача проверена</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Навигация задача проверена</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="НавигацияЗадачаПроверенаРасширеннаяПодсказка" id="590"/>
+				<ChildItems>
+					<Button name="ФормаПереходДекларацияПоУСН2" id="599">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПереходДекларацияПоУСН</CommandName>
+						<ExtendedTooltip name="ФормаПереходДекларацияПоУСН2РасширеннаяПодсказка" id="600"/>
+					</Button>
+					<Button name="Далее" id="451">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<AutoMaxHeight>false</AutoMaxHeight>
+						<CommandName>Form.Command.Далее</CommandName>
+						<ExtendedTooltip name="ДалееРасширеннаяПодсказка" id="452"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+			<ButtonGroup name="НавигацияЗадачаБезДекларации" id="661">
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Навигация задача проверена</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Навигация задача проверена</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="НавигацияЗадачаБезДекларацииРасширеннаяПодсказка" id="662"/>
+				<ChildItems>
+					<Button name="ПереходЗаполнение1" id="657">
+						<Type>CommandBarButton</Type>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<AutoMaxHeight>false</AutoMaxHeight>
+						<CommandName>Form.Command.ПереходЗаполнение</CommandName>
+						<Picture>
+							<xr:Ref>CommonPicture.СтрелкаВлевоБольшая</xr:Ref>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ПереходЗаполнение1РасширеннаяПодсказка" id="658"/>
+					</Button>
+					<Button name="Закрыть2" id="659">
+						<Type>CommandBarButton</Type>
+						<Representation>Text</Representation>
+						<AutoMaxWidth>false</AutoMaxWidth>
+						<AutoMaxHeight>false</AutoMaxHeight>
+						<CommandName>Form.StandardCommand.Close</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Готово</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="Закрыть2РасширеннаяПодсказка" id="660"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаКрошки5" id="655">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа крошки</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаКрошки5РасширеннаяПодсказка" id="656"/>
+		</UsualGroup>
+		<Pages name="СтраницаДекларация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница декларация</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницаДекларацияРасширеннаяПодсказка" id="289"/>
+			<ChildItems>
+				<Page name="ДекларацияПоУСН" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декларация по УСН за %1</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ДекларацияПоУСНРасширеннаяПодсказка" id="290"/>
+					<ChildItems>
+						<RadioButtonField name="ТекущийСпособСдачи" id="601">
+							<DataPath>ТекущийСпособСдачи</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Способ отправки декларации</v8:content>
+								</v8:item>
+							</Title>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Отправить через 1C-Отчетность</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Подать самостоятельно</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ТекущийСпособСдачиКонтекстноеМеню" id="602"/>
+							<ExtendedTooltip name="ТекущийСпособСдачиРасширеннаяПодсказка" id="603"/>
+							<Events>
+								<Event name="OnChange">ТекущийСпособСдачиПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<UsualGroup name="ГруппаОперацийНадРезультатом" id="605">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Операций над результатом</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаОперацийНадРезультатомРасширеннаяПодсказка" id="606"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОписанияДействий" id="607">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Описания действий</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОписанияДействийРасширеннаяПодсказка" id="608"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаВыборПередачиОтчетности" id="609">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выбор передачи отчетности</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<VerticalSpacing>Double</VerticalSpacing>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаВыборПередачиОтчетностиРасширеннаяПодсказка" id="610"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаПодачиЧерезИнтернет" id="611">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отправить через 1С-Отчетность</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<VerticalSpacing>Single</VerticalSpacing>
+													<Representation>NormalSeparation</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПодачиЧерезИнтернетРасширеннаяПодсказка" id="612"/>
+													<Events>
+														<Event name="Click">ОтправитьОтчетностьЧерезИнтернетВыбор</Event>
+													</Events>
+													<ChildItems>
+														<Button name="ОтправитьОтчетностьЧерезИнтернетВыбор" id="613">
+															<Type>Hyperlink</Type>
+															<Visible>false</Visible>
+															<CommandName>Form.Command.ОтправитьОтчетностьЧерезИнтернетВыбор</CommandName>
+															<ExtendedTooltip name="ОтправитьОтчетностьЧерезИнтернетВыборРасширеннаяПодсказка" id="614"/>
+														</Button>
+														<UsualGroup name="ГруппаПодачиЧерезИнтернетОписание" id="615">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Отправить через 1С-Отчетность</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Vertical</Group>
+															<Behavior>Usual</Behavior>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПодачиЧерезИнтернетОписаниеРасширеннаяПодсказка" id="616"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаСтрока11" id="617">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Строка 11</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаСтрока11РасширеннаяПодсказка" id="618"/>
+																	<ChildItems>
+																		<UsualGroup name="Группа2" id="619">
+																			<HorizontalStretch>false</HorizontalStretch>
+																			<Group>Vertical</Group>
+																			<Behavior>Usual</Behavior>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="620"/>
+																			<ChildItems>
+																				<UsualGroup name="БаннерПодключитьОтчетнность" id="621">
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Баннер задача выполнена</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ToolTip>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Баннер задача выполнена</v8:content>
+																						</v8:item>
+																					</ToolTip>
+																					<HorizontalStretch>true</HorizontalStretch>
+																					<Representation>None</Representation>
+																					<ShowTitle>false</ShowTitle>
+																					<ExtendedTooltip name="БаннерПодключитьОтчетнностьРасширеннаяПодсказка" id="622"/>
+																				</UsualGroup>
+																				<LabelDecoration name="ДекорацияОписанияПередачиЧерезИнтернет" id="623">
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<AutoMaxHeight>false</AutoMaxHeight>
+																					<Title formatted="false">
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Декларация будет подана онлайн.
+Если декларация будет принята налоговой успешно, то больше никаких действий от вас не потребуется. 
+После обработки декларации налоговыми органами мы вас известим. </v8:content>
+																						</v8:item>
+																					</Title>
+																					<VerticalAlign>Top</VerticalAlign>
+																					<ContextMenu name="ДекорацияОписанияПередачиЧерезИнтернетКонтекстноеМеню" id="624"/>
+																					<ExtendedTooltip name="ДекорацияОписанияПередачиЧерезИнтернетРасширеннаяПодсказка" id="625"/>
+																				</LabelDecoration>
+																			</ChildItems>
+																		</UsualGroup>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаСтрока12" id="628">
+																	<EnableContentChange>true</EnableContentChange>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Строка 12</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Horizontal</Group>
+																	<Behavior>Usual</Behavior>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаСтрока12РасширеннаяПодсказка" id="629"/>
+																	<ChildItems>
+																		<LabelDecoration name="ДекорацияЗаявлениеОтправлено" id="630">
+																			<Visible>false</Visible>
+																			<Height>2</Height>
+																			<Title formatted="true">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Заявление отправлено, но еще не одобрено. Попробуйте &lt;link ОбновитьСтатус&gt;о&lt;/&gt;&lt;link ОбновитьСтатус&gt;бновить&lt;/&gt;&lt;link ОбновитьСтатус&gt; &lt;/&gt;статус заявления.
+Для перехода к списку заявлений нажмите &lt;link ПерейтиКСпискуЗаявлений&gt;сюда&lt;/&gt;.</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ContextMenu name="ДекорацияЗаявлениеОтправленоКонтекстноеМеню" id="631"/>
+																			<ExtendedTooltip name="ДекорацияЗаявлениеОтправленоРасширеннаяПодсказка" id="632"/>
+																			<Events>
+																				<Event name="URLProcessing">ДекорацияЗаявлениеОтправленоОбработкаНавигационнойСсылки</Event>
+																			</Events>
+																		</LabelDecoration>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаПодачиСамостоятельно" id="633">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Подать декларацию №12 самостоятельно</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<VerticalSpacing>Single</VerticalSpacing>
+													<Behavior>Usual</Behavior>
+													<Representation>NormalSeparation</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаПодачиСамостоятельноРасширеннаяПодсказка" id="634"/>
+													<Events>
+														<Event name="Click">ПодатьОтчетностьСамостоятельно</Event>
+													</Events>
+													<ChildItems>
+														<Button name="ПодатьОтчетностьСамостоятельно" id="635">
+															<Type>Hyperlink</Type>
+															<Visible>false</Visible>
+															<CommandName>Form.Command.ПодатьОтчетностьСамостоятельно</CommandName>
+															<ExtendedTooltip name="ПодатьОтчетностьСамостоятельноРасширеннаяПодсказка" id="636"/>
+														</Button>
+														<UsualGroup name="ГруппаПодачиСамостоятельноОписание" id="637">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Отправить самостоятельно</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Vertical</Group>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПодачиСамостоятельноОписаниеРасширеннаяПодсказка" id="638"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаСтрока9" id="639">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Строка 9</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаСтрока9РасширеннаяПодсказка" id="640"/>
+																	<ChildItems>
+																		<Button name="СохранитьФайлВыгрузки" id="641">
+																			<Type>Hyperlink</Type>
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<AutoMaxHeight>false</AutoMaxHeight>
+																			<CommandName>Form.Command.СохранитьФайлВыгрузки</CommandName>
+																			<TextColor>web:Black</TextColor>
+																			<ExtendedTooltip name="СохранитьФайлВыгрузкиРасширеннаяПодсказка" id="642"/>
+																		</Button>
+																		<Button name="РаспечататьСведения" id="643">
+																			<Type>Hyperlink</Type>
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<AutoMaxHeight>false</AutoMaxHeight>
+																			<CommandName>Form.Command.РаспечататьДекларацию</CommandName>
+																			<TextColor>web:Black</TextColor>
+																			<ExtendedTooltip name="РаспечататьСведенияРасширеннаяПодсказка" id="644"/>
+																		</Button>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="Группа4" id="677">
+													<Group>Vertical</Group>
+													<VerticalSpacing>Single</VerticalSpacing>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="678"/>
+													<ChildItems>
+														<Button name="ОткрытьСведения" id="645">
+															<Type>Hyperlink</Type>
+															<Representation>PictureAndText</Representation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<AutoMaxHeight>false</AutoMaxHeight>
+															<CommandName>Form.Command.ОткрытьДекларацию</CommandName>
+															<TextColor>web:Black</TextColor>
+															<Picture>
+																<xr:Ref>StdPicture.Report</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Открыть декларацию</v8:content>
+																</v8:item>
+															</Title>
+															<ExtendedTooltip name="ОткрытьСведенияРасширеннаяПодсказка" id="646"/>
+														</Button>
+														<Button name="ОписаниеРазделов" id="675">
+															<Type>Hyperlink</Type>
+															<CommandName>Form.Command.ОписаниеРазделов</CommandName>
+															<TextColor>web:Black</TextColor>
+															<Picture>
+																<xr:Ref>StdPicture.Information</xr:Ref>
+																<xr:LoadTransparent>true</xr:LoadTransparent>
+															</Picture>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Описание разделов декларации</v8:content>
+																</v8:item>
+															</Title>
+															<ExtendedTooltip name="ОписаниеРазделовРасширеннаяПодсказка" id="676"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДекорацииОписания" id="156">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорации описания</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДекорацииОписанияРасширеннаяПодсказка" id="293"/>
+						</UsualGroup>
+						<UsualGroup name="Группа1" id="647">
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ShowAsCard>true</ShowAsCard>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="648"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаУведомлениеОНалогах" id="527">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Уведомление</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаУведомлениеОНалогахРасширеннаяПодсказка" id="528"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияУведомление" id="529">
+											<Visible>false</Visible>
+											<Font ref="sys:DefaultGUIFont" height="12" kind="WindowsFont"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Уведомление</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияУведомлениеКонтекстноеМеню" id="530"/>
+											<ExtendedTooltip name="ДекорацияУведомлениеРасширеннаяПодсказка" id="531"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияИнформацияУведомление" id="532">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подготовьте уведомление о сумме налога к уплате</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияИнформацияУведомлениеКонтекстноеМеню" id="533"/>
+											<ExtendedTooltip name="ДекорацияИнформацияУведомлениеРасширеннаяПодсказка" id="534"/>
+										</LabelDecoration>
+										<UsualGroup name="СтраницыУведомление" id="535">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страницы уведомление</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="СтраницыУведомлениеРасширеннаяПодсказка" id="536"/>
+											<ChildItems>
+												<UsualGroup name="СтраницаВыполнитьДействиеУведомление" id="537">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Страница выполнить действие уведомление</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="СтраницаВыполнитьДействиеУведомлениеРасширеннаяПодсказка" id="538"/>
+													<ChildItems>
+														<UsualGroup name="ВыполнениеДействияУведомление" id="539">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Выполнение действия уведомление</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Horizontal</Group>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ВыполнениеДействияУведомлениеРасширеннаяПодсказка" id="540"/>
+															<ChildItems>
+																<Button name="ВыполнитьДействиеСформироватьУведомление" id="541">
+																	<Type>UsualButton</Type>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<CommandName>Form.Command.ВыполнитьДействиеСформироватьУведомление</CommandName>
+																	<ExtendedTooltip name="ВыполнитьДействиеСформироватьУведомлениеРасширеннаяПодсказка" id="542"/>
+																</Button>
+																<Button name="ВыполнитьДействиеСформироватьОперациюПоЕНС" id="543">
+																	<Type>UsualButton</Type>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<AutoMaxHeight>false</AutoMaxHeight>
+																	<CommandName>Form.Command.ВыполнитьДействиеСформироватьОперациюПоЕНС</CommandName>
+																	<ExtendedTooltip name="ВыполнитьДействиеСформироватьОперациюПоЕНСРасширеннаяПодсказка" id="544"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="СтраницаРезультатВыполненияУведомление" id="545">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница результат выполнения уведомление</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="СтраницаРезультатВыполненияУведомлениеРасширеннаяПодсказка" id="546"/>
+									<ChildItems>
+										<UsualGroup name="ОписаниеУведомление" id="547">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Описание расчет</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ОписаниеУведомлениеРасширеннаяПодсказка" id="548"/>
+											<ChildItems>
+												<Button name="ОткрытьУведомление" id="549">
+													<Type>Hyperlink</Type>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<CommandName>Form.Command.УведомлениеНажатие</CommandName>
+													<ExtendedTooltip name="ОткрытьУведомлениеРасширеннаяПодсказка" id="550"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ОписаниеУведомлениеСуммы" id="551">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Описание уведомление суммы</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ОписаниеУведомлениеСуммыРасширеннаяПодсказка" id="552"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияСуммаУведомление" id="553">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<TextColor>style:ЦветПояснящегоТекстаПротоколовРасчета</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сумма:</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Взносы в пенсионный и соцстрах</v8:content>
+														</v8:item>
+													</ToolTip>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="ДекорацияСуммаУведомлениеКонтекстноеМеню" id="554"/>
+													<ExtendedTooltip name="ДекорацияСуммаУведомлениеРасширеннаяПодсказка" id="555"/>
+												</LabelDecoration>
+												<LabelDecoration name="СуммаУведомления" id="556">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>9 999</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<ContextMenu name="СуммаУведомленияКонтекстноеМеню" id="557"/>
+													<ExtendedTooltip name="СуммаУведомленияРасширеннаяПодсказка" id="558"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ОписаниеУведомлениеИтог" id="559">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Описание уведомление итог</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ОписаниеУведомлениеИтогРасширеннаяПодсказка" id="560"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияИтогоУведомление" id="561">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<TextColor>style:ЦветПояснящегоТекстаПротоколовРасчета</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Итого:</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Взносы в пенсионный и соцстрах</v8:content>
+														</v8:item>
+													</ToolTip>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="ДекорацияИтогоУведомлениеКонтекстноеМеню" id="562"/>
+													<ExtendedTooltip name="ДекорацияИтогоУведомлениеРасширеннаяПодсказка" id="563"/>
+												</LabelDecoration>
+												<LabelDecoration name="ЗначениеУведомлениеИтог" id="564">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>9 999</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalAlign>Right</HorizontalAlign>
+													<ContextMenu name="ЗначениеУведомлениеИтогКонтекстноеМеню" id="565"/>
+													<ExtendedTooltip name="ЗначениеУведомлениеИтогРасширеннаяПодсказка" id="566"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ЗадачаВыполнена" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декларация по УСН за %1 (Выполнена)</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ЗадачаВыполненаРасширеннаяПодсказка" id="354"/>
+					<ChildItems>
+						<UsualGroup name="БаннерЗадачаВыполнена" id="649">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Баннер задача выполнена</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Баннер задача выполнена</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="БаннерЗадачаВыполненаРасширеннаяПодсказка" id="650"/>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ЗадачаОжидатьПодтверждения" id="109">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декларация по УСН за %1 (Ожидаем подтверждения)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача выполнена</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ЗадачаОжидатьПодтвержденияРасширеннаяПодсказка" id="367"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСтрока15" id="146">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Строка 15</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСтрока15РасширеннаяПодсказка" id="374"/>
+							<ChildItems>
+								<LabelDecoration name="ДекорацияОтступ23" id="149">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата отправки:</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<ContextMenu name="ДекорацияОтступ23КонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="ДекорацияОтступ23РасширеннаяПодсказка" id="376"/>
+								</LabelDecoration>
+								<LabelField name="ДатаСменыСостояния" id="142">
+									<DataPath>ДатаСменыСостояния</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<VerticalAlign>Center</VerticalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<Width>20</Width>
+									<ContextMenu name="ДатаСменыСостоянияКонтекстноеМеню" id="143"/>
+									<ExtendedTooltip name="ДатаСменыСостоянияРасширеннаяПодсказка" id="377"/>
+								</LabelField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="БаннерОжидатьПодтверждения" id="651">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Баннер задача выполнена</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Баннер задача выполнена</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="БаннерОжидатьПодтвержденияРасширеннаяПодсказка" id="652"/>
+						</UsualGroup>
+						<UsualGroup name="ГруппаДекорацииОписания10" id="202">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Декорации описания 10</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>Horizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДекорацииОписания10РасширеннаяПодсказка" id="381"/>
+							<ChildItems>
+								<LabelDecoration name="Декорация8" id="222">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<AutoMaxHeight>false</AutoMaxHeight>
+									<ContextMenu name="Декорация8КонтекстноеМеню" id="223"/>
+									<ExtendedTooltip name="Декорация8РасширеннаяПодсказка" id="382"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаДекорацииОписания12" id="205">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорации описания 12</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДекорацииОписания12РасширеннаяПодсказка" id="384"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаДекорацииОписания13" id="206">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорации описания 13</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДекорацииОписания13РасширеннаяПодсказка" id="385"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияОписаниеРаботы4" id="209">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>70</MaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>• Декларация сформирована и отправлена в налоговую электронно.</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="ДекорацияОписаниеРаботы4КонтекстноеМеню" id="210"/>
+													<ExtendedTooltip name="ДекорацияОписаниеРаботы4РасширеннаяПодсказка" id="387"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаДекорацииОписания15" id="224">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорации описания 15</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДекорацииОписания15РасширеннаяПодсказка" id="388"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияОписаниеРаботы5" id="227">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<MaxWidth>70</MaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>• Но возможность распечатать и сохранить файл для налоговой все равно есть. </v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Center</VerticalAlign>
+													<ContextMenu name="ДекорацияОписаниеРаботы5КонтекстноеМеню" id="228"/>
+													<ExtendedTooltip name="ДекорацияОписаниеРаботы5РасширеннаяПодсказка" id="390"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаДекорацииОписания14" id="211">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорации описания 14</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДекорацииОписания14РасширеннаяПодсказка" id="391"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаСтрока14" id="137">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Строка 14</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаСтрока14РасширеннаяПодсказка" id="393"/>
+													<ChildItems>
+														<Button name="РаспечататьДекларацию1" id="141">
+															<Type>Hyperlink</Type>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<AutoMaxHeight>false</AutoMaxHeight>
+															<CommandName>Form.Command.РаспечататьДекларацию</CommandName>
+															<TextColor>web:Black</TextColor>
+															<ExtendedTooltip name="РаспечататьДекларацию1РасширеннаяПодсказка" id="394"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаДекорацииОписания16" id="217">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорации описания 16</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаДекорацииОписания16РасширеннаяПодсказка" id="395"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаСтрока16" id="151">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Строка 16</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Horizontal</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаСтрока16РасширеннаяПодсказка" id="397"/>
+													<ChildItems>
+														<Button name="СохранитьФайлВыгрузки1" id="154">
+															<Type>Hyperlink</Type>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<AutoMaxHeight>false</AutoMaxHeight>
+															<CommandName>Form.Command.СохранитьФайлВыгрузки</CommandName>
+															<TextColor>web:Black</TextColor>
+															<ExtendedTooltip name="СохранитьФайлВыгрузки1РасширеннаяПодсказка" id="398"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ЗадачаОзнакомиться" id="237">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декларация по УСН за %1 (Результаты)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача выполнена</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ЗадачаОзнакомитьсяРасширеннаяПодсказка" id="399"/>
+					<ChildItems>
+						<UsualGroup name="БаннерОзнакомится" id="665">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Баннер задача выполнена</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Баннер задача выполнена</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="БаннерОзнакомитсяРасширеннаяПодсказка" id="666"/>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ЗадачаПроверена" id="426">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декларация по УСН за %1 (Проверена)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача выполнена</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ЗадачаПроверенаРасширеннаяПодсказка" id="427"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаПанельОтправки" id="456">
+							<EnableContentChange>true</EnableContentChange>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Панель отправки</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПанельОтправкиРасширеннаяПодсказка" id="457"/>
+							<ChildItems>
+								<UsualGroup name="БлокСостоянияОтправки" id="458">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Блок состояния отправки</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:ЦветФонаУдачнойОтправки</BackColor>
+									<ExtendedTooltip name="БлокСостоянияОтправкиРасширеннаяПодсказка" id="459"/>
+									<ChildItems>
+										<UsualGroup name="СостояниеОтправки" id="460">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Состояние отправки</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="СостояниеОтправкиРасширеннаяПодсказка" id="461"/>
+											<ChildItems>
+												<LabelDecoration name="НаименованиеЭтапа" id="462">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;Наименование этапа&gt;</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НаименованиеЭтапаКонтекстноеМеню" id="463"/>
+													<ExtendedTooltip name="НаименованиеЭтапаРасширеннаяПодсказка" id="464"/>
+												</LabelDecoration>
+												<LabelDecoration name="ОтступМеждуЭтапомИПротоколом" id="465">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<ContextMenu name="ОтступМеждуЭтапомИПротоколомКонтекстноеМеню" id="466"/>
+													<ExtendedTooltip name="ОтступМеждуЭтапомИПротоколомРасширеннаяПодсказка" id="467"/>
+												</LabelDecoration>
+												<LabelDecoration name="ГиперссылкаПротокол" id="468">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;Протокол&gt;</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ГиперссылкаПротоколКонтекстноеМеню" id="469"/>
+													<ExtendedTooltip name="ГиперссылкаПротоколРасширеннаяПодсказка" id="470"/>
+													<Events>
+														<Event name="Click">ГиперссылкаПротоколНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="ОтступМеждуПотоколомИКомментарием" id="471">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<ContextMenu name="ОтступМеждуПотоколомИКомментариемКонтекстноеМеню" id="472"/>
+													<ExtendedTooltip name="ОтступМеждуПотоколомИКомментариемРасширеннаяПодсказка" id="473"/>
+												</LabelDecoration>
+												<LabelDecoration name="КомментарийЭтапа" id="474">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<TextColor>style:ЦветШрифтаКомментарияКСостоянию</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>&lt;Комментарий к состоянию&gt;</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="КомментарийЭтапаКонтекстноеМеню" id="475"/>
+													<ExtendedTooltip name="КомментарийЭтапаРасширеннаяПодсказка" id="476"/>
+												</LabelDecoration>
+												<LabelDecoration name="ОтступПередКнопкойОбновитьОтправку" id="477">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<ContextMenu name="ОтступПередКнопкойОбновитьОтправкуКонтекстноеМеню" id="478"/>
+													<ExtendedTooltip name="ОтступПередКнопкойОбновитьОтправкуРасширеннаяПодсказка" id="479"/>
+												</LabelDecoration>
+												<Button name="ОбновитьОтправку" id="480">
+													<Type>UsualButton</Type>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<CommandName>Form.Command.ОбновитьОтправку</CommandName>
+													<ExtendedTooltip name="ОбновитьОтправкуРасширеннаяПодсказка" id="481"/>
+												</Button>
+												<LabelDecoration name="ЭтапыОтправки" id="482">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Этапы отправки</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ЭтапыОтправкиКонтекстноеМеню" id="483"/>
+													<ExtendedTooltip name="ЭтапыОтправкиРасширеннаяПодсказка" id="484"/>
+													<Events>
+														<Event name="Click">ЭтапыОтправкиНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="БлокОшибокИИзвещений" id="485">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Блок ошибок и извещений</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<BackColor>style:ЦветФонаОшибкиОтправки</BackColor>
+									<ExtendedTooltip name="БлокОшибокИИзвещенийРасширеннаяПодсказка" id="486"/>
+									<ChildItems>
+										<UsualGroup name="БлокКритическихОшибок" id="487">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Блок критических ошибок</v8:content>
+												</v8:item>
+											</Title>
+											<Width>27</Width>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="БлокКритическихОшибокРасширеннаяПодсказка" id="488"/>
+											<ChildItems>
+												<PictureDecoration name="ЗначокКритическойОшибки" id="489">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<Picture>
+														<xr:Ref>CommonPicture.ПризнакНаличияКритическойОшибки</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="ЗначокКритическойОшибкиКонтекстноеМеню" id="490"/>
+													<ExtendedTooltip name="ЗначокКритическойОшибкиРасширеннаяПодсказка" id="491"/>
+												</PictureDecoration>
+												<LabelDecoration name="КритическиеОшибки" id="492">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<Title formatted="true">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Обнаружены &lt;link критические ошибки&gt;критические ошибки&lt;/&gt;</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="КритическиеОшибкиКонтекстноеМеню" id="493"/>
+													<ExtendedTooltip name="КритическиеОшибкиРасширеннаяПодсказка" id="494"/>
+													<Events>
+														<Event name="URLProcessing">КритическиеОшибкиОбработкаНавигационнойСсылки</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="БлокНеотправленныхИзвещений" id="495">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Блок неотправленных извещений</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа ошибок</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="БлокНеотправленныхИзвещенийРасширеннаяПодсказка" id="496"/>
+											<ChildItems>
+												<LabelDecoration name="ЗаголовокНеотправленныхСообщений" id="497">
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оператору не отправлено подтверждение о приеме информации</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ЗаголовокНеотправленныхСообщенийКонтекстноеМеню" id="498"/>
+													<ExtendedTooltip name="ЗаголовокНеотправленныхСообщенийРасширеннаяПодсказка" id="499"/>
+												</LabelDecoration>
+												<Button name="ОтправитьНеотправленноеИзвещение" id="500">
+													<Type>UsualButton</Type>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<CommandName>Form.Command.ОтправитьНеотправленноеИзвещение</CommandName>
+													<ExtendedTooltip name="ОтправитьНеотправленноеИзвещениеРасширеннаяПодсказка" id="501"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="ЗаливкаФономБлокаОшибокИИзвещений" id="502">
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<AutoMaxHeight>false</AutoMaxHeight>
+											<ContextMenu name="ЗаливкаФономБлокаОшибокИИзвещенийКонтекстноеМеню" id="503"/>
+											<ExtendedTooltip name="ЗаливкаФономБлокаОшибокИИзвещенийРасширеннаяПодсказка" id="504"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="БаннерЗадачаВыполнена1" id="653">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Баннер задача выполнена</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Баннер задача выполнена</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="БаннерЗадачаВыполнена1РасширеннаяПодсказка" id="654"/>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ЗадачаВыполненаБезДекларации" id="505">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Декларация по УСН за %1 (Выполнена)</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача выполнена</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ScrollOnCompress>false</ScrollOnCompress>
+					<ExtendedTooltip name="ЗадачаВыполненаБезДекларацииРасширеннаяПодсказка" id="506"/>
+					<ChildItems>
+						<UsualGroup name="БаннерЗадачаВыполнена2" id="663">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Баннер задача выполнена</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Баннер задача выполнена</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="БаннерЗадачаВыполнена2РасширеннаяПодсказка" id="664"/>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОбработкиНалоговИОтчетности</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ДокументОтчетности" id="2">
+			<Type>
+				<v8:Type>cfg:DocumentRef.РегламентированныйОтчет</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДатаСменыСостояния" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата смены состояния</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийСпособСдачи" id="4">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>1</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуетсяДКО" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Доверенность" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доверенность для сдачи отчетности</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ДоверенностиНалогоплательщика</v8:Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодЗадачиПредставление" id="7">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НалоговыйПериодПропущен" id="8">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсегоКУплате" id="9">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗаписьКалендаря" id="10">
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЗаписиКалендаряПодготовкиОтчетности</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПериодСобытия" id="11">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПлательщикЕНП" id="12">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УведомлениеОбИсчисленныхНалогахПодготовлено" id="13">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УведомленияОбИсчисленныхНалогах" id="14">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Уведомление" id="1">
+					<Type>
+						<v8:Type>cfg:DocumentRef.ОперацияПоЕдиномуНалоговомуСчету</v8:Type>
+						<v8:Type>cfg:DocumentRef.УведомлениеОбИсчисленныхСуммахНалогов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="3">
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПодаетсяУведомлениеПоНалогуЗаПериод" id="15">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогПоУведомлениям" id="17">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПереходВыполнил" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Декларация передана в ИФНС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчетность передана в налоговую</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереходВыполнил</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<ActionPurpose>Finish</ActionPurpose>
+		</Command>
+		<Command name="ПереходЗаполнение" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуться к заполнению</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуться к списку первичных документов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереходЗаполнение</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<ActionPurpose>Finish</ActionPurpose>
+		</Command>
+		<Command name="ПодатьОтчетностьСамостоятельно" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подать декларацию самостоятельно</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подать отчетность самостоятельно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПодачаОтчетностиСамостоятельно</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПодатьОтчетностьСамостоятельно</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтправитьОтчетностьЧерезИнтернетВыбор" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить через Интернет (рекомендуем)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить отчетность электронно через интернет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьОтчетностьЧерезИнтернетВыбор</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОткрытьДекларацию" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть Декларацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть декларацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ПросмотретьОтчет32</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьДекларацию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтправитьОтчетность" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить отчетность</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтправитьОтчетность</Action>
+			<Representation>Text</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<ActionPurpose>Finish</ActionPurpose>
+		</Command>
+		<Command name="СохранитьФайлВыгрузки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить файл выгрузки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить файл выгрузки декларации</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СохранитьФайлВыгрузки</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="РаспечататьДекларацию" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распечатать декларацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распечатать декларацию на принтере</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Print</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РаспечататьДекларацию</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УзнатьАдресБлижайшейНалоговой" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес налоговой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Узнать адрес ближайшей налоговой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.InputFieldOpen</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОшибкиСдачи" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Причины отказа, ошибки, комментарии</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки сдачи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОшибкиСдачи</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОформитьЗаявку" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;&lt;Оформить заявку&gt;&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Оформить заявку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОформитьЗаявку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИсторияОбмена" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История обмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>История обмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсторияОбмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьСтатус" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить наличие подтверждения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить статус</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьСтатус</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Далее" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Готово</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Далее</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Готово</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<ActionPurpose>Finish</ActionPurpose>
+		</Command>
+		<Command name="ОбновитьОтправку" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОбновитьОтправку</Action>
+			<Representation>Text</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтправитьНеотправленноеИзвещение" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отправить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОтправитьНеотправленноеИзвещение</Action>
+			<Representation>Text</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыполнитьДействиеСформироватьОперациюПоЕНС" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать операцию по ЕНС</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ВыполнитьДействиеСформироватьОперациюПоЕНС</Action>
+		</Command>
+		<Command name="ВыполнитьДействиеСформироватьУведомление" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать уведомление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить действие сформировать уведомление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьДействиеСформироватьУведомление</Action>
+		</Command>
+		<Command name="УведомлениеНажатие" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подготовить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уведомление нажатие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УведомлениеНажатие</Action>
+		</Command>
+		<Command name="ПереходДекларацияПоУСН" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переход декларация по УСН</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переход декларация по УСН</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СтрелкаВлевоБольшая</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереходДекларацияПоУСН</Action>
+			<ActionPurpose>Finish</ActionPurpose>
+		</Command>
+		<Command name="ОписаниеРазделов" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание разделов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание разделов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДекорацияОписаниеРазеделовНажатие</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="Организация">
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="СобытиеКалендаря">
+			<Type>
+				<v8:Type>cfg:CatalogRef.КалендарьПодготовкиОтчетности</v8:Type>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+		<Parameter name="СостояниеСобытия">
+			<Type>
+				<v8:Type>cfg:EnumRef.СостоянияСобытийКалендаря</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ДокументОтчетности">
+			<Type>
+				<v8:Type>cfg:DocumentRef.РегламентированныйОтчет</v8:Type>
+			</Type>
+		</Parameter>
+	</Parameters>
+</Form>

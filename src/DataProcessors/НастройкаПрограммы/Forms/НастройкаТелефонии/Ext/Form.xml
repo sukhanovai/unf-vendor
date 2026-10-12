@@ -1,0 +1,2341 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Выбор оператора и настройка интеграции</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ShowTitle>true</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновное" id="668">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основное</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновноеРасширеннаяПодсказка" id="669"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаОператоры" id="756">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Операторы</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОператорыРасширеннаяПодсказка" id="757"/>
+					<ChildItems>
+						<Table name="Операторы" id="670">
+							<Representation>List</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<SelectionMode>SingleRow</SelectionMode>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<InitialRowActivation>Activate</InitialRowActivation>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Операторы</DataPath>
+							<CommandSet>
+								<ExcludedCommand>Add</ExcludedCommand>
+								<ExcludedCommand>CancelSearch</ExcludedCommand>
+								<ExcludedCommand>Change</ExcludedCommand>
+								<ExcludedCommand>ClearTableMarksAppearance</ExcludedCommand>
+								<ExcludedCommand>Copy</ExcludedCommand>
+								<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+								<ExcludedCommand>Delete</ExcludedCommand>
+								<ExcludedCommand>EndEdit</ExcludedCommand>
+								<ExcludedCommand>Find</ExcludedCommand>
+								<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+								<ExcludedCommand>MoveDown</ExcludedCommand>
+								<ExcludedCommand>MoveUp</ExcludedCommand>
+								<ExcludedCommand>OutputList</ExcludedCommand>
+								<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+								<ExcludedCommand>SearchHistory</ExcludedCommand>
+								<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+								<ExcludedCommand>SortListAsc</ExcludedCommand>
+								<ExcludedCommand>SortListDesc</ExcludedCommand>
+							</CommandSet>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ОператорыКонтекстноеМеню" id="671"/>
+							<AutoCommandBar name="ОператорыКоманднаяПанель" id="672">
+								<ChildItems>
+									<Button name="СписокПодключитьОператора" id="778">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СписокПодключитьОператора</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="СписокПодключитьОператораРасширеннаяПодсказка" id="779"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ОператорыРасширеннаяПодсказка" id="673"/>
+							<SearchStringAddition name="ОператорыСтрокаПоиска" id="674">
+								<AdditionSource>
+									<Item>Операторы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОператорыСтрокаПоискаКонтекстноеМеню" id="675"/>
+								<ExtendedTooltip name="ОператорыСтрокаПоискаРасширеннаяПодсказка" id="676"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ОператорыСостояниеПросмотра" id="677">
+								<AdditionSource>
+									<Item>Операторы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ОператорыСостояниеПросмотраКонтекстноеМеню" id="678"/>
+								<ExtendedTooltip name="ОператорыСостояниеПросмотраРасширеннаяПодсказка" id="679"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ОператорыУправлениеПоиском" id="680">
+								<AdditionSource>
+									<Item>Операторы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ОператорыУправлениеПоискомКонтекстноеМеню" id="681"/>
+								<ExtendedTooltip name="ОператорыУправлениеПоискомРасширеннаяПодсказка" id="682"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">ОператорыПриАктивизацииСтроки</Event>
+								<Event name="OnHover">ОператорыПриНаведении</Event>
+							</Events>
+							<ChildItems>
+								<PictureField name="ОператорыПодключен" id="720">
+									<DataPath>Операторы.Подключен</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<HeaderPicture>
+										<xr:Ref>CommonPicture.Успех24Зеленый</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</HeaderPicture>
+									<AutoEditMode>true</AutoEditMode>
+									<AutoWidthInTable>None</AutoWidthInTable>
+									<ValuesPicture>
+										<xr:Ref>CommonPicture.Успех24Зеленый</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</ValuesPicture>
+									<ContextMenu name="ОператорыПодключенКонтекстноеМеню" id="721"/>
+									<ExtendedTooltip name="ОператорыПодключенРасширеннаяПодсказка" id="722"/>
+								</PictureField>
+								<InputField name="ОператорыПредставление" id="689">
+									<DataPath>Операторы.Представление</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<AutoWidthInTable>None</AutoWidthInTable>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ОператорыПредставлениеКонтекстноеМеню" id="690"/>
+									<ExtendedTooltip name="ОператорыПредставлениеРасширеннаяПодсказка" id="691"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="ГруппаБольшеВозможностей" id="517">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Больше возможностей</v8:content>
+								</v8:item>
+							</Title>
+							<Group>HorizontalIfPossible</Group>
+							<VerticalSpacing>Single</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаБольшеВозможностейРасширеннаяПодсказка" id="518"/>
+							<ChildItems>
+								<LabelDecoration name="ТекстБольшеВозможностей" id="522">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не нашли нужного оператора?</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ТекстБольшеВозможностейКонтекстноеМеню" id="523"/>
+									<ExtendedTooltip name="ТекстБольшеВозможностейРасширеннаяПодсказка" id="524"/>
+								</LabelDecoration>
+								<LabelDecoration name="ПредложитьВозможность" id="525">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Предложите своего</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ПредложитьВозможностьКонтекстноеМеню" id="526"/>
+									<ExtendedTooltip name="ПредложитьВозможностьРасширеннаяПодсказка" id="527"/>
+									<Events>
+										<Event name="Click">ПредложитьВозможностьНажатие</Event>
+									</Events>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПараметры" id="693">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оператор</v8:content>
+						</v8:item>
+					</Title>
+					<Width>54</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<ShowTitle>true</ShowTitle>
+					<ShowAsCard>true</ShowAsCard>
+					<ExtendedTooltip name="ГруппаПараметрыРасширеннаяПодсказка" id="694"/>
+					<ChildItems>
+						<CommandBar name="ГруппаКПДеталей" id="872">
+							<AppearanceMode>CommandBar</AppearanceMode>
+							<ExtendedTooltip name="ГруппаКПДеталейРасширеннаяПодсказка" id="873"/>
+							<ChildItems>
+								<Button name="ДеталиПодключить" id="780">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ДеталиПодключить</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ДеталиПодключитьРасширеннаяПодсказка" id="781"/>
+								</Button>
+								<Button name="ДеталиОтключить" id="774">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ДеталиОтключить</CommandName>
+									<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+									<ExtendedTooltip name="ДеталиОтключитьРасширеннаяПодсказка" id="775"/>
+								</Button>
+								<Button name="ЗапуститьДиагностику" id="746">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗапуститьДиагностику</CommandName>
+									<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ЗапуститьДиагностикуРасширеннаяПодсказка" id="747"/>
+								</Button>
+								<Button name="ЗапуститьОтладку" id="748">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.ЗапуститьОтладку</CommandName>
+									<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+									<ExtendedTooltip name="ЗапуститьОтладкуРасширеннаяПодсказка" id="749"/>
+								</Button>
+								<Popup name="ГруппаКПИнструкции" id="892">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Инструкции</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ГруппаКПИнструкцииРасширеннаяПодсказка" id="893"/>
+									<ChildItems>
+										<Button name="ОткрытьСтраницуОператора" id="700">
+											<Type>CommandBarHyperlink</Type>
+											<CommandName>Form.Command.ОткрытьСтраницуОператора</CommandName>
+											<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+											<ExtendedTooltip name="ОткрытьСтраницуОператораРасширеннаяПодсказка" id="701"/>
+										</Button>
+										<Button name="ОткрытьОписаниеВозможностей" id="874">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ОткрытьОписаниеВозможностей</CommandName>
+											<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+											<ExtendedTooltip name="ОткрытьОписаниеВозможностейРасширеннаяПодсказка" id="875"/>
+										</Button>
+										<Button name="ИнструкцияПодключениеОператора" id="896">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ИнструкцияПодключениеОператора</CommandName>
+											<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+											<ExtendedTooltip name="ИнструкцияПодключениеОператораРасширеннаяПодсказка" id="897"/>
+										</Button>
+										<Button name="ИнструкцияПубликацияИБ" id="900">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ИнструкцияПубликацияИБ</CommandName>
+											<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+											<ExtendedTooltip name="ИнструкцияПубликацияИБРасширеннаяПодсказка" id="901"/>
+										</Button>
+									</ChildItems>
+								</Popup>
+							</ChildItems>
+						</CommandBar>
+						<PictureDecoration name="ЛоготипПодключенногоОператора" id="912">
+							<Width>19</Width>
+							<Height>3</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Логотип</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+							<PictureSize>Proportionally</PictureSize>
+							<ContextMenu name="ЛоготипПодключенногоОператораКонтекстноеМеню" id="913"/>
+							<ExtendedTooltip name="ЛоготипПодключенногоОператораРасширеннаяПодсказка" id="914"/>
+						</PictureDecoration>
+						<UsualGroup name="ГруппаБаннерМобильнаяТелефония" id="811">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа баннер мобильная телефония</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа баннер мобильная телефония</v8:content>
+								</v8:item>
+							</ToolTip>
+							<HorizontalStretch>true</HorizontalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<BackColor>pal:Yellow</BackColor>
+							<ExtendedTooltip name="ГруппаБаннерМобильнаяТелефонияРасширеннаяПодсказка" id="812"/>
+						</UsualGroup>
+						<Pages name="ГруппаСтраницыПараметров" id="702">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Параметры</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<ExtendedTooltip name="ГруппаСтраницыПараметровРасширеннаяПодсказка" id="703"/>
+							<ChildItems>
+								<Page name="ГруппаСтраницаПараметрыИнтеграции" id="704">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Параметры интеграции</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>Vertical</Group>
+									<ShowTitle>true</ShowTitle>
+									<ScrollOnCompress>true</ScrollOnCompress>
+									<ExtendedTooltip name="ГруппаСтраницаПараметрыИнтеграцииРасширеннаяПодсказка" id="705"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаБаннерПараметры" id="789">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>pal:Yellow</BackColor>
+											<ExtendedTooltip name="ГруппаБаннерПараметрыРасширеннаяПодсказка" id="790"/>
+										</UsualGroup>
+										<UsualGroup name="НастройкаИнтеграции" id="6">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройка интеграции</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Collapsed>true</Collapsed>
+											<ControlRepresentation>Button</ControlRepresentation>
+											<ShowLeftMargin>false</ShowLeftMargin>
+											<ShowTitle>true</ShowTitle>
+											<ExtendedTooltip name="НастройкаИнтеграцииРасширеннаяПодсказка" id="7"/>
+											<ChildItems>
+												<Button name="НастройкаПубликацииСервисов" id="744">
+													<Type>Hyperlink</Type>
+													<CommandName>Form.Command.НастройкаПубликацииСервисов</CommandName>
+													<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+													<ExtendedTooltip name="НастройкаПубликацииСервисовРасширеннаяПодсказка" id="745"/>
+												</Button>
+												<UsualGroup name="ГруппаНастройкиАТС_Яндекс" id="185">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки: Яндекс.Телефония</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНастройкиАТС_ЯндексРасширеннаяПодсказка" id="186"/>
+													<ChildItems>
+														<InputField name="АТС_Яндекс_АдресУНФ" id="237">
+															<DataPath>НастройкиАТС_Яндекс[0].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес публикации 1С:УНФ</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Добавьте этот адрес на странице "Вебхуки" (раздел Интеграционное API) в личном кабинете вашей АТС</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_Яндекс_АдресУНФКонтекстноеМеню" id="238"/>
+															<ExtendedTooltip name="АТС_Яндекс_АдресУНФРасширеннаяПодсказка" id="239"/>
+														</InputField>
+														<InputField name="АТС_Яндекс_КлючДляАвторизации" id="234">
+															<DataPath>НастройкиАТС_Яндекс[1].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>API Key вашей АТС</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ключ (API Key) аккаунта вашей АТС (раздел Интеграционное API)</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_Яндекс_КлючДляАвторизацииКонтекстноеМеню" id="235"/>
+															<ExtendedTooltip name="АТС_Яндекс_КлючДляАвторизацииРасширеннаяПодсказка" id="236"/>
+															<Events>
+																<Event name="OnChange">АТС_Яндекс_КлючДляАвторизацииПриИзменении</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаНастройкиАТС_ВестКоллСПб" id="183">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки: Облачная АТС ВестКолл СПб</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНастройкиАТС_ВестКоллСПбРасширеннаяПодсказка" id="184"/>
+													<ChildItems>
+														<InputField name="АТС_ВестКоллСПб_АдресОблачнойАТС" id="222">
+															<DataPath>НастройкиАТС_ВестКоллСПб[0].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес облачной АТС</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес вашей АТС, указанный в личном кабинете (раздел "Интеграция с CRM")</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_ВестКоллСПб_АдресОблачнойАТСКонтекстноеМеню" id="223"/>
+															<ExtendedTooltip name="АТС_ВестКоллСПб_АдресОблачнойАТСРасширеннаяПодсказка" id="224"/>
+															<Events>
+																<Event name="OnChange">АТС_ВестКоллСПб_АдресОблачнойАТСПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="АТС_ВестКоллСПб_КлючДляАвторизацииВОблачнойАТС" id="225">
+															<DataPath>НастройкиАТС_ВестКоллСПб[1].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ключ для авторизации в облачной АТС</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Уникальный ключ вашей АТС, указанный в личном кабинете (раздел "Интеграция с CRM")</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_ВестКоллСПб_КлючДляАвторизацииВОблачнойАТСКонтекстноеМеню" id="226"/>
+															<ExtendedTooltip name="АТС_ВестКоллСПб_КлючДляАвторизацииВОблачнойАТСРасширеннаяПодсказка" id="227"/>
+															<Events>
+																<Event name="OnChange">АТС_ВестКоллСПб_КлючДляАвторизацииВОблачнойАТСПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="АТС_ВестКоллСПб_АдресУНФ" id="228">
+															<DataPath>НастройкиАТС_ВестКоллСПб[2].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес публикации 1С:УНФ</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Скопируйте этот адрес в поле "Адрес вашей CRM" в личном кабинете вашей АТС.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_ВестКоллСПб_АдресУНФКонтекстноеМеню" id="229"/>
+															<ExtendedTooltip name="АТС_ВестКоллСПб_АдресУНФРасширеннаяПодсказка" id="230"/>
+														</InputField>
+														<InputField name="АТС_ВестКоллСПб_КлючДляАвторизацииВУНФ" id="231">
+															<DataPath>НастройкиАТС_ВестКоллСПб[3].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ключ для авторизации в 1С:УНФ</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Скопируйте этот ключ в поле "Ключ авторизации" в личном кабинете вашей АТС.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_ВестКоллСПб_КлючДляАвторизацииВУНФКонтекстноеМеню" id="232"/>
+															<ExtendedTooltip name="АТС_ВестКоллСПб_КлючДляАвторизацииВУНФРасширеннаяПодсказка" id="233"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаНастройкиАТС_ДеловаяСетьИркутск" id="268">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки: Облачная АТС ВестКолл СПб</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа настройки АТС вест колл с пб</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНастройкиАТС_ДеловаяСетьИркутскРасширеннаяПодсказка" id="269"/>
+													<ChildItems>
+														<InputField name="АТС_ДеловаяСетьИркутск_АдресОблачнойАТС" id="270">
+															<DataPath>НастройкиАТС_ДеловаяСетьИркутск[0].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес облачной АТС</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес вашей АТС, указанный в личном кабинете (раздел "Интеграция с CRM")</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_ДеловаяСетьИркутск_АдресОблачнойАТСКонтекстноеМеню" id="271"/>
+															<ExtendedTooltip name="АТС_ДеловаяСетьИркутск_АдресОблачнойАТСРасширеннаяПодсказка" id="272"/>
+															<Events>
+																<Event name="OnChange">АТС_ДеловаяСетьИркутск_АдресОблачнойАТСПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="АТС_ДеловаяСетьИркутск_КлючДляАвторизацииВОблачнойАТС" id="273">
+															<DataPath>НастройкиАТС_ДеловаяСетьИркутск[1].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ключ для авторизации в облачной АТС</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Уникальный ключ вашей АТС, указанный в личном кабинете (раздел "Интеграция с CRM")</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_ДеловаяСетьИркутск_КлючДляАвторизацииВОблачнойАТСКонтекстноеМеню" id="274"/>
+															<ExtendedTooltip name="АТС_ДеловаяСетьИркутск_КлючДляАвторизацииВОблачнойАТСРасширеннаяПодсказка" id="275"/>
+															<Events>
+																<Event name="OnChange">АТС_ДеловаяСетьИркутск_КлючДляАвторизацииВОблачнойАТСПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="АТС_ДеловаяСетьИркутск_АдресУНФ" id="276">
+															<DataPath>НастройкиАТС_ДеловаяСетьИркутск[2].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес публикации 1С:УНФ</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Скопируйте этот адрес в поле "Адрес вашей CRM" в личном кабинете вашей АТС.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_ДеловаяСетьИркутск_АдресУНФКонтекстноеМеню" id="277"/>
+															<ExtendedTooltip name="АТС_ДеловаяСетьИркутск_АдресУНФРасширеннаяПодсказка" id="278"/>
+														</InputField>
+														<InputField name="АТС_ДеловаяСетьИркутск_КлючДляАвторизацииВУНФ" id="279">
+															<DataPath>НастройкиАТС_ДеловаяСетьИркутск[3].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ключ для авторизации в 1С:УНФ</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Скопируйте этот ключ в поле "Ключ авторизации" в личном кабинете вашей АТС.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_ДеловаяСетьИркутск_КлючДляАвторизацииВУНФКонтекстноеМеню" id="280"/>
+															<ExtendedTooltip name="АТС_ДеловаяСетьИркутск_КлючДляАвторизацииВУНФРасширеннаяПодсказка" id="281"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаНастройкиАТС_Itoolabs" id="409">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки: Облачная АТС Дом.ru Бизнес</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНастройкиАТС_ItoolabsРасширеннаяПодсказка" id="410"/>
+													<ChildItems>
+														<InputField name="АТС_Itoolabs_АдресОблачнойАТС" id="411">
+															<DataPath>НастройкиАТС_Itoolabs[0].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес облачной АТС</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес вашей АТС, указанный в личном кабинете (раздел "Интеграция с CRM")</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_Itoolabs_АдресОблачнойАТСКонтекстноеМеню" id="412"/>
+															<ExtendedTooltip name="АТС_Itoolabs_АдресОблачнойАТСРасширеннаяПодсказка" id="413"/>
+															<Events>
+																<Event name="OnChange">АТС_Itoolabs_АдресОблачнойАТСПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="АТС_Itoolabs_КлючДляАвторизацииВОблачнойАТС" id="414">
+															<DataPath>НастройкиАТС_Itoolabs[1].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ключ для авторизации в облачной АТС</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Уникальный ключ вашей АТС, указанный в личном кабинете (раздел "Интеграция с CRM")</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_Itoolabs_КлючДляАвторизацииВОблачнойАТСКонтекстноеМеню" id="415"/>
+															<ExtendedTooltip name="АТС_Itoolabs_КлючДляАвторизацииВОблачнойАТСРасширеннаяПодсказка" id="416"/>
+															<Events>
+																<Event name="OnChange">АТС_Itoolabs_КлючДляАвторизацииВОблачнойАТСПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="АТС_Itoolabs_АдресУНФ" id="417">
+															<DataPath>НастройкиАТС_Itoolabs[2].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес публикации 1С:УНФ</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Скопируйте этот адрес в поле "Адрес вашей CRM" в личном кабинете вашей АТС.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_Itoolabs_АдресУНФКонтекстноеМеню" id="418"/>
+															<ExtendedTooltip name="АТС_Itoolabs_АдресУНФРасширеннаяПодсказка" id="419"/>
+														</InputField>
+														<InputField name="АТС_Itoolabs_КлючДляАвторизацииВУНФ" id="420">
+															<DataPath>НастройкиАТС_Itoolabs[3].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ключ для авторизации в 1С:УНФ</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Скопируйте этот ключ в поле "Ключ авторизации" в личном кабинете вашей АТС.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_Itoolabs_КлючДляАвторизацииВУНФКонтекстноеМеню" id="421"/>
+															<ExtendedTooltip name="АТС_Itoolabs_КлючДляАвторизацииВУНФРасширеннаяПодсказка" id="422"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаНастройкиАТС_Ростелеком" id="506">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки: Виртуальная АТС Mango Ofiice</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНастройкиАТС_РостелекомРасширеннаяПодсказка" id="507"/>
+													<ChildItems>
+														<InputField name="АТС_Ростелеком_АдресОбратногоВызова" id="508">
+															<DataPath>НастройкиАТС_Ростелеком[0].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес публикации 1С:УНФ</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Скопируйте этот адрес в поле "Адрес внешней системы" в личном кабинете вашей АТС.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_Ростелеком_АдресОбратногоВызоваКонтекстноеМеню" id="509"/>
+															<ExtendedTooltip name="АТС_Ростелеком_АдресОбратногоВызоваРасширеннаяПодсказка" id="510"/>
+														</InputField>
+														<InputField name="АТС_Ростелеком_КодИдентификации" id="511">
+															<DataPath>НастройкиАТС_Ростелеком[1].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Уникальный код идентификации</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Уникальный код вашей АТС, указанный в личном кабинете (раздел "Подключение по API")</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_Ростелеком_КодИдентификацииКонтекстноеМеню" id="512"/>
+															<ExtendedTooltip name="АТС_Ростелеком_КодИдентификацииРасширеннаяПодсказка" id="513"/>
+															<Events>
+																<Event name="OnChange">АТС_Ростелеком_КодИдентификацииПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="АТС_Ростелеком_КлючДляПодписи" id="514">
+															<DataPath>НастройкиАТС_Ростелеком[2].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Уникальный ключ для подписи</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ключ для создания подписи, указанный в личном кабинете (раздел "Подключение по API")</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_Ростелеком_КлючДляПодписиКонтекстноеМеню" id="515"/>
+															<ExtendedTooltip name="АТС_Ростелеком_КлючДляПодписиРасширеннаяПодсказка" id="516"/>
+															<Events>
+																<Event name="OnChange">АТС_Ростелеком_КлючДляПодписиПриИзменении</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаНастройкиАТС_Билайн" id="581">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки: Облачная АТС Билайн</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа настройки АТС вест колл с пб</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНастройкиАТС_БилайнРасширеннаяПодсказка" id="582"/>
+													<ChildItems>
+														<InputField name="АТС_Билайн_КлючДляАвторизацииВОблачнойАТС" id="583">
+															<DataPath>НастройкиАТС_Билайн[0].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Токен для аутентификации</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Уникальный ключ вашей АТС, указанный в личном кабинете (раздел Услуги - CRM Коннеткор - 1С:УНФ)</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_Билайн_КлючДляАвторизацииВОблачнойАТСКонтекстноеМеню" id="584"/>
+															<ExtendedTooltip name="АТС_Билайн_КлючДляАвторизацииВОблачнойАТСРасширеннаяПодсказка" id="585"/>
+															<Events>
+																<Event name="OnChange">АТС_Билайн_КлючДляАвторизацииВОблачнойАТСПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="АТС_Билайн_АдресУНФ" id="586">
+															<DataPath>НастройкиАТС_Билайн[1].Значение</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес публикации 1С:УНФ</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес опубликованного сервиса 1С:УНФ.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_Билайн_АдресУНФКонтекстноеМеню" id="587"/>
+															<ExtendedTooltip name="АТС_Билайн_АдресУНФРасширеннаяПодсказка" id="588"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаНастройкиАТС_MangoOffice" id="179">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки: Виртуальная АТС Mango Ofiice</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНастройкиАТС_MangoOfficeРасширеннаяПодсказка" id="180"/>
+													<ChildItems>
+														<InputField name="АТС_MangoOffice_АдресОбратногоВызова" id="195">
+															<DataPath>НастройкиАТС_MangoOffice[0].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес публикации 1С:УНФ</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Скопируйте этот адрес в поле "Адрес внешней системы" в личном кабинете вашей АТС.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_MangoOffice_АдресОбратногоВызоваКонтекстноеМеню" id="196"/>
+															<ExtendedTooltip name="АТС_MangoOffice_АдресОбратногоВызоваРасширеннаяПодсказка" id="197"/>
+														</InputField>
+														<InputField name="АТС_MangoOffice_vpbx_api_key" id="198">
+															<DataPath>НастройкиАТС_MangoOffice[1].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Уникальный код АТС</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Уникальный код вашей АТС, указанный в личном кабинете (раздел "Подключение по API")</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_MangoOffice_vpbx_api_keyКонтекстноеМеню" id="199"/>
+															<ExtendedTooltip name="АТС_MangoOffice_vpbx_api_keyРасширеннаяПодсказка" id="200"/>
+															<Events>
+																<Event name="OnChange">АТС_MangoOffice_vpbx_api_keyПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="АТС_MangoOffice_vpbx_api_salt" id="201">
+															<DataPath>НастройкиАТС_MangoOffice[2].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ключ для создания подписи</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ключ для создания подписи, указанный в личном кабинете (раздел "Подключение по API")</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_MangoOffice_vpbx_api_saltКонтекстноеМеню" id="202"/>
+															<ExtendedTooltip name="АТС_MangoOffice_vpbx_api_saltРасширеннаяПодсказка" id="203"/>
+															<Events>
+																<Event name="OnChange">АТС_MangoOffice_vpbx_api_saltПриИзменении</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаНастройкиАТС_ДомRu" id="181">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки: Облачная АТС Дом.ru Бизнес</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаНастройкиАТС_ДомRuРасширеннаяПодсказка" id="182"/>
+													<ChildItems>
+														<InputField name="АТС_ДомRu_АдресОблачнойАТС" id="210">
+															<DataPath>НастройкиАТС_ДомRu[0].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес облачной АТС</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес вашей АТС, указанный в личном кабинете (раздел "Интеграция с CRM")</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_ДомRu_АдресОблачнойАТСКонтекстноеМеню" id="211"/>
+															<ExtendedTooltip name="АТС_ДомRu_АдресОблачнойАТСРасширеннаяПодсказка" id="212"/>
+															<Events>
+																<Event name="OnChange">АТС_ДомRu_АдресОблачнойАТСПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="АТС_ДомRu_КлючДляАвторизацииВОблачнойАТС" id="213">
+															<DataPath>НастройкиАТС_ДомRu[1].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ключ для авторизации в облачной АТС</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Уникальный ключ вашей АТС, указанный в личном кабинете (раздел "Интеграция с CRM")</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_ДомRu_КлючДляАвторизацииВОблачнойАТСКонтекстноеМеню" id="214"/>
+															<ExtendedTooltip name="АТС_ДомRu_КлючДляАвторизацииВОблачнойАТСРасширеннаяПодсказка" id="215"/>
+															<Events>
+																<Event name="OnChange">АТС_ДомRu_КлючДляАвторизацииВОблачнойАТСПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="АТС_ДомRu_АдресУНФ" id="216">
+															<DataPath>НастройкиАТС_ДомRu[2].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Адрес публикации 1С:УНФ</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Скопируйте этот адрес в поле "Адрес вашей CRM" в личном кабинете вашей АТС.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_ДомRu_АдресУНФКонтекстноеМеню" id="217"/>
+															<ExtendedTooltip name="АТС_ДомRu_АдресУНФРасширеннаяПодсказка" id="218"/>
+														</InputField>
+														<InputField name="АТС_ДомRu_КлючДляАвторизацииВУНФ" id="219">
+															<DataPath>НастройкиАТС_ДомRu[3].Значение</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ключ для авторизации в 1С:УНФ</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Скопируйте этот ключ в поле "Ключ авторизации" в личном кабинете вашей АТС.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="АТС_ДомRu_КлючДляАвторизацииВУНФКонтекстноеМеню" id="220"/>
+															<ExtendedTooltip name="АТС_ДомRu_КлючДляАвторизацииВУНФРасширеннаяПодсказка" id="221"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаСтраницаПользователи" id="706">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Пользователи</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ShowTitle>true</ShowTitle>
+									<ScrollOnCompress>true</ScrollOnCompress>
+									<ExtendedTooltip name="ГруппаСтраницаПользователиРасширеннаяПодсказка" id="707"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаБаннерПользователи" id="799">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<ShowTitle>false</ShowTitle>
+											<BackColor>pal:Yellow</BackColor>
+											<ExtendedTooltip name="ГруппаБаннерПользователиРасширеннаяПодсказка" id="800"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаБаннерПользователиНеУказаны" id="929">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Предупреждение</v8:content>
+														</v8:item>
+													</Title>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаБаннерПользователиНеУказаныРасширеннаяПодсказка" id="930"/>
+												</UsualGroup>
+												<UsualGroup name="ГруппаБаннерПользователиНеЗаполненыНомера" id="931">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Предупреждение</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа баннер пользователи не заполнены номера</v8:content>
+														</v8:item>
+													</ToolTip>
+													<HorizontalStretch>true</HorizontalStretch>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаБаннерПользователиНеЗаполненыНомераРасширеннаяПодсказка" id="932"/>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПользователиТелефонии" id="8">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пользователи телефонии</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalStretch>true</VerticalStretch>
+											<Group>Vertical</Group>
+											<Collapsed>true</Collapsed>
+											<ControlRepresentation>Button</ControlRepresentation>
+											<ShowLeftMargin>false</ShowLeftMargin>
+											<ShowTitle>true</ShowTitle>
+											<ExtendedTooltip name="ГруппаПользователиТелефонииРасширеннаяПодсказка" id="9"/>
+											<ChildItems>
+												<CheckBoxField name="МаршрутизироватьВходящиеНаОтветственных" id="240">
+													<DataPath>МаршрутизироватьВходящиеНаОтветственных</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Входящий звонок клиента будет перенаправляться на закрепленного за ним ответственного (указывается в карточке контрагента).</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<Shortcut>Ctrl+S</Shortcut>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<ContextMenu name="МаршрутизироватьВходящиеНаОтветственныхКонтекстноеМеню" id="241"/>
+													<ExtendedTooltip name="МаршрутизироватьВходящиеНаОтветственныхРасширеннаяПодсказка" id="242"/>
+													<Events>
+														<Event name="OnChange">МаршрутизироватьВходящиеНаОтветственныхПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<Table name="ПользователиТелефонии" id="109">
+													<Representation>List</Representation>
+													<HeightControlVariant>UseHeightInTableRows</HeightControlVariant>
+													<RowSelectionMode>Cell</RowSelectionMode>
+													<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>ПользователиТелефонии</DataPath>
+													<BorderColor>style:FormBackColor</BorderColor>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Пользователи телефонии</v8:content>
+														</v8:item>
+													</Title>
+													<CommandSet>
+														<ExcludedCommand>MoveDown</ExcludedCommand>
+														<ExcludedCommand>MoveUp</ExcludedCommand>
+													</CommandSet>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ПользователиТелефонииКонтекстноеМеню" id="110"/>
+													<AutoCommandBar name="ПользователиТелефонииКоманднаяПанель" id="111">
+														<ChildItems>
+															<Button name="ПользователиТелефонииУдалить" id="809">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.ПользователиТелефонии.StandardCommand.Delete</CommandName>
+																<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+																<ExtendedTooltip name="ПользователиТелефонииУдалитьРасширеннаяПодсказка" id="810"/>
+															</Button>
+														</ChildItems>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ПользователиТелефонииРасширеннаяПодсказка" id="112"/>
+													<SearchStringAddition name="ПользователиТелефонииСтрокаПоиска" id="113">
+														<Enabled>false</Enabled>
+														<AdditionSource>
+															<Item>ПользователиТелефонии</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПользователиТелефонииСтрокаПоискаКонтекстноеМеню" id="114"/>
+														<ExtendedTooltip name="ПользователиТелефонииСтрокаПоискаРасширеннаяПодсказка" id="115"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ПользователиТелефонииСостояниеПросмотра" id="116">
+														<Enabled>false</Enabled>
+														<AdditionSource>
+															<Item>ПользователиТелефонии</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ПользователиТелефонииСостояниеПросмотраКонтекстноеМеню" id="117"/>
+														<ExtendedTooltip name="ПользователиТелефонииСостояниеПросмотраРасширеннаяПодсказка" id="118"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ПользователиТелефонииУправлениеПоиском" id="119">
+														<Enabled>false</Enabled>
+														<AdditionSource>
+															<Item>ПользователиТелефонии</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ПользователиТелефонииУправлениеПоискомКонтекстноеМеню" id="120"/>
+														<ExtendedTooltip name="ПользователиТелефонииУправлениеПоискомРасширеннаяПодсказка" id="121"/>
+													</SearchControlAddition>
+													<Events>
+														<Event name="AfterDeleteRow">ПользователиТелефонииПослеУдаления</Event>
+														<Event name="OnChange">ПользователиТелефонииПриИзменении</Event>
+													</Events>
+													<ChildItems>
+														<InputField name="ПользователиТелефонииПользователь" id="246">
+															<DataPath>ПользователиТелефонии.Пользователь</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="ПользователиТелефонииПользовательКонтекстноеМеню" id="247"/>
+															<ExtendedTooltip name="ПользователиТелефонииПользовательРасширеннаяПодсказка" id="248"/>
+															<Events>
+																<Event name="OnChange">ПользователиТелефонииПользовательПриИзменении</Event>
+																<Event name="ChoiceProcessing">ПользователиТелефонииПользовательОбработкаВыбора</Event>
+															</Events>
+														</InputField>
+														<InputField name="ПользователиТелефонииВнутреннийНомер" id="249">
+															<DataPath>ПользователиТелефонии.ВнутреннийНомер</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<MaxWidth>8</MaxWidth>
+															<ContextMenu name="ПользователиТелефонииВнутреннийНомерКонтекстноеМеню" id="250"/>
+															<ExtendedTooltip name="ПользователиТелефонииВнутреннийНомерРасширеннаяПодсказка" id="251"/>
+															<Events>
+																<Event name="OnChange">ПользователиТелефонииВнутреннийНомерПриИзменении</Event>
+																<Event name="ChoiceProcessing">ПользователиТелефонииВнутреннийНомерОбработкаВыбора</Event>
+															</Events>
+														</InputField>
+														<InputField name="ПользователиТелефонииИсходящийНомер" id="252">
+															<DataPath>ПользователиТелефонии.ИсходящийНомер</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<MaxWidth>8</MaxWidth>
+															<ContextMenu name="ПользователиТелефонииИсходящийНомерКонтекстноеМеню" id="253"/>
+															<ExtendedTooltip name="ПользователиТелефонииИсходящийНомерРасширеннаяПодсказка" id="254"/>
+															<Events>
+																<Event name="OnChange">ПользователиТелефонииИсходящийНомерПриИзменении</Event>
+															</Events>
+														</InputField>
+														<InputField name="ПользователиТелефонииВнутреннийИдентификаторВАТС" id="578">
+															<DataPath>ПользователиТелефонии.ВнутреннийИдентификаторВАТС</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Номер / ID</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ContextMenu name="ПользователиТелефонииВнутреннийИдентификаторВАТСКонтекстноеМеню" id="579"/>
+															<ExtendedTooltip name="ПользователиТелефонииВнутреннийИдентификаторВАТСРасширеннаяПодсказка" id="580"/>
+															<Events>
+																<Event name="OnChange">ПользователиТелефонииВнутреннийИдентификаторВАТСПриИзменении</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+								<Page name="ГруппаСтраницаОбработкаЗвонков" id="708">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обработка звонков</v8:content>
+										</v8:item>
+									</Title>
+									<ShowTitle>true</ShowTitle>
+									<ScrollOnCompress>true</ScrollOnCompress>
+									<ExtendedTooltip name="ГруппаСтраницаОбработкаЗвонковРасширеннаяПодсказка" id="709"/>
+									<ChildItems>
+										<CheckBoxField name="АвтоматическаяОбработкаЗвонков" id="187">
+											<DataPath>АвтоматическаяОбработкаЗвонков</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Начиная с платформы 8.3.11 открытие карточки клиента и другие действия* будут обрабатываться программой автоматически при поступлении входящего звонка.
+
+* см. настройку "Действия при входящем звонке"</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ContextMenu name="АвтоматическаяОбработкаЗвонковКонтекстноеМеню" id="188"/>
+											<ExtendedTooltip name="АвтоматическаяОбработкаЗвонковРасширеннаяПодсказка" id="189"/>
+											<Events>
+												<Event name="OnChange">АвтоматическаяОбработкаЗвонковПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<LabelDecoration name="ОткрытьСписокНеобрабатываемыеТелефонныеНомера" id="243">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Необрабатываемые телефонные номера</v8:content>
+												</v8:item>
+											</Title>
+											<Hyperlink>true</Hyperlink>
+											<ContextMenu name="ОткрытьСписокНеобрабатываемыеТелефонныеНомераКонтекстноеМеню" id="244"/>
+											<ExtendedTooltip name="ОткрытьСписокНеобрабатываемыеТелефонныеНомераРасширеннаяПодсказка" id="245"/>
+											<Events>
+												<Event name="Click">ОткрытьСписокНеобрабатываемыеТелефонныеНомераНажатие</Event>
+											</Events>
+										</LabelDecoration>
+										<UsualGroup name="ДействияПриВходящемЗвонке" id="133">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Действия при входящем звонке</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<ShowTitle>true</ShowTitle>
+											<ExtendedTooltip name="ДействияПриВходящемЗвонкеРасширеннаяПодсказка" id="134"/>
+											<ChildItems>
+												<InputField name="ДействиеВходящийЗвонокИзвестногоАбонента" id="170">
+													<DataPath>ДействиеВходящийЗвонокИзвестногоАбонента</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройка определяет поведение программы при обработке звонка (F8) от абонента, которого удалось найти в программе по номеру телефона.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ContextMenu name="ДействиеВходящийЗвонокИзвестногоАбонентаКонтекстноеМеню" id="171"/>
+													<ExtendedTooltip name="ДействиеВходящийЗвонокИзвестногоАбонентаРасширеннаяПодсказка" id="172"/>
+													<Events>
+														<Event name="OnChange">ДействиеВходящийЗвонокИзвестногоАбонентаПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ДействиеВходящийЗвонокНеизвестногоАбонента" id="173">
+													<DataPath>ДействиеВходящийЗвонокНеизвестногоАбонента</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройка определяет поведение программы при обработке звонка (F8) от абонента, найти которого в программе не удалось.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ContextMenu name="ДействиеВходящийЗвонокНеизвестногоАбонентаКонтекстноеМеню" id="174"/>
+													<ExtendedTooltip name="ДействиеВходящийЗвонокНеизвестногоАбонентаРасширеннаяПодсказка" id="175"/>
+													<Events>
+														<Event name="OnChange">ДействиеВходящийЗвонокНеизвестногоАбонентаПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ДействияПриИсходящемЗвонке" id="151">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Действия при исходящем звонке</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<ShowTitle>true</ShowTitle>
+											<ExtendedTooltip name="ДействияПриИсходящемЗвонкеРасширеннаяПодсказка" id="152"/>
+											<ChildItems>
+												<InputField name="ДействиеИсходящийЗвонок" id="176">
+													<DataPath>ДействиеИсходящийЗвонок</DataPath>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройка определяет поведение программы при обработке исходящего звонка НЕ из карточки события</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ContextMenu name="ДействиеИсходящийЗвонокКонтекстноеМеню" id="177"/>
+													<ExtendedTooltip name="ДействиеИсходящийЗвонокРасширеннаяПодсказка" id="178"/>
+													<Events>
+														<Event name="OnChange">ДействиеИсходящийЗвонокПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ДействияПриПропущенномЗвонке" id="589">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ответственный за пропущенный звонок</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<ShowTitle>true</ShowTitle>
+											<ExtendedTooltip name="ДействияПриПропущенномЗвонкеРасширеннаяПодсказка" id="590"/>
+											<ChildItems>
+												<InputField name="ДействиеПропущенныйЗвонок" id="596">
+													<DataPath>ДействиеПропущенныйЗвонок</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ContextMenu name="ДействиеПропущенныйЗвонокКонтекстноеМеню" id="597"/>
+													<ExtendedTooltip name="ДействиеПропущенныйЗвонокРасширеннаяПодсказка" id="598"/>
+													<Events>
+														<Event name="OnChange">ДействиеПропущенныйЗвонокПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="СлужебныйПользователь" id="599">
+													<DataPath>СлужебныйПользователь</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сотрудник</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройка позволяет назначить ответственного пользователя для обработки пропущенных звонков.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<ClearButton>true</ClearButton>
+													<OpenButton>false</OpenButton>
+													<TextEdit>false</TextEdit>
+													<ContextMenu name="СлужебныйПользовательКонтекстноеМеню" id="600"/>
+													<ExtendedTooltip name="СлужебныйПользовательРасширеннаяПодсказка" id="601"/>
+													<Events>
+														<Event name="OnChange">СлужебныйПользовательПриИзменении</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.НастройкаПрограммы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_MangoOffice" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_ДомRu" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Дом.ru</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_ВестКоллСпб" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС WestCall</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_Яндекс" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуемаяАТС" id="8">
+			<Type>
+				<v8:Type>cfg:EnumRef.ДоступныеАТС</v8:Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СсылкиНаСтатьи" id="9">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ДействиеВходящийЗвонокИзвестногоАбонента" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>От известного абонента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДействиеВходящийЗвонокНеизвестногоАбонента" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>От неизвестного абонента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДействиеИсходящийЗвонок" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При исходящем звонке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтоматическаяОбработкаЗвонков" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматическая обработка звонков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиАТС_MangoOffice" id="14">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ключ" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НастройкиАТС_ДомRu" id="15">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ключ" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НастройкиАТС_Яндекс" id="16">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ключ" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НастройкиАТС_ВестКоллСПб" id="17">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ключ" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="МаршрутизироватьВходящиеНаОтветственных" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маршрутизировать входящие на ответственных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользователиТелефонии" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи телефонии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordSet.НастройкиПользователейТелефонии</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиАТС_ДеловаяСетьИркутск" id="20">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ключ" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_ДеловаяСетьИркутск" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_Энфорта" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_Мегафон" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_ТТК" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_ВестКоллМосква" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_VirginConnect" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_ГарсТелеком" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_НаукаСвязь" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_RiNet" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_СибирскиеСети" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_Авантел" id="31">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_Гравител" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Mango Office</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиАТС_Itoolabs" id="44">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ключ" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_УниверсальныйItoolabs" id="45">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС универсальный itoolabs</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_МГТС" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС МГТС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_Ростелеком" id="33">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Ростелеком</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиАТС_Ростелеком" id="34">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ключ" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИспользоватьМобильнаяТелефония" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать мобильную телефонию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_Билайн" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС Билайн</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьАТС_МТТ" id="36">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать АТС МТТ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкиАТС_Билайн" id="37">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ключ" id="1">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокАбонентов" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список абонентов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ДействиеПропущенныйЗвонок" id="39">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СлужебныйПользователь" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Операторы" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Операторы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Идентификатор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ДоступныеАТС</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оператор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяКартинки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоОператорItoolabs" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это оператор itoolabs</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Подключен" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключен</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СсылкаНаСтатьюОператора" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес статьи оператора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоВариантИнтерфейса85" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это вариант интерфейса85</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользуемаяАТСДополнительно" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используемая АТСДополнительно</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоПолноправныйПользователь" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это полноправный пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоНеобрабатываемыхНомеров" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество необрабатываемых номеров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьСтраницуОператора" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сайт оператора</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьСтраницуОператора</Action>
+		</Command>
+		<Command name="ДеталиОтключить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Отключить</Action>
+		</Command>
+		<Command name="СписокПодключитьОператора" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Успех24</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПодключитьОператораСписок</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Операторы</AssociatedTableElementId>
+		</Command>
+		<Command name="НастройкаПубликацииСервисов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить публикацию http-сервисов</v8:content>
+				</v8:item>
+			</Title>
+			<Action>НастройкаПубликацииСервисов</Action>
+		</Command>
+		<Command name="ЗапуститьДиагностику" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить диагностику</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗапуститьДиагностику</Action>
+		</Command>
+		<Command name="ЗапуститьОтладку" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить отладку</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗапуститьОтладку</Action>
+		</Command>
+		<Command name="ДеталиПодключить" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ДеталиПодключить</Action>
+		</Command>
+		<Command name="ОткрытьОписаниеВозможностей" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возможности телефонии</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьОписаниеВозможностей</Action>
+		</Command>
+		<Command name="ИнструкцияПодключениеОператора" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключение оператора</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция подключение оператора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИнструкцияПодключениеОператора</Action>
+		</Command>
+		<Command name="ИнструкцияПубликацияИБ" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Публикация информационной базы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция публикация ИБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИнструкцияПубликацияИБ</Action>
+		</Command>
+	</Commands>
+</Form>

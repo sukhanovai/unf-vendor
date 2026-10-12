@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<CommandSet>
+		<ExcludedCommand>Create</ExcludedCommand>
+	</CommandSet>
+	<ShowTitle>true</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<Table name="Список" id="1">
+			<Representation>Tree</Representation>
+			<SkipOnInput>false</SkipOnInput>
+			<DefaultItem>true</DefaultItem>
+			<ChoiceMode>true</ChoiceMode>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<Header>false</Header>
+			<HorizontalLinesBWA>false</HorizontalLinesBWA>
+			<VerticalLinesBWA>false</VerticalLinesBWA>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<InitialRowActivation>Activate</InitialRowActivation>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.КартинкаСтроки</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.КоллекцияСтатьиДвиженияДенежныхСредств</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Create</ExcludedCommand>
+			</CommandSet>
+			<SearchStringLocation>CommandBar</SearchStringLocation>
+			<ViewStatusLocation>Top</ViewStatusLocation>
+			<SearchControlLocation>CommandBar</SearchControlLocation>
+			<ShowCommandBar>auto</ShowCommandBar>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Folders</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>true</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="8"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="12"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="15"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="16">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="17"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="18"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="Наименование" id="4">
+					<DataPath>Список.Наименование</DataPath>
+					<DefaultItem>true</DefaultItem>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="9"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникСтатьиДвиженияДенежныхСредств.Ссылка,
+	СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления,
+	СправочникСтатьиДвиженияДенежныхСредств.Родитель,
+	СправочникСтатьиДвиженияДенежныхСредств.ЭтоГруппа,
+	СправочникСтатьиДвиженияДенежныхСредств.Код,
+	СправочникСтатьиДвиженияДенежныхСредств.Наименование,
+	СправочникСтатьиДвиженияДенежныхСредств.КорреспондирующийСчет,
+	СправочникСтатьиДвиженияДенежныхСредств.УчитыватьВНУ,
+	СправочникСтатьиДвиженияДенежныхСредств.Недействителен,
+	СправочникСтатьиДвиженияДенежныхСредств.Описание,
+	СправочникСтатьиДвиженияДенежныхСредств.Порядок,
+	СправочникСтатьиДвиженияДенежныхСредств.ДополнительныеРеквизиты,
+	СправочникСтатьиДвиженияДенежныхСредств.Предопределенный,
+	СправочникСтатьиДвиженияДенежныхСредств.ИмяПредопределенныхДанных,
+	ВЫБОР
+		КОГДА СправочникСтатьиДвиженияДенежныхСредств.Ссылка = ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ПеремещенияКурсовыеРазницы)
+			И НЕ СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+			ТОГДА 5
+		КОГДА СправочникСтатьиДвиженияДенежныхСредств.Ссылка = ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ПеремещенияКурсовыеРазницы)
+			И СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+			ТОГДА 12
+		КОГДА СправочникСтатьиДвиженияДенежныхСредств.Ссылка = ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ИнвестиционнаяДеятельность)
+				И НЕ СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+			ТОГДА 0
+		КОГДА СправочникСтатьиДвиженияДенежныхСредств.Ссылка = ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ИнвестиционнаяДеятельность)
+				И СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+			ТОГДА 7
+		КОГДА СправочникСтатьиДвиженияДенежныхСредств.Ссылка = ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ОперационнаяДеятельность)
+				И НЕ СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+			ТОГДА 1
+		КОГДА СправочникСтатьиДвиженияДенежныхСредств.Ссылка = ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ОперационнаяДеятельность)
+				И СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+			ТОГДА 8
+		КОГДА СправочникСтатьиДвиженияДенежныхСредств.Ссылка = ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ФинансоваяДеятельность)
+				И НЕ СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+			ТОГДА 2
+		КОГДА СправочникСтатьиДвиженияДенежныхСредств.Ссылка = ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ФинансоваяДеятельность)
+				И СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+			ТОГДА 9
+		КОГДА СправочникСтатьиДвиженияДенежныхСредств.ЭтоГруппа
+				И НЕ СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+			ТОГДА 5
+		КОГДА СправочникСтатьиДвиженияДенежныхСредств.ЭтоГруппа
+				И СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+			ТОГДА 12
+		КОГДА СправочникСтатьиДвиженияДенежныхСредств.Ссылка В ИЕРАРХИИ (ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ИнвестиционныеПлатежи))
+				ИЛИ СправочникСтатьиДвиженияДенежныхСредств.Ссылка В ИЕРАРХИИ (ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ОперационныеПлатежи))
+				ИЛИ СправочникСтатьиДвиженияДенежныхСредств.Ссылка В ИЕРАРХИИ (ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ФинансовыеПлатежи))
+			ТОГДА ВЫБОР
+					КОГДА СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+						ТОГДА 11
+					ИНАЧЕ 4
+				КОНЕЦ
+		КОГДА СправочникСтатьиДвиженияДенежныхСредств.Ссылка В ИЕРАРХИИ (ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ИнвестиционныеПоступления))
+				ИЛИ СправочникСтатьиДвиженияДенежныхСредств.Ссылка В ИЕРАРХИИ (ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ОперационныеПоступления))
+				ИЛИ СправочникСтатьиДвиженияДенежныхСредств.Ссылка В ИЕРАРХИИ (ЗНАЧЕНИЕ(Справочник.СтатьиДвиженияДенежныхСредств.ФинансовыеПоступления))
+			ТОГДА ВЫБОР
+					КОГДА СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+						ТОГДА 10
+					ИНАЧЕ 3
+				КОНЕЦ
+		ИНАЧЕ ВЫБОР
+				КОГДА СправочникСтатьиДвиженияДенежныхСредств.ПометкаУдаления
+					ТОГДА 13
+				ИНАЧЕ 6
+			КОНЕЦ
+	КОНЕЦ КАК КартинкаСтроки
+ИЗ
+	Справочник.СтатьиДвиженияДенежныхСредств КАК СправочникСтатьиДвиженияДенежныхСредств</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Код</dcssch:dataPath>
+					<dcssch:field>Код</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КорреспондирующийСчет</dcssch:dataPath>
+					<dcssch:field>КорреспондирующийСчет</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Родитель</dcssch:dataPath>
+					<dcssch:field>Родитель</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ЭтоГруппа</dcssch:dataPath>
+					<dcssch:field>ЭтоГруппа</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Порядок</dcssch:dataPath>
+					<dcssch:field>Порядок</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>УчитыватьВНУ</dcssch:dataPath>
+					<dcssch:field>УчитыватьВНУ</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Недействителен</dcssch:dataPath>
+					<dcssch:field>Недействителен</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Описание</dcssch:dataPath>
+					<dcssch:field>Описание</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДополнительныеРеквизиты.Ссылка</dcssch:dataPath>
+					<dcssch:field>ДополнительныеРеквизиты.Ссылка</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДополнительныеРеквизиты.НомерСтроки</dcssch:dataPath>
+					<dcssch:field>ДополнительныеРеквизиты.НомерСтроки</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДополнительныеРеквизиты.Свойство</dcssch:dataPath>
+					<dcssch:field>ДополнительныеРеквизиты.Свойство</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДополнительныеРеквизиты.Значение</dcssch:dataPath>
+					<dcssch:field>ДополнительныеРеквизиты.Значение</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДополнительныеРеквизиты.ТекстоваяСтрока</dcssch:dataPath>
+					<dcssch:field>ДополнительныеРеквизиты.ТекстоваяСтрока</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldNestedDataSet">
+					<dcssch:dataPath>ДополнительныеРеквизиты</dcssch:dataPath>
+					<dcssch:field>ДополнительныеРеквизиты</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>КартинкаСтроки</dcssch:dataPath>
+					<dcssch:field>КартинкаСтроки</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка строки</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<MainTable>Catalog.СтатьиДвиженияДенежныхСредств</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ЭтоГруппа</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<CommandBar>
+			<Item>
+				<Command>CommonCommand.ДополнительныеСведенияКоманднаяПанель</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormCommandBarImportant</CommandGroup>
+				<Index>1</Index>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+		</CommandBar>
+	</CommandInterface>
+</Form>

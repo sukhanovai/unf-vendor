@@ -1,0 +1,2593 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Помощник публикации торговых предложений в сервисе 1С:Бизнес-сеть.</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<Group>AutoScreenTypeSensitive</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаОбновить" id="58">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.Обновить</CommandName>
+				<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="59"/>
+			</Button>
+			<Button name="Справка" id="308">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Инструкции</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+				<ExtendedTooltip name="СправкаРасширеннаяПодсказка" id="309"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШаги" id="150">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаги</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AutoScreenTypeSensitive</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШагиРасширеннаяПодсказка" id="151"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаШагиЛеваяКолонка" id="683">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаги левая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШагиЛеваяКолонкаРасширеннаяПодсказка" id="684"/>
+					<ChildItems>
+						<UsualGroup name="КарточкаОрганизации" id="532">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Регистрация в сервисе 1С:Бизнес-сеть</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ShowAsCard>true</ShowAsCard>
+							<ExtendedTooltip name="КарточкаОрганизацииРасширеннаяПодсказка" id="533"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКарточкаОрганизацииПорядковыйНомер" id="633">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа карточка организации порядковый номер</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКарточкаОрганизацииПорядковыйНомерРасширеннаяПодсказка" id="634"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаПункт1" id="637">
+											<Picture>
+												<xr:Ref>CommonPicture.Пункт1ТорговыеПредложения</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="КартинкаПункт1КонтекстноеМеню" id="638"/>
+											<ExtendedTooltip name="КартинкаПункт1РасширеннаяПодсказка" id="639"/>
+										</PictureDecoration>
+										<LabelDecoration name="НадписьРегистрацияВСервисе" id="640">
+											<Font ref="style:TitleLevel2" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Регистрация в сервисе 1С:Бизнес-сеть</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Публикация торговых предложений в сервисе 1С:Торговая площадка производится для зарегистрированных организаций.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<ContextMenu name="НадписьРегистрацияВСервисеКонтекстноеМеню" id="641"/>
+											<ExtendedTooltip name="НадписьРегистрацияВСервисеРасширеннаяПодсказка" id="642"/>
+										</LabelDecoration>
+										<Button name="ОткрытьФормуРегистрацииОрганизацииВБизнесСети" id="719">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<CommandName>Form.Command.ОткрытьФормуРегистрацииОрганизацииВБизнесСети</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.InputFieldOpen</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ButtonImportance>Supplementary</ButtonImportance>
+											<ExtendedTooltip name="ОткрытьФормуРегистрацииОрганизацииВБизнесСетиРасширеннаяПодсказка" id="720"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаБизнесСетьОписание" id="748">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа бизнес сеть описание</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаБизнесСетьОписаниеРасширеннаяПодсказка" id="749"/>
+									<ChildItems>
+										<LabelDecoration name="ПодсказкаКарточкиОрганизации" id="694">
+											<Font ref="style:TextLevel3" kind="StyleItem" scale="100"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Публикация торговых предложений в сервисе 1С:Торговая площадка производится для зарегистрированных организаций.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПодсказкаКарточкиОрганизацииКонтекстноеМеню" id="695"/>
+											<ExtendedTooltip name="ПодсказкаКарточкиОрганизацииРасширеннаяПодсказка" id="696"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКарточкаОрганизацииСтатусы" id="635">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа карточка организации статусы</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКарточкаОрганизацииСтатусыРасширеннаяПодсказка" id="636"/>
+									<ChildItems>
+										<UsualGroup name="ОрганизацияУспех" id="219">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организация</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ОрганизацияУспехРасширеннаяПодсказка" id="220"/>
+											<ChildItems>
+												<PictureDecoration name="ОрганизацияУспехКартинка" id="224">
+													<TextColor>pal:Green</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организация успех картинка</v8:content>
+														</v8:item>
+													</Title>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.ВажноеСообщениеУспешно</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<PictureColor>pal:Green</PictureColor>
+													<ContextMenu name="ОрганизацияУспехКартинкаКонтекстноеМеню" id="225"/>
+													<ExtendedTooltip name="ОрганизацияУспехКартинкаРасширеннаяПодсказка" id="226"/>
+												</PictureDecoration>
+												<LabelDecoration name="ОрганизацияУспехНадпись" id="221">
+													<TextColor>pal:Green</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организации зарегистрированы (%1)</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ОрганизацияУспехНадписьКонтекстноеМеню" id="222"/>
+													<ExtendedTooltip name="ОрганизацияУспехНадписьРасширеннаяПодсказка" id="223"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ОрганизацииТребуетсяПовторноеПодключение" id="503">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организации требуется повторное подключение</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ОрганизацииТребуетсяПовторноеПодключениеРасширеннаяПодсказка" id="504"/>
+											<ChildItems>
+												<PictureDecoration name="ОрганизацииТребуетсяПовторноеПодключениеКартинка" id="508">
+													<TextColor>pal:Yellow</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организации требуется повторное подключение картинка</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.ВажноеСообщениеПредупреждение</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<PictureColor>pal:Yellow</PictureColor>
+													<ContextMenu name="ОрганизацииТребуетсяПовторноеПодключениеКартинкаКонтекстноеМеню" id="509"/>
+													<ExtendedTooltip name="ОрганизацииТребуетсяПовторноеПодключениеКартинкаРасширеннаяПодсказка" id="510"/>
+													<Events>
+														<Event name="Click">ОрганизацииТребуетсяПовторноеПодключениеКартинкаНажатие</Event>
+													</Events>
+												</PictureDecoration>
+												<LabelDecoration name="ОрганизацииТребуетсяПовторноеПодключениеНадпись" id="505">
+													<TextColor>pal:FirstBrand</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Требуется повторное подключение (%1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОрганизацииТребуетсяПовторноеПодключениеНадписьКонтекстноеМеню" id="506"/>
+													<ExtendedTooltip name="ОрганизацииТребуетсяПовторноеПодключениеНадписьРасширеннаяПодсказка" id="507"/>
+													<Events>
+														<Event name="Click">ОрганизацииТребуетсяПовторноеПодключениеКартинкаНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ОрганизацияОшибка" id="154">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Организация</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ОрганизацияОшибкаРасширеннаяПодсказка" id="155"/>
+											<ChildItems>
+												<UsualGroup name="ОрганизацияОшибкаГруппа" id="156">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Организация</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalSpacing>Half</HorizontalSpacing>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ОрганизацияОшибкаГруппаРасширеннаяПодсказка" id="157"/>
+													<ChildItems>
+														<PictureDecoration name="ОрганизацияОшибкаКартинка" id="158">
+															<TextColor>pal:Red</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Картинка</v8:content>
+																</v8:item>
+															</Title>
+															<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+															<Hyperlink>true</Hyperlink>
+															<PictureSize>Proportionally</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.ВажноеСообщениеОшибка</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
+															<PictureColor>pal:Red</PictureColor>
+															<ContextMenu name="ОрганизацияОшибкаКартинкаКонтекстноеМеню" id="159"/>
+															<ExtendedTooltip name="ОрганизацияОшибкаКартинкаРасширеннаяПодсказка" id="160"/>
+															<Events>
+																<Event name="Click">ОрганизацияОшибкаНадписьНажатие</Event>
+															</Events>
+														</PictureDecoration>
+														<LabelDecoration name="ОрганизацияОшибкаНадпись" id="178">
+															<TextColor>pal:Red</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Организации не зарегистрированы</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="ОрганизацияОшибкаНадписьКонтекстноеМеню" id="179"/>
+															<ExtendedTooltip name="ОрганизацияОшибкаНадписьРасширеннаяПодсказка" id="180">
+																<Title formatted="true">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>&lt;link https://1cbn.ru/agreement/&gt;Ознакомиться с Условиями использования&lt;/&gt;.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="Click">ОрганизацияОшибкаНадписьНажатие</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ОрганизацияОбновление" id="434">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Длительная операция (контроль регистрации организации)</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ОрганизацияОбновлениеРасширеннаяПодсказка" id="435"/>
+											<ChildItems>
+												<PictureDecoration name="ОрганизацияДлительнаяОперация" id="436">
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="ОрганизацияДлительнаяОперацияКонтекстноеМеню" id="437"/>
+													<ExtendedTooltip name="ОрганизацияДлительнаяОперацияРасширеннаяПодсказка" id="438"/>
+												</PictureDecoration>
+												<LabelDecoration name="ОрганизацияОбновлениеТекст" id="439">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Обновление данных...</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ОрганизацияОбновлениеТекстКонтекстноеМеню" id="440"/>
+													<ExtendedTooltip name="ОрганизацияОбновлениеТекстРасширеннаяПодсказка" id="441"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="КарточкаТорговыеПредложения" id="534">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Публикация торговых предложений</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ShowAsCard>true</ShowAsCard>
+							<ExtendedTooltip name="КарточкаТорговыеПредложенияРасширеннаяПодсказка" id="535"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаКарточкаТорговыеПредложенияЛево" id="729">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа карточка торговые предложения лево</v8:content>
+										</v8:item>
+									</Title>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКарточкаТорговыеПредложенияЛевоРасширеннаяПодсказка" id="730"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаКарточкаТорговыеПредложенияПорядковыйНомер" id="645">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа карточка торговые предложения порядковый номер</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<VerticalAlign>Center</VerticalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКарточкаТорговыеПредложенияПорядковыйНомерРасширеннаяПодсказка" id="646"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаПункт2" id="647">
+													<Picture>
+														<xr:Ref>CommonPicture.Пункт2ТорговыеПредложения</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="КартинкаПункт2КонтекстноеМеню" id="648"/>
+													<ExtendedTooltip name="КартинкаПункт2РасширеннаяПодсказка" id="649"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьТорговыеПредложения" id="650">
+													<Font ref="style:TitleLevel2" kind="StyleItem"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Публикация торговых предложений</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>В списке торговых предложений выполняется настройка параметров публикации, таких как: список товаров, условия, цены на товары, ограничения и т.д. 
+Для публикации торгового предложения требуется установить свойство "Публиковать"</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<ContextMenu name="НадписьТорговыеПредложенияКонтекстноеМеню" id="651"/>
+													<ExtendedTooltip name="НадписьТорговыеПредложенияРасширеннаяПодсказка" id="652"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="СправкаТорговыхПредложений" id="691">
+											<Font ref="style:TextLevel3" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>В списке торговых предложений выполняется настройка параметров публикации, таких как: список товаров, условия, цены на товары, ограничения и т.д. 
+Для публикации торгового предложения требуется установить свойство "Публиковать"</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="СправкаТорговыхПредложенийКонтекстноеМеню" id="692"/>
+											<ExtendedTooltip name="СправкаТорговыхПредложенийРасширеннаяПодсказка" id="693"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаКарточкаТорговыеПредложенияСтатусы" id="643">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа карточка торговые предложения статусы</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаКарточкаТорговыеПредложенияСтатусыРасширеннаяПодсказка" id="644"/>
+											<ChildItems>
+												<UsualGroup name="ТорговыеПредложенияУспех" id="203">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Соглашение</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalSpacing>Half</HorizontalSpacing>
+													<VerticalAlign>Center</VerticalAlign>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ТорговыеПредложенияУспехРасширеннаяПодсказка" id="204"/>
+													<ChildItems>
+														<PictureDecoration name="ТорговыеПредложенияУспехКартинка" id="205">
+															<TextColor>pal:Green</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Торговые предложения успех картинка</v8:content>
+																</v8:item>
+															</Title>
+															<PictureSize>Proportionally</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.ВажноеСообщениеУспешно</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
+															<PictureColor>pal:Green</PictureColor>
+															<ContextMenu name="ТорговыеПредложенияУспехКартинкаКонтекстноеМеню" id="206"/>
+															<ExtendedTooltip name="ТорговыеПредложенияУспехКартинкаРасширеннаяПодсказка" id="207"/>
+														</PictureDecoration>
+														<LabelDecoration name="ТорговыеПредложенияУспехНадпись" id="208">
+															<TextColor>pal:Green</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Торговые предложения настроены (%1)</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ТорговыеПредложенияУспехНадписьКонтекстноеМеню" id="209"/>
+															<ExtendedTooltip name="ТорговыеПредложенияУспехНадписьРасширеннаяПодсказка" id="210"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ТорговыеПредложенияОшибка" id="235">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Соглашение</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalSpacing>Half</HorizontalSpacing>
+													<VerticalAlign>Center</VerticalAlign>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ТорговыеПредложенияОшибкаРасширеннаяПодсказка" id="236"/>
+													<ChildItems>
+														<PictureDecoration name="ТорговыеПредложенияОшибкаКартинка" id="240">
+															<TextColor>pal:Red</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Картинка</v8:content>
+																</v8:item>
+															</Title>
+															<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+															<Hyperlink>true</Hyperlink>
+															<PictureSize>Proportionally</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.ВажноеСообщениеОшибка</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
+															<PictureColor>pal:Red</PictureColor>
+															<ContextMenu name="ТорговыеПредложенияОшибкаКартинкаКонтекстноеМеню" id="241"/>
+															<ExtendedTooltip name="ТорговыеПредложенияОшибкаКартинкаРасширеннаяПодсказка" id="242"/>
+															<Events>
+																<Event name="Click">ТорговыеПредложенияОшибкаКартинкаНажатие</Event>
+															</Events>
+														</PictureDecoration>
+														<LabelDecoration name="ТорговыеПредложенияОшибкаНадпись" id="237">
+															<TextColor>pal:Red</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Требуется настройка</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="ТорговыеПредложенияОшибкаНадписьКонтекстноеМеню" id="238"/>
+															<ExtendedTooltip name="ТорговыеПредложенияОшибкаНадписьРасширеннаяПодсказка" id="239"/>
+															<Events>
+																<Event name="Click">ТорговыеПредложенияОшибкаКартинкаНажатие</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ТорговыеПредложенияТребуетсяСинхронизация" id="394">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Соглашение</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalSpacing>Half</HorizontalSpacing>
+													<VerticalAlign>Center</VerticalAlign>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ТорговыеПредложенияТребуетсяСинхронизацияРасширеннаяПодсказка" id="395"/>
+													<ChildItems>
+														<PictureDecoration name="ТорговыеПредложенияТребуетсяСинхронизацияКартинка" id="399">
+															<TextColor>pal:Yellow</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Торговые предложения успех картинка</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<PictureSize>Proportionally</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.ВажноеСообщениеПредупреждение</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
+															<PictureColor>pal:Yellow</PictureColor>
+															<ContextMenu name="ТорговыеПредложенияТребуетсяСинхронизацияКартинкаКонтекстноеМеню" id="400"/>
+															<ExtendedTooltip name="ТорговыеПредложенияТребуетсяСинхронизацияКартинкаРасширеннаяПодсказка" id="401"/>
+															<Events>
+																<Event name="Click">ТорговыеПредложенияТребуетсяСинхронизацияКартинкаНажатие</Event>
+															</Events>
+														</PictureDecoration>
+														<LabelDecoration name="ТорговыеПредложенияТребуетсяСинхронизацияНадпись" id="396">
+															<TextColor>pal:FirstBrand</TextColor>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Требуется синхронизация (%1)</v8:content>
+																</v8:item>
+															</Title>
+															<Hyperlink>true</Hyperlink>
+															<ContextMenu name="ТорговыеПредложенияТребуетсяСинхронизацияНадписьКонтекстноеМеню" id="397"/>
+															<ExtendedTooltip name="ТорговыеПредложенияТребуетсяСинхронизацияНадписьРасширеннаяПодсказка" id="398"/>
+															<Events>
+																<Event name="Click">ТорговыеПредложенияТребуетсяСинхронизацияКартинкаНажатие</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ТорговыеПредложенияОбновление" id="450">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Торговые предложения обновление</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalSpacing>Half</HorizontalSpacing>
+													<VerticalAlign>Center</VerticalAlign>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ТорговыеПредложенияОбновлениеРасширеннаяПодсказка" id="451"/>
+													<ChildItems>
+														<PictureDecoration name="ОрганизацияДлительнаяОперация2" id="452">
+															<PictureSize>Proportionally</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="ОрганизацияДлительнаяОперация2КонтекстноеМеню" id="453"/>
+															<ExtendedTooltip name="ОрганизацияДлительнаяОперация2РасширеннаяПодсказка" id="454"/>
+														</PictureDecoration>
+														<LabelDecoration name="ОрганизацияОбновлениеТекст2" id="455">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Обновление данных...</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ОрганизацияОбновлениеТекст2КонтекстноеМеню" id="456"/>
+															<ExtendedTooltip name="ОрганизацияОбновлениеТекст2РасширеннаяПодсказка" id="457"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаКарточкаТорговыеПредложенияПраво" id="731">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа карточка торговые предложения лево</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<VerticalSpacing>Half</VerticalSpacing>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКарточкаТорговыеПредложенияПравоРасширеннаяПодсказка" id="732"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаТорговыеПредложенияДополнительныеДействия" id="609">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа торговые предложения дополнительные действия</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаТорговыеПредложенияДополнительныеДействияРасширеннаяПодсказка" id="610"/>
+											<ChildItems>
+												<Button name="ОткрытьФормуСпискаПубликацийТорговыхПредложений" id="723">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<CommandName>Form.Command.ОткрытьФормуСпискаПубликацийТорговыхПредложений</CommandName>
+													<Picture>
+														<xr:Ref>StdPicture.InputFieldOpen</xr:Ref>
+														<xr:LoadTransparent>true</xr:LoadTransparent>
+													</Picture>
+													<ButtonImportance>Supplementary</ButtonImportance>
+													<ExtendedTooltip name="ОткрытьФормуСпискаПубликацийТорговыхПредложенийРасширеннаяПодсказка" id="724"/>
+												</Button>
+												<Button name="СостоянияПубликаций" id="594">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<CommandName>Form.Command.СостоянияПубликаций</CommandName>
+													<ButtonImportance>Supplementary</ButtonImportance>
+													<ExtendedTooltip name="СостоянияПубликацийРасширеннаяПодсказка" id="595"/>
+												</Button>
+												<Button name="ОтчетПубликуемыеТорговыеПредложения" id="546">
+													<Type>UsualButton</Type>
+													<Representation>Picture</Representation>
+													<CommandName>Report.ПубликуемыеТорговыеПредложения.Command.ПубликуемыеТорговыеПредложения</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отчет публикуемых товаров</v8:content>
+														</v8:item>
+													</Title>
+													<ButtonImportance>Supplementary</ButtonImportance>
+													<ExtendedTooltip name="ОтчетПубликуемыеТорговыеПредложенияРасширеннаяПодсказка" id="547"/>
+												</Button>
+												<UsualGroup name="ГруппаОпубликованныеТовары" id="629">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа опубликованные товары</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalSpacing>None</HorizontalSpacing>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаОпубликованныеТоварыРасширеннаяПодсказка" id="630"/>
+													<ChildItems>
+														<LabelDecoration name="ОткрытьМоиТорговыеПредложенияОрганизация" id="604">
+															<ContextMenu name="ОткрытьМоиТорговыеПредложенияОрганизацияКонтекстноеМеню" id="605"/>
+															<ExtendedTooltip name="ОткрытьМоиТорговыеПредложенияОрганизацияРасширеннаяПодсказка" id="606"/>
+														</LabelDecoration>
+														<Button name="ОткрытьМоиТорговыеПредложения" id="596">
+															<Type>UsualButton</Type>
+															<Representation>Picture</Representation>
+															<CommandName>Form.Command.ОткрытьМоиТорговыеПредложения</CommandName>
+															<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+															<ButtonImportance>Supplementary</ButtonImportance>
+															<ExtendedTooltip name="ОткрытьМоиТорговыеПредложенияРасширеннаяПодсказка" id="597"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаШагиПраваяКолонка" id="685">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа шаги правая колонка</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаШагиПраваяКолонкаРасширеннаяПодсказка" id="686"/>
+					<ChildItems>
+						<UsualGroup name="СопоставлениеНоменклатурыГруппа" id="341">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сопоставление 1С:Номенклатура</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ShowAsCard>true</ShowAsCard>
+							<ExtendedTooltip name="СопоставлениеНоменклатурыГруппаРасширеннаяПодсказка" id="342"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСопоставлениеНоменклатурыПорядковыйНомер" id="655">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сопоставление номенклатуры порядковый номер</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСопоставлениеНоменклатурыПорядковыйНомерРасширеннаяПодсказка" id="656"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаПункт3" id="657">
+											<Picture>
+												<xr:Ref>CommonPicture.Пункт3ТорговыеПредложения</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="КартинкаПункт3КонтекстноеМеню" id="658"/>
+											<ExtendedTooltip name="КартинкаПункт3РасширеннаяПодсказка" id="659"/>
+										</PictureDecoration>
+										<LabelDecoration name="НадписьСопоставлениеНоменклатуры" id="660">
+											<Font ref="style:TitleLevel2" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сопоставление 1С:Номенклатура</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сопоставление номенклатуры с эталонными карточками сервиса 1С:Номенклатура. Удобная возможность выгрузить номенклатуру в соответствующие категории и наполнить описания товаров детальными сведениями, полученными из сервиса.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<ContextMenu name="НадписьСопоставлениеНоменклатурыКонтекстноеМеню" id="661"/>
+											<ExtendedTooltip name="НадписьСопоставлениеНоменклатурыРасширеннаяПодсказка" id="662"/>
+										</LabelDecoration>
+										<Button name="ОткрытьФормуСопоставленияНоменклатуры" id="725">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<CommandName>Form.Command.ОткрытьФормуСопоставленияНоменклатуры</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.InputFieldOpen</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ButtonImportance>Supplementary</ButtonImportance>
+											<ExtendedTooltip name="ОткрытьФормуСопоставленияНоменклатурыРасширеннаяПодсказка" id="726"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="ПодсказкаСопоставлениеНоменклатуры" id="704">
+									<Font ref="style:TextLevel3" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сопоставление номенклатуры с эталонными карточками сервиса 1С:Номенклатура. Удобная возможность выгрузить номенклатуру в соответствующие категории и наполнить описания товаров детальными сведениями, полученными из сервиса.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаСопоставлениеНоменклатурыКонтекстноеМеню" id="705"/>
+									<ExtendedTooltip name="ПодсказкаСопоставлениеНоменклатурыРасширеннаяПодсказка" id="706"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаСопоставлениеНоменклатурыСтатусы" id="653">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сопоставление номенклатуры статусы</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСопоставлениеНоменклатурыСтатусыРасширеннаяПодсказка" id="654"/>
+									<ChildItems>
+										<UsualGroup name="СопоставлениеНоменклатурыУспех" id="348">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сопоставление</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="СопоставлениеНоменклатурыУспехРасширеннаяПодсказка" id="349"/>
+											<ChildItems>
+												<PictureDecoration name="СопоставлениеНоменклатурыУспехКартинка" id="353">
+													<TextColor>pal:Green</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сопоставление категорий успех картинка</v8:content>
+														</v8:item>
+													</Title>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.ВажноеСообщениеУспешно</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<PictureColor>pal:Green</PictureColor>
+													<ContextMenu name="СопоставлениеНоменклатурыУспехКартинкаКонтекстноеМеню" id="354"/>
+													<ExtendedTooltip name="СопоставлениеНоменклатурыУспехКартинкаРасширеннаяПодсказка" id="355"/>
+												</PictureDecoration>
+												<LabelDecoration name="СопоставлениеНоменклатурыУспехНадпись" id="350">
+													<TextColor>pal:Green</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сопоставлено 25% (1 из 4 позиций)</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="СопоставлениеНоменклатурыУспехНадписьКонтекстноеМеню" id="351"/>
+													<ExtendedTooltip name="СопоставлениеНоменклатурыУспехНадписьРасширеннаяПодсказка" id="352"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="СопоставлениеНоменклатурыОшибка" id="356">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сопоставление</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="СопоставлениеНоменклатурыОшибкаРасширеннаяПодсказка" id="357"/>
+											<ChildItems>
+												<PictureDecoration name="СопоставлениеНоменклатурыОшибкаКартинка" id="361">
+													<TextColor>pal:Red</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Картинка</v8:content>
+														</v8:item>
+													</Title>
+													<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+													<Hyperlink>true</Hyperlink>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.ВажноеСообщениеОшибка</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<PictureColor>pal:Red</PictureColor>
+													<ContextMenu name="СопоставлениеНоменклатурыОшибкаКартинкаКонтекстноеМеню" id="362"/>
+													<ExtendedTooltip name="СопоставлениеНоменклатурыОшибкаКартинкаРасширеннаяПодсказка" id="363"/>
+													<Events>
+														<Event name="Click">СопоставлениеНоменклатурыОшибкаКартинкаНажатие</Event>
+													</Events>
+												</PictureDecoration>
+												<LabelDecoration name="СопоставлениеНоменклатурыОшибкаНадпись" id="358">
+													<TextColor>pal:Red</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Номенклатура не сопоставлена</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="СопоставлениеНоменклатурыОшибкаНадписьКонтекстноеМеню" id="359"/>
+													<ExtendedTooltip name="СопоставлениеНоменклатурыОшибкаНадписьРасширеннаяПодсказка" id="360"/>
+													<Events>
+														<Event name="Click">СопоставлениеНоменклатурыОшибкаКартинкаНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="СопоставлениеНоменклатурыОбновление" id="613">
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="СопоставлениеНоменклатурыОбновлениеРасширеннаяПодсказка" id="614"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаСопоставлениеНоменклатурыДлительнаяОперация" id="615">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Картинка сопоставление номенклатуры длительная операция</v8:content>
+														</v8:item>
+													</Title>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаСопоставлениеНоменклатурыДлительнаяОперацияКонтекстноеМеню" id="616"/>
+													<ExtendedTooltip name="КартинкаСопоставлениеНоменклатурыДлительнаяОперацияРасширеннаяПодсказка" id="617"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьСопоставлениеНоменклатурыДлительнаяОперация" id="618">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Обновление данных...</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьСопоставлениеНоменклатурыДлительнаяОперацияКонтекстноеМеню" id="619"/>
+													<ExtendedTooltip name="НадписьСопоставлениеНоменклатурыДлительнаяОперацияРасширеннаяПодсказка" id="620"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="СопоставлениеКатегорийГруппа" id="128">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сопоставление 1С:Бизнес-сеть (Категории)</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>false</ShowTitle>
+							<ShowAsCard>true</ShowAsCard>
+							<ExtendedTooltip name="СопоставлениеКатегорийГруппаРасширеннаяПодсказка" id="129"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСопоставлениеКатегорийПорядковыйНомер" id="668">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сопоставление категорий порядковый номер</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalSpacing>Half</HorizontalSpacing>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСопоставлениеКатегорийПорядковыйНомерРасширеннаяПодсказка" id="669"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаПункт4" id="670">
+											<Picture>
+												<xr:Ref>CommonPicture.Пункт4ТорговыеПредложения</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="КартинкаПункт4КонтекстноеМеню" id="671"/>
+											<ExtendedTooltip name="КартинкаПункт4РасширеннаяПодсказка" id="672"/>
+										</PictureDecoration>
+										<LabelDecoration name="НадписьСопоставлениеКатегорий" id="665">
+											<Font ref="style:TitleLevel2" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сопоставление 1С:Бизнес-сеть (Категории)</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сопоставление номенклатуры с категориями рубрикатора 1С:Номенклатура. Позволяет выгрузить номенклатуру в соответствующие категории. Рекомендуется, если в сервисе 1С:Номенклатура нет эталонных карточек для номенклатуры.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<ContextMenu name="НадписьСопоставлениеКатегорийКонтекстноеМеню" id="666"/>
+											<ExtendedTooltip name="НадписьСопоставлениеКатегорийРасширеннаяПодсказка" id="667"/>
+										</LabelDecoration>
+										<Button name="ОткрытьФормуСопоставленияНоменклатурыСРубрикатором" id="727">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<CommandName>Form.Command.ОткрытьФормуСопоставленияНоменклатурыПоКатегориям</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.InputFieldOpen</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ButtonImportance>Supplementary</ButtonImportance>
+											<ExtendedTooltip name="ОткрытьФормуСопоставленияНоменклатурыСРубрикаторомРасширеннаяПодсказка" id="728"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="ПодсказкаСопоставлениеКатегорий" id="707">
+									<Font ref="style:TextLevel3" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сопоставление номенклатуры с категориями рубрикатора 1С:Номенклатура. Позволяет выгрузить номенклатуру в соответствующие категории. Рекомендуется, если в сервисе 1С:Номенклатура нет эталонных карточек для номенклатуры.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПодсказкаСопоставлениеКатегорийКонтекстноеМеню" id="708"/>
+									<ExtendedTooltip name="ПодсказкаСопоставлениеКатегорийРасширеннаяПодсказка" id="709"/>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаСопоставлениеКатегорийСтатусы" id="663">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сопоставление категорий статусы</v8:content>
+										</v8:item>
+									</Title>
+									<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСопоставлениеКатегорийСтатусыРасширеннаяПодсказка" id="664"/>
+									<ChildItems>
+										<UsualGroup name="СопоставлениеКатегорийУспех" id="183">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сопоставление</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="СопоставлениеКатегорийУспехРасширеннаяПодсказка" id="184"/>
+											<ChildItems>
+												<PictureDecoration name="СопоставлениеКатегорийУспехКартинка" id="185">
+													<TextColor>pal:Green</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сопоставление категорий успех картинка</v8:content>
+														</v8:item>
+													</Title>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.ВажноеСообщениеУспешно</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<PictureColor>pal:Green</PictureColor>
+													<ContextMenu name="СопоставлениеКатегорийУспехКартинкаКонтекстноеМеню" id="186"/>
+													<ExtendedTooltip name="СопоставлениеКатегорийУспехКартинкаРасширеннаяПодсказка" id="187"/>
+												</PictureDecoration>
+												<LabelDecoration name="СопоставлениеКатегорийУспехНадпись" id="188">
+													<TextColor>pal:Green</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Сопоставлено 50% (2 из 4 позиций)</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="СопоставлениеКатегорийУспехНадписьКонтекстноеМеню" id="189"/>
+													<ExtendedTooltip name="СопоставлениеКатегорийУспехНадписьРасширеннаяПодсказка" id="190"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="СопоставлениеКатегорийОшибка" id="227">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сопоставление</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Horizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="СопоставлениеКатегорийОшибкаРасширеннаяПодсказка" id="228"/>
+											<ChildItems>
+												<PictureDecoration name="СопоставлениеКатегорийОшибкаКартинка" id="232">
+													<TextColor>pal:Red</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Картинка</v8:content>
+														</v8:item>
+													</Title>
+													<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.ВажноеСообщениеОшибка</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<PictureColor>pal:Red</PictureColor>
+													<ContextMenu name="СопоставлениеКатегорийОшибкаКартинкаКонтекстноеМеню" id="233"/>
+													<ExtendedTooltip name="СопоставлениеКатегорийОшибкаКартинкаРасширеннаяПодсказка" id="234"/>
+												</PictureDecoration>
+												<LabelDecoration name="СопоставлениеКатегорийОшибкаНадпись" id="229">
+													<TextColor>pal:Red</TextColor>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Категории не сопоставлены</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="СопоставлениеКатегорийОшибкаНадписьКонтекстноеМеню" id="230"/>
+													<ExtendedTooltip name="СопоставлениеКатегорийОшибкаНадписьРасширеннаяПодсказка" id="231"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="СопоставлениеКатегорийОбновление" id="621">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сопоставление категорий обновление</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="СопоставлениеКатегорийОбновлениеРасширеннаяПодсказка" id="622"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаСопоставлениеКатегорийДлительнаяОперация" id="623">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Картинка сопоставление номенклатуры длительная операция</v8:content>
+														</v8:item>
+													</Title>
+													<PictureSize>Proportionally</PictureSize>
+													<Picture>
+														<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<FileDragMode>AsFile</FileDragMode>
+													<ContextMenu name="КартинкаСопоставлениеКатегорийДлительнаяОперацияКонтекстноеМеню" id="624"/>
+													<ExtendedTooltip name="КартинкаСопоставлениеКатегорийДлительнаяОперацияРасширеннаяПодсказка" id="625"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьСопоставлениеКатегорийДлительнаяОперация" id="626">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Обновление данных...</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="НадписьСопоставлениеКатегорийДлительнаяОперацияКонтекстноеМеню" id="627"/>
+													<ExtendedTooltip name="НадписьСопоставлениеКатегорийДлительнаяОперацияРасширеннаяПодсказка" id="628"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="СинхронизацияПоРасписанию" id="138">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Синхронизация</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<ControlRepresentation>Button</ControlRepresentation>
+							<ShowTitle>false</ShowTitle>
+							<ShowAsCard>true</ShowAsCard>
+							<ExtendedTooltip name="СинхронизацияПоРасписаниюРасширеннаяПодсказка" id="139"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСинхронизацияПоРасписаниюЛево" id="739">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа синхронизация по расписанию лево</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСинхронизацияПоРасписаниюЛевоРасширеннаяПодсказка" id="740"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаСинхронизацияПоРасписаниюПорядковыйНомер" id="673">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа синхронизация по расписанию порядковый номер</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<VerticalAlign>Center</VerticalAlign>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСинхронизацияПоРасписаниюПорядковыйНомерРасширеннаяПодсказка" id="674"/>
+											<ChildItems>
+												<PictureDecoration name="КартинкаПункт5" id="680">
+													<Picture>
+														<xr:Ref>CommonPicture.Пункт5ТорговыеПредложения</xr:Ref>
+														<xr:LoadTransparent>false</xr:LoadTransparent>
+													</Picture>
+													<ContextMenu name="КартинкаПункт5КонтекстноеМеню" id="681"/>
+													<ExtendedTooltip name="КартинкаПункт5РасширеннаяПодсказка" id="682"/>
+												</PictureDecoration>
+												<LabelDecoration name="НадписьСинхронизация" id="677">
+													<Font ref="style:TitleLevel2" kind="StyleItem"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Синхронизация по расписанию</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Публикация по расписанию предназначена для автоматической периодической выгрузки данных по торговым предложениям в сервис.</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<ContextMenu name="НадписьСинхронизацияКонтекстноеМеню" id="678"/>
+													<ExtendedTooltip name="НадписьСинхронизацияРасширеннаяПодсказка" id="679"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<LabelDecoration name="ПодсказкаСинхронизация" id="710">
+											<Font ref="style:TextLevel3" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Публикация по расписанию предназначена для автоматической периодической выгрузки данных по торговым предложениям в сервис.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ПодсказкаСинхронизацияКонтекстноеМеню" id="711"/>
+											<ExtendedTooltip name="ПодсказкаСинхронизацияРасширеннаяПодсказка" id="712"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаСинхронизацияПоРасписанию" id="675">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Расписание</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ExtendedTooltip name="ГруппаСинхронизацияПоРасписаниюРасширеннаяПодсказка" id="676"/>
+											<ChildItems>
+												<LabelDecoration name="Расписание" id="31">
+													<Font ref="style:TextLevel3" kind="StyleItem"/>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>каждый день, по дням недели [суббота, воскресенье ]; с 1:00:00 один раз в день, завершать после 7:00:00</v8:content>
+														</v8:item>
+													</Title>
+													<VerticalAlign>Top</VerticalAlign>
+													<ContextMenu name="РасписаниеКонтекстноеМеню" id="32"/>
+													<ExtendedTooltip name="РасписаниеРасширеннаяПодсказка" id="33"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРезультата" id="152">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Результат</v8:content>
+												</v8:item>
+											</Title>
+											<VerticalStretch>true</VerticalStretch>
+											<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Half</HorizontalSpacing>
+											<VerticalAlign>Bottom</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>NormalSeparation</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаРезультатаРасширеннаяПодсказка" id="153"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаДлительнаяОперация" id="426">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа длительная операция</v8:content>
+														</v8:item>
+													</Title>
+													<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalSpacing>Half</HorizontalSpacing>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаДлительнаяОперацияРасширеннаяПодсказка" id="427"/>
+													<ChildItems>
+														<PictureDecoration name="ДекорацияДлительнаяОперацияКартинка" id="428">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Декорация длительная операция картинка</v8:content>
+																</v8:item>
+															</Title>
+															<GroupVerticalAlign>Center</GroupVerticalAlign>
+															<PictureSize>Proportionally</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.ДлительнаяОперация16</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<ContextMenu name="ДекорацияДлительнаяОперацияКартинкаКонтекстноеМеню" id="429"/>
+															<ExtendedTooltip name="ДекорацияДлительнаяОперацияКартинкаРасширеннаяПодсказка" id="430"/>
+														</PictureDecoration>
+														<LabelDecoration name="ДекорацияДлительнаяОперацияНадпись" id="431">
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Торговое предложение - 20%</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="ДекорацияДлительнаяОперацияНадписьКонтекстноеМеню" id="432"/>
+															<ExtendedTooltip name="ДекорацияДлительнаяОперацияНадписьРасширеннаяПодсказка" id="433"/>
+															<Events>
+																<Event name="URLProcessing">ДекорацияДлительнаяОперацияНадписьОбработкаНавигационнойСсылки</Event>
+															</Events>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="РезультатГруппа" id="193">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Результат</v8:content>
+														</v8:item>
+													</Title>
+													<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalSpacing>Half</HorizontalSpacing>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="РезультатГруппаРасширеннаяПодсказка" id="194"/>
+													<ChildItems>
+														<PictureDecoration name="КартинкаСостоянияСинхронизации" id="713">
+															<Visible>false</Visible>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Картинка состояния синхронизации</v8:content>
+																</v8:item>
+															</Title>
+															<PictureSize>Proportionally</PictureSize>
+															<ContextMenu name="КартинкаСостоянияСинхронизацииКонтекстноеМеню" id="714"/>
+															<ExtendedTooltip name="КартинкаСостоянияСинхронизацииРасширеннаяПодсказка" id="715"/>
+														</PictureDecoration>
+														<LabelDecoration name="РезультатНадпись" id="43">
+															<TextColor>pal:Green</TextColor>
+															<GroupVerticalAlign>Center</GroupVerticalAlign>
+															<ContextMenu name="РезультатНадписьКонтекстноеМеню" id="44"/>
+															<ExtendedTooltip name="РезультатНадписьРасширеннаяПодсказка" id="45"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСинхронизацияПоРасписаниюПраво" id="741">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа синхронизация по расписанию право</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<VerticalSpacing>Half</VerticalSpacing>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСинхронизацияПоРасписаниюПравоРасширеннаяПодсказка" id="742"/>
+									<ChildItems>
+										<Button name="ВключитьВыключитьАвтоматическуюСинхронизацию" id="743">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ВключитьВыключитьАвтоматическуюСинхронизацию</CommandName>
+											<Picture>
+												<xr:Ref>CommonPicture.ПереключательВыключенЦветнойТорговыеПредложения</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ButtonImportance>Supplementary</ButtonImportance>
+											<ExtendedTooltip name="ВключитьВыключитьАвтоматическуюСинхронизациюРасширеннаяПодсказка" id="744"/>
+										</Button>
+										<Button name="НастроитьРасписание" id="29">
+											<Type>UsualButton</Type>
+											<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+											<CommandName>Form.Command.НастроитьРасписание</CommandName>
+											<ButtonImportance>Supplementary</ButtonImportance>
+											<ExtendedTooltip name="НастроитьРасписаниеРасширеннаяПодсказка" id="30"/>
+										</Button>
+										<Button name="ОпубликоватьТорговыеПредложения" id="176">
+											<Type>UsualButton</Type>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<CommandName>Form.Command.ОпубликоватьТорговыеПредложения</CommandName>
+											<ButtonImportance>Supplementary</ButtonImportance>
+											<ExtendedTooltip name="ОпубликоватьТорговыеПредложенияРасширеннаяПодсказка" id="177"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Диаграммы" id="544">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диаграммы</v8:content>
+				</v8:item>
+			</Title>
+			<Width>30</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<VerticalStretch>true</VerticalStretch>
+			<Group>Vertical</Group>
+			<HorizontalAlign>Center</HorizontalAlign>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ДиаграммыРасширеннаяПодсказка" id="545"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСостоянияПубликации" id="550">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа состояния публикации</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalStretch>true</VerticalStretch>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ShowAsCard>true</ShowAsCard>
+					<ExtendedTooltip name="ГруппаСостоянияПубликацииРасширеннаяПодсказка" id="551"/>
+					<ChildItems>
+						<Pages name="СтраницыСостоянияПубликаций" id="554">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страницы состояния публикаций</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="СтраницыСостоянияПубликацийРасширеннаяПодсказка" id="555"/>
+							<ChildItems>
+								<Page name="СтраницаСостоянияПубликацийДлительнаяОперация" id="556">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Страница состояния публикаций длительная операция</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<ExtendedTooltip name="СтраницаСостоянияПубликацийДлительнаяОперацияРасширеннаяПодсказка" id="557"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаДлительнаяОперацияСостоянияПубликаций" id="563">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Картинка длительная операция состояния публикаций</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ДлительнаяОперация32БЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаДлительнаяОперацияСостоянияПубликацийКонтекстноеМеню" id="564"/>
+											<ExtendedTooltip name="КартинкаДлительнаяОперацияСостоянияПубликацийРасширеннаяПодсказка" id="565"/>
+										</PictureDecoration>
+										<LabelDecoration name="НадписьДлительнаяОперацияСостоянияПубликаций" id="560">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подсчет статистики публикации...</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьДлительнаяОперацияСостоянияПубликацийКонтекстноеМеню" id="561"/>
+											<ExtendedTooltip name="НадписьДлительнаяОперацияСостоянияПубликацийРасширеннаяПодсказка" id="562"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаСостоянияПубликацийДиаграмма" id="558">
+									<ExtendedTooltip name="СтраницаСостоянияПубликацийДиаграммаРасширеннаяПодсказка" id="559"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьДиаграммыСостоянияПубликаций" id="733">
+											<Font ref="style:TitleLevel3" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Состояния публикаций</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сопоставление номенклатуры с эталонными карточками сервиса 1С:Номенклатура. Удобная возможность выгрузить номенклатуру в соответствующие категории и наполнить описания товаров детальными сведениями, полученными из сервиса.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<ContextMenu name="НадписьДиаграммыСостоянияПубликацийКонтекстноеМеню" id="734"/>
+											<ExtendedTooltip name="НадписьДиаграммыСостоянияПубликацийРасширеннаяПодсказка" id="735"/>
+										</LabelDecoration>
+										<ChartField name="ДиаграммаСостоянийПубликации" id="536">
+											<DataPath>ДиаграммаСостоянийПубликации</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<Width>25</Width>
+											<Height>7</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<ContextMenu name="ДиаграммаСостоянийПубликацииКонтекстноеМеню" id="537"/>
+											<ExtendedTooltip name="ДиаграммаСостоянийПубликацииРасширеннаяПодсказка" id="538"/>
+										</ChartField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаСопоставления" id="566">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сопоставления</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalStretch>true</VerticalStretch>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ShowAsCard>true</ShowAsCard>
+					<ExtendedTooltip name="ГруппаСопоставленияРасширеннаяПодсказка" id="567"/>
+					<ChildItems>
+						<Pages name="СтраницыСопоставления" id="568">
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="СтраницыСопоставленияРасширеннаяПодсказка" id="569"/>
+							<ChildItems>
+								<Page name="СтраницаСопоставленияДлительнаяОперация" id="570">
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<ExtendedTooltip name="СтраницаСопоставленияДлительнаяОперацияРасширеннаяПодсказка" id="571"/>
+									<ChildItems>
+										<PictureDecoration name="КартинкаДлительнаяОперацияСопоставления" id="572">
+											<Picture>
+												<xr:Ref>CommonPicture.ДлительнаяОперация32БЭД</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="КартинкаДлительнаяОперацияСопоставленияКонтекстноеМеню" id="573"/>
+											<ExtendedTooltip name="КартинкаДлительнаяОперацияСопоставленияРасширеннаяПодсказка" id="574"/>
+										</PictureDecoration>
+										<LabelDecoration name="НадписьДлительнаяОперацияСопоставления" id="575">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подсчет сопоставленной номенклатуры...</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="НадписьДлительнаяОперацияСопоставленияКонтекстноеМеню" id="576"/>
+											<ExtendedTooltip name="НадписьДлительнаяОперацияСопоставленияРасширеннаяПодсказка" id="577"/>
+										</LabelDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СтраницаСопоставленияДиаграмма" id="578">
+									<ExtendedTooltip name="СтраницаСопоставленияДиаграммаРасширеннаяПодсказка" id="579"/>
+									<ChildItems>
+										<LabelDecoration name="НадписьДиаграммыСопоставления" id="736">
+											<Font ref="style:TitleLevel3" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сопоставления</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сопоставление номенклатуры с эталонными карточками сервиса 1С:Номенклатура. Удобная возможность выгрузить номенклатуру в соответствующие категории и наполнить описания товаров детальными сведениями, полученными из сервиса.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>None</ToolTipRepresentation>
+											<ContextMenu name="НадписьДиаграммыСопоставленияКонтекстноеМеню" id="737"/>
+											<ExtendedTooltip name="НадписьДиаграммыСопоставленияРасширеннаяПодсказка" id="738"/>
+										</LabelDecoration>
+										<ChartField name="ДиаграммаСостоянийСопоставления" id="540">
+											<DataPath>ДиаграммаСопоставления</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Не сопоставленная номенклатура публикуется в категорию прочих товаров.</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<Width>25</Width>
+											<Height>7</Height>
+											<VerticalStretch>false</VerticalStretch>
+											<ContextMenu name="ДиаграммаСостоянийСопоставленияКонтекстноеМеню" id="541"/>
+											<ExtendedTooltip name="ДиаграммаСостоянийСопоставленияРасширеннаяПодсказка" id="542"/>
+										</ChartField>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Соглашение" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соглашение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ТорговоеПредложение</v8:TypeSet>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Контрагенты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагенты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АвтоматическиСинхронизировать" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автоматически по расписанию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьОшибки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацияНеЗарегистрирована" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация не зарегистрирована</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Организация" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.Организация</v8:TypeSet>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="Статистика" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статистика</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="АдресРезультатаПодсчетаСтатистики" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес результата подсчета статистики</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьСопоставление1СНоменклатура" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать сопоставление1 с номенклатура</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДлительнаяОперация" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Длительная операция</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОрганизацияОтбораФормыПоиска" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация отбора формы поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.Организация</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="Организации" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="ДиаграммаСостоянийПубликации" id="6">
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/chart">d5p1:Chart</v8:Type>
+			</Type>
+			<Settings xmlns:d4p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d4p1:Chart">
+				<d4p1:seriesCurId>5</d4p1:seriesCurId>
+				<d4p1:pointsCurId>1</d4p1:pointsCurId>
+				<d4p1:isSeriesDesign>true</d4p1:isSeriesDesign>
+				<d4p1:realSeriesCount>3</d4p1:realSeriesCount>
+				<d4p1:realSeriesData>
+					<d4p1:id>2</d4p1:id>
+					<d4p1:color>pal:Green</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Auto</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Опубликовано</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realSeriesData>
+				<d4p1:realSeriesData>
+					<d4p1:id>3</d4p1:id>
+					<d4p1:color>pal:FirstBrand</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Auto</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ожидает публикации</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realSeriesData>
+				<d4p1:realSeriesData>
+					<d4p1:id>5</d4p1:id>
+					<d4p1:color>pal:Red</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Auto</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ошибки</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realSeriesData>
+				<d4p1:realExSeriesData>
+					<d4p1:id>1</d4p1:id>
+					<d4p1:color>auto</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Auto</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>#</v8:lang>
+							<v8:content>Сводная</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>false</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realExSeriesData>
+				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
+				<d4p1:realPointCount>1</d4p1:realPointCount>
+				<d4p1:realPointData>
+					<d4p1:id>1</d4p1:id>
+					<d4p1:color>auto</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Rect</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Товары</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realPointData>
+				<d4p1:curSeries>0</d4p1:curSeries>
+				<d4p1:curPoint>0</d4p1:curPoint>
+				<d4p1:chartType>Pie3D</d4p1:chartType>
+				<d4p1:circleLabelType>Value</d4p1:circleLabelType>
+				<d4p1:labelsDelimiter>, </d4p1:labelsDelimiter>
+				<d4p1:labelsLocation>Center</d4p1:labelsLocation>
+				<d4p1:lbFormat/>
+				<d4p1:lbpFormat/>
+				<d4p1:labelsColor>auto</d4p1:labelsColor>
+				<d4p1:labelsFont kind="AutoFont"/>
+				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
+				<d4p1:labelsBkgColor>auto</d4p1:labelsBkgColor>
+				<d4p1:labelsBorder width="1">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:labelsBorder>
+				<d4p1:labelsBorderColor>auto</d4p1:labelsBorderColor>
+				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
+				<d4p1:chart3Dcrd>SouthWest</d4p1:chart3Dcrd>
+				<d4p1:title/>
+				<d4p1:isShowTitle>true</d4p1:isShowTitle>
+				<d4p1:isShowLegend>true</d4p1:isShowLegend>
+				<d4p1:ttlBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:ttlBorder>
+				<d4p1:ttlBorderColor>style:BorderColor</d4p1:ttlBorderColor>
+				<d4p1:lgBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:lgBorder>
+				<d4p1:lgBorderColor>style:BorderColor</d4p1:lgBorderColor>
+				<d4p1:chBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:chBorder>
+				<d4p1:chBorderColor>style:BorderColor</d4p1:chBorderColor>
+				<d4p1:transparent>true</d4p1:transparent>
+				<d4p1:bkgColor>auto</d4p1:bkgColor>
+				<d4p1:isTrnspTtl>false</d4p1:isTrnspTtl>
+				<d4p1:ttlColor>auto</d4p1:ttlColor>
+				<d4p1:isTrnspLeg>true</d4p1:isTrnspLeg>
+				<d4p1:legColor>auto</d4p1:legColor>
+				<d4p1:isTrnspCh>true</d4p1:isTrnspCh>
+				<d4p1:chColor>auto</d4p1:chColor>
+				<d4p1:ttlTxtColor>auto</d4p1:ttlTxtColor>
+				<d4p1:legTxtColor>auto</d4p1:legTxtColor>
+				<d4p1:chTxtColor>auto</d4p1:chTxtColor>
+				<d4p1:ttlFont kind="AutoFont"/>
+				<d4p1:legFont kind="AutoFont"/>
+				<d4p1:chFont kind="AutoFont"/>
+				<d4p1:isShowScale>true</d4p1:isShowScale>
+				<d4p1:isShowScaleVL>true</d4p1:isShowScaleVL>
+				<d4p1:isShowSeriesScale>true</d4p1:isShowSeriesScale>
+				<d4p1:isShowPointsScale>true</d4p1:isShowPointsScale>
+				<d4p1:isShowValuesScale>true</d4p1:isShowValuesScale>
+				<d4p1:vsFormat/>
+				<d4p1:xLabelsOrientation>Auto</d4p1:xLabelsOrientation>
+				<d4p1:scaleLine width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+				</d4p1:scaleLine>
+				<d4p1:scaleColor>auto</d4p1:scaleColor>
+				<d4p1:isAutoSeriesName>true</d4p1:isAutoSeriesName>
+				<d4p1:isAutoPointName>true</d4p1:isAutoPointName>
+				<d4p1:maxMode>Limited</d4p1:maxMode>
+				<d4p1:maxSeries>3</d4p1:maxSeries>
+				<d4p1:maxSeriesPrc>30</d4p1:maxSeriesPrc>
+				<d4p1:spaceMode>Half</d4p1:spaceMode>
+				<d4p1:baseVal>0</d4p1:baseVal>
+				<d4p1:isOutline>false</d4p1:isOutline>
+				<d4p1:realPiePoint>0</d4p1:realPiePoint>
+				<d4p1:realStockSeries>0</d4p1:realStockSeries>
+				<d4p1:isLight>true</d4p1:isLight>
+				<d4p1:isGradient>false</d4p1:isGradient>
+				<d4p1:isTransposition>false</d4p1:isTransposition>
+				<d4p1:hideBaseVal>false</d4p1:hideBaseVal>
+				<d4p1:dataTable>false</d4p1:dataTable>
+				<d4p1:dtVerLines>true</d4p1:dtVerLines>
+				<d4p1:dtHorLines>true</d4p1:dtHorLines>
+				<d4p1:dtHAlign>Right</d4p1:dtHAlign>
+				<d4p1:dtFormat/>
+				<d4p1:dtKeys>true</d4p1:dtKeys>
+				<d4p1:paletteKind>Auto</d4p1:paletteKind>
+				<d4p1:animation>Auto</d4p1:animation>
+				<d4p1:rebuildTime>1734573</d4p1:rebuildTime>
+				<d4p1:isTransposed>false</d4p1:isTransposed>
+				<d4p1:autoTransposition>false</d4p1:autoTransposition>
+				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
+				<d4p1:surfaceColor>#A90000</d4p1:surfaceColor>
+				<d4p1:radarScaleType>Circle</d4p1:radarScaleType>
+				<d4p1:gaugeValuesPresentation>Needle</d4p1:gaugeValuesPresentation>
+				<d4p1:gaugeQualityBands useTextStr="false" useTooltipStr="false"/>
+				<d4p1:beginGaugeAngle>0</d4p1:beginGaugeAngle>
+				<d4p1:endGaugeAngle>180</d4p1:endGaugeAngle>
+				<d4p1:gaugeThickness>5</d4p1:gaugeThickness>
+				<d4p1:gaugeLabelsLocation>InsideScale</d4p1:gaugeLabelsLocation>
+				<d4p1:gaugeLabelsArcDirection>false</d4p1:gaugeLabelsArcDirection>
+				<d4p1:gaugeBushThickness>4</d4p1:gaugeBushThickness>
+				<d4p1:gaugeBushColor>#A9A9A9</d4p1:gaugeBushColor>
+				<d4p1:autoMaxValue>true</d4p1:autoMaxValue>
+				<d4p1:userMaxValue>0</d4p1:userMaxValue>
+				<d4p1:autoMinValue>true</d4p1:autoMinValue>
+				<d4p1:userMinValue>0</d4p1:userMinValue>
+				<d4p1:elementsIsInit>false</d4p1:elementsIsInit>
+				<d4p1:titleIsInit>true</d4p1:titleIsInit>
+				<d4p1:legendIsInit>true</d4p1:legendIsInit>
+				<d4p1:chartIsInit>true</d4p1:chartIsInit>
+				<d4p1:elementsChart>
+					<d4p1:left>0</d4p1:left>
+					<d4p1:right>0.17</d4p1:right>
+					<d4p1:top>0</d4p1:top>
+					<d4p1:bottom>0</d4p1:bottom>
+				</d4p1:elementsChart>
+				<d4p1:elementsLegend>
+					<d4p1:left>0.83</d4p1:left>
+					<d4p1:right>0</d4p1:right>
+					<d4p1:top>0.08</d4p1:top>
+					<d4p1:bottom>0</d4p1:bottom>
+				</d4p1:elementsLegend>
+				<d4p1:elementsTitle>
+					<d4p1:left>0.83</d4p1:left>
+					<d4p1:right>0</d4p1:right>
+					<d4p1:top>0</d4p1:top>
+					<d4p1:bottom>0.92</d4p1:bottom>
+				</d4p1:elementsTitle>
+				<d4p1:borderColor>style:BorderColor</d4p1:borderColor>
+				<d4p1:border width="1">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:border>
+				<d4p1:dataSourceDescription/>
+				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
+				<d4p1:isRandomizedNewValues>true</d4p1:isRandomizedNewValues>
+				<d4p1:realDataItems>
+					<d4p1:item>
+						<d4p1:valData xsi:type="xs:decimal">1.83</d4p1:valData>
+						<d4p1:valInfo xsi:nil="true"/>
+						<d4p1:toolTip/>
+					</d4p1:item>
+					<d4p1:item>
+						<d4p1:valData xsi:type="xs:decimal">7.29</d4p1:valData>
+						<d4p1:valInfo xsi:nil="true"/>
+						<d4p1:toolTip/>
+					</d4p1:item>
+					<d4p1:item>
+						<d4p1:valData xsi:type="xs:decimal">2.95</d4p1:valData>
+						<d4p1:valInfo xsi:nil="true"/>
+						<d4p1:toolTip/>
+					</d4p1:item>
+				</d4p1:realDataItems>
+				<d4p1:splineStrain>95</d4p1:splineStrain>
+				<d4p1:translucencePercent>0</d4p1:translucencePercent>
+				<d4p1:funnelNeckHeightPercent>10</d4p1:funnelNeckHeightPercent>
+				<d4p1:funnelNeckWidthPercent>10</d4p1:funnelNeckWidthPercent>
+				<d4p1:funnelGapSumPercent>3</d4p1:funnelGapSumPercent>
+				<d4p1:multiStageLinkLine width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+				</d4p1:multiStageLinkLine>
+				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
+				<d4p1:valuesAxis/>
+				<d4p1:pointsAxis/>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДиаграммаСопоставления" id="12">
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.2/data/chart">d5p1:Chart</v8:Type>
+			</Type>
+			<Settings xmlns:d4p1="http://v8.1c.ru/8.2/data/chart" xsi:type="d4p1:Chart">
+				<d4p1:seriesCurId>3</d4p1:seriesCurId>
+				<d4p1:pointsCurId>2</d4p1:pointsCurId>
+				<d4p1:isSeriesDesign>true</d4p1:isSeriesDesign>
+				<d4p1:realSeriesCount>2</d4p1:realSeriesCount>
+				<d4p1:realSeriesData>
+					<d4p1:id>2</d4p1:id>
+					<d4p1:color>pal:Green</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Auto</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сопоставлено</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realSeriesData>
+				<d4p1:realSeriesData>
+					<d4p1:id>3</d4p1:id>
+					<d4p1:color>auto</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Auto</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не сопоставлено</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realSeriesData>
+				<d4p1:realExSeriesData>
+					<d4p1:id>1</d4p1:id>
+					<d4p1:color>auto</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Auto</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>#</v8:lang>
+							<v8:content>Сводная</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>false</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realExSeriesData>
+				<d4p1:isPointsDesign>true</d4p1:isPointsDesign>
+				<d4p1:realPointCount>2</d4p1:realPointCount>
+				<d4p1:realPointData>
+					<d4p1:id>1</d4p1:id>
+					<d4p1:color>auto</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Rect</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>1С:Номенклатура</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realPointData>
+				<d4p1:realPointData>
+					<d4p1:id>2</d4p1:id>
+					<d4p1:color>auto</d4p1:color>
+					<d4p1:line width="2" gap="false">
+						<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+					</d4p1:line>
+					<d4p1:marker>Rect</d4p1:marker>
+					<d4p1:text>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>1С:Бизнес-сеть</v8:content>
+						</v8:item>
+					</d4p1:text>
+					<d4p1:strIsChanged>true</d4p1:strIsChanged>
+					<d4p1:isExpand>false</d4p1:isExpand>
+					<d4p1:isIndicator>false</d4p1:isIndicator>
+					<d4p1:colorPriority>false</d4p1:colorPriority>
+				</d4p1:realPointData>
+				<d4p1:curSeries>1</d4p1:curSeries>
+				<d4p1:curPoint>1</d4p1:curPoint>
+				<d4p1:chartType>Bar</d4p1:chartType>
+				<d4p1:circleLabelType>Value</d4p1:circleLabelType>
+				<d4p1:labelsDelimiter>, </d4p1:labelsDelimiter>
+				<d4p1:labelsLocation>Auto</d4p1:labelsLocation>
+				<d4p1:lbFormat/>
+				<d4p1:lbpFormat/>
+				<d4p1:labelsColor>auto</d4p1:labelsColor>
+				<d4p1:labelsFont kind="AutoFont"/>
+				<d4p1:transparentLabelsBkg>true</d4p1:transparentLabelsBkg>
+				<d4p1:labelsBkgColor>auto</d4p1:labelsBkgColor>
+				<d4p1:labelsBorder width="1">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+				</d4p1:labelsBorder>
+				<d4p1:labelsBorderColor>auto</d4p1:labelsBorderColor>
+				<d4p1:circleExpandMode>None</d4p1:circleExpandMode>
+				<d4p1:chart3Dcrd>SouthWest</d4p1:chart3Dcrd>
+				<d4p1:title/>
+				<d4p1:isShowTitle>true</d4p1:isShowTitle>
+				<d4p1:isShowLegend>true</d4p1:isShowLegend>
+				<d4p1:ttlBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:ttlBorder>
+				<d4p1:ttlBorderColor>style:BorderColor</d4p1:ttlBorderColor>
+				<d4p1:lgBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:lgBorder>
+				<d4p1:lgBorderColor>style:BorderColor</d4p1:lgBorderColor>
+				<d4p1:chBorder width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:chBorder>
+				<d4p1:chBorderColor>style:BorderColor</d4p1:chBorderColor>
+				<d4p1:transparent>true</d4p1:transparent>
+				<d4p1:bkgColor>auto</d4p1:bkgColor>
+				<d4p1:isTrnspTtl>false</d4p1:isTrnspTtl>
+				<d4p1:ttlColor>auto</d4p1:ttlColor>
+				<d4p1:isTrnspLeg>true</d4p1:isTrnspLeg>
+				<d4p1:legColor>auto</d4p1:legColor>
+				<d4p1:isTrnspCh>true</d4p1:isTrnspCh>
+				<d4p1:chColor>auto</d4p1:chColor>
+				<d4p1:ttlTxtColor>auto</d4p1:ttlTxtColor>
+				<d4p1:legTxtColor>auto</d4p1:legTxtColor>
+				<d4p1:chTxtColor>auto</d4p1:chTxtColor>
+				<d4p1:ttlFont kind="AutoFont"/>
+				<d4p1:legFont kind="AutoFont"/>
+				<d4p1:chFont kind="AutoFont"/>
+				<d4p1:isShowScale>true</d4p1:isShowScale>
+				<d4p1:isShowScaleVL>true</d4p1:isShowScaleVL>
+				<d4p1:isShowSeriesScale>true</d4p1:isShowSeriesScale>
+				<d4p1:isShowPointsScale>true</d4p1:isShowPointsScale>
+				<d4p1:isShowValuesScale>true</d4p1:isShowValuesScale>
+				<d4p1:vsFormat/>
+				<d4p1:xLabelsOrientation>Auto</d4p1:xLabelsOrientation>
+				<d4p1:scaleLine width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+				</d4p1:scaleLine>
+				<d4p1:scaleColor>auto</d4p1:scaleColor>
+				<d4p1:isAutoSeriesName>true</d4p1:isAutoSeriesName>
+				<d4p1:isAutoPointName>true</d4p1:isAutoPointName>
+				<d4p1:maxMode>Limited</d4p1:maxMode>
+				<d4p1:maxSeries>2</d4p1:maxSeries>
+				<d4p1:maxSeriesPrc>30</d4p1:maxSeriesPrc>
+				<d4p1:spaceMode>Half</d4p1:spaceMode>
+				<d4p1:baseVal>0</d4p1:baseVal>
+				<d4p1:isOutline>false</d4p1:isOutline>
+				<d4p1:realPiePoint>0</d4p1:realPiePoint>
+				<d4p1:realStockSeries>0</d4p1:realStockSeries>
+				<d4p1:isLight>true</d4p1:isLight>
+				<d4p1:isGradient>false</d4p1:isGradient>
+				<d4p1:isTransposition>false</d4p1:isTransposition>
+				<d4p1:hideBaseVal>false</d4p1:hideBaseVal>
+				<d4p1:dataTable>false</d4p1:dataTable>
+				<d4p1:dtVerLines>true</d4p1:dtVerLines>
+				<d4p1:dtHorLines>true</d4p1:dtHorLines>
+				<d4p1:dtHAlign>Right</d4p1:dtHAlign>
+				<d4p1:dtFormat/>
+				<d4p1:dtKeys>true</d4p1:dtKeys>
+				<d4p1:paletteKind>Auto</d4p1:paletteKind>
+				<d4p1:animation>Auto</d4p1:animation>
+				<d4p1:rebuildTime>727851</d4p1:rebuildTime>
+				<d4p1:isTransposed>false</d4p1:isTransposed>
+				<d4p1:autoTransposition>false</d4p1:autoTransposition>
+				<d4p1:legendScrollEnable>false</d4p1:legendScrollEnable>
+				<d4p1:surfaceColor>#A90000</d4p1:surfaceColor>
+				<d4p1:radarScaleType>Circle</d4p1:radarScaleType>
+				<d4p1:gaugeValuesPresentation>Needle</d4p1:gaugeValuesPresentation>
+				<d4p1:gaugeQualityBands useTextStr="false" useTooltipStr="false"/>
+				<d4p1:beginGaugeAngle>0</d4p1:beginGaugeAngle>
+				<d4p1:endGaugeAngle>180</d4p1:endGaugeAngle>
+				<d4p1:gaugeThickness>5</d4p1:gaugeThickness>
+				<d4p1:gaugeLabelsLocation>InsideScale</d4p1:gaugeLabelsLocation>
+				<d4p1:gaugeLabelsArcDirection>false</d4p1:gaugeLabelsArcDirection>
+				<d4p1:gaugeBushThickness>4</d4p1:gaugeBushThickness>
+				<d4p1:gaugeBushColor>#A9A9A9</d4p1:gaugeBushColor>
+				<d4p1:autoMaxValue>true</d4p1:autoMaxValue>
+				<d4p1:userMaxValue>0</d4p1:userMaxValue>
+				<d4p1:autoMinValue>true</d4p1:autoMinValue>
+				<d4p1:userMinValue>0</d4p1:userMinValue>
+				<d4p1:elementsIsInit>false</d4p1:elementsIsInit>
+				<d4p1:titleIsInit>true</d4p1:titleIsInit>
+				<d4p1:legendIsInit>true</d4p1:legendIsInit>
+				<d4p1:chartIsInit>true</d4p1:chartIsInit>
+				<d4p1:elementsChart>
+					<d4p1:left>0</d4p1:left>
+					<d4p1:right>0</d4p1:right>
+					<d4p1:top>0</d4p1:top>
+					<d4p1:bottom>0.067349926793557833089311859</d4p1:bottom>
+				</d4p1:elementsChart>
+				<d4p1:elementsLegend>
+					<d4p1:left>0.83</d4p1:left>
+					<d4p1:right>0</d4p1:right>
+					<d4p1:top>0.08</d4p1:top>
+					<d4p1:bottom>0</d4p1:bottom>
+				</d4p1:elementsLegend>
+				<d4p1:elementsTitle>
+					<d4p1:left>0.83</d4p1:left>
+					<d4p1:right>0</d4p1:right>
+					<d4p1:top>0</d4p1:top>
+					<d4p1:bottom>0.92</d4p1:bottom>
+				</d4p1:elementsTitle>
+				<d4p1:borderColor>style:BorderColor</d4p1:borderColor>
+				<d4p1:border width="0">
+					<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+				</d4p1:border>
+				<d4p1:dataSourceDescription/>
+				<d4p1:isDataSourceMode>false</d4p1:isDataSourceMode>
+				<d4p1:isRandomizedNewValues>true</d4p1:isRandomizedNewValues>
+				<d4p1:realDataItems>
+					<d4p1:item>
+						<d4p1:valData xsi:type="xs:decimal">12.15</d4p1:valData>
+						<d4p1:valInfo xsi:nil="true"/>
+						<d4p1:toolTip/>
+					</d4p1:item>
+					<d4p1:item>
+						<d4p1:valData xsi:type="xs:decimal">15.67</d4p1:valData>
+						<d4p1:valInfo xsi:nil="true"/>
+						<d4p1:toolTip/>
+					</d4p1:item>
+					<d4p1:item>
+						<d4p1:valData xsi:type="xs:decimal">16.05</d4p1:valData>
+						<d4p1:valInfo xsi:nil="true"/>
+						<d4p1:toolTip/>
+					</d4p1:item>
+					<d4p1:item>
+						<d4p1:valData xsi:type="xs:decimal">10.4</d4p1:valData>
+						<d4p1:valInfo xsi:nil="true"/>
+						<d4p1:toolTip/>
+					</d4p1:item>
+				</d4p1:realDataItems>
+				<d4p1:splineStrain>95</d4p1:splineStrain>
+				<d4p1:translucencePercent>0</d4p1:translucencePercent>
+				<d4p1:funnelNeckHeightPercent>10</d4p1:funnelNeckHeightPercent>
+				<d4p1:funnelNeckWidthPercent>10</d4p1:funnelNeckWidthPercent>
+				<d4p1:funnelGapSumPercent>3</d4p1:funnelGapSumPercent>
+				<d4p1:multiStageLinkLine width="1" gap="false">
+					<v8ui:style xsi:type="v8ui:ChartLineType">Solid</v8ui:style>
+				</d4p1:multiStageLinkLine>
+				<d4p1:multiStageLinkColor>#000000</d4p1:multiStageLinkColor>
+				<d4p1:valuesAxis/>
+				<d4p1:pointsAxis/>
+			</Settings>
+		</Attribute>
+		<Attribute name="КлючНастроекФормы" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ключ настроек формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокОтборовСостоянийСинхронизацииТорговыхПредложений" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список отборов состояний синхронизации торговых предложений</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="НастроитьРасписание" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настроить расписание</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ScheduledJob</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>НастроитьРасписание</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОпубликоватьТорговыеПредложения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Синхронизировать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СинхронизацияДанныхВыполнение</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>СинхронизироватьТорговыеПредложения</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="Обновить" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить статистику</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить (F5)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СостоянияПубликаций" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояния публикаций</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояния публикаций</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ShowData</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СостоянияПубликаций</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОткрытьМоиТорговыеПредложения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск публикаций</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посмотреть опубликованные товары</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DataSearch</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьМоиТорговыеПредложенияНажатие</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОткрытьФормуРегистрацииОрганизацииВБизнесСети" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список организаций</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму регистрации организации в бизнес сети</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуРегистрацииОрганизацииВБизнесСети</Action>
+		</Command>
+		<Command name="ОткрытьФормуСпискаПубликацийТорговыхПредложений" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму списка публикаций торговых предложений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму списка публикаций торговых предложений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуСпискаПубликацийТорговыхПредложений</Action>
+		</Command>
+		<Command name="ОткрытьФормуСопоставленияНоменклатуры" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму сопоставления номенклатуры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму сопоставления номенклатуры</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуСопоставленияНоменклатуры</Action>
+		</Command>
+		<Command name="ОткрытьФормуСопоставленияНоменклатурыПоКатегориям" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму сопоставления номенклатуры по категориям</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму сопоставления номенклатуры по категориям</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуСопоставленияНоменклатурыПоКатегориям</Action>
+		</Command>
+		<Command name="ВключитьВыключитьАвтоматическуюСинхронизацию" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить выключить автоматическую синхронизацию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить выключить автоматическую синхронизацию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьВыключитьАвтоматическуюСинхронизацию</Action>
+			<Representation>Picture</Representation>
+		</Command>
+	</Commands>
+</Form>

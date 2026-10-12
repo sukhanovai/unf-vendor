@@ -1,0 +1,466 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<ShowTitle>true</ShowTitle>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AutoScreenTypeSensitive</Group>
+			<HorizontalSpacing>Double</HorizontalSpacing>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="55"/>
+			<ChildItems>
+				<UsualGroup name="КолонкаЛево" id="120">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка лево</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КолонкаЛевоРасширеннаяПодсказка" id="121"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСпособЗначение" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Способ значение</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСпособЗначениеРасширеннаяПодсказка" id="33"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСпособЗначениеВертикально" id="59">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Способ значение вертикально</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСпособЗначениеВертикальноРасширеннаяПодсказка" id="60"/>
+									<ChildItems>
+										<InputField name="СпособРасчетаПремий" id="4">
+											<DataPath>Объект.СпособРасчетаПремий</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Начислять</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="СпособРасчетаПремийКонтекстноеМеню" id="5"/>
+											<ExtendedTooltip name="СпособРасчетаПремийРасширеннаяПодсказка" id="6"/>
+											<Events>
+												<Event name="OnChange">СпособРасчетаПремийПриИзменении</Event>
+											</Events>
+										</InputField>
+										<UsualGroup name="ГруппаЗначениеВалюта" id="69">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Значение валюта</v8:content>
+												</v8:item>
+											</Title>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalSpacing>Single</HorizontalSpacing>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЗначениеВалютаРасширеннаяПодсказка" id="70"/>
+											<ChildItems>
+												<InputField name="ЗначениеРасчетаПремий" id="7">
+													<DataPath>Объект.ЗначениеРасчетаПремий</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Значение</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTipRepresentation>None</ToolTipRepresentation>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<HorizontalStretch>true</HorizontalStretch>
+													<ChoiceButton>false</ChoiceButton>
+													<ContextMenu name="ЗначениеРасчетаПремийКонтекстноеМеню" id="8"/>
+													<ExtendedTooltip name="ЗначениеРасчетаПремийРасширеннаяПодсказка" id="9"/>
+													<Events>
+														<Event name="OnChange">ЗначениеРасчетаПремийПриИзменении</Event>
+													</Events>
+												</InputField>
+												<UsualGroup name="ГруппаВалюта" id="64">
+													<Visible>false</Visible>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Валюта</v8:content>
+														</v8:item>
+													</Title>
+													<Group>HorizontalIfPossible</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаВалютаРасширеннаяПодсказка" id="65"/>
+													<ChildItems>
+														<InputField name="ВалютаРасчета" id="61">
+															<DataPath>Объект.ВалютаРасчета</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Валюта правила</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>None</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<Width>4</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<ContextMenu name="ВалютаРасчетаКонтекстноеМеню" id="62"/>
+															<ExtendedTooltip name="ВалютаРасчетаРасширеннаяПодсказка" id="63">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Сумма начисления будет пересчитана в валюту документа начисления зарплаты по курсу документа</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">ВалютаРасчетаПриИзменении</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<InputField name="ПорядокОкругления" id="51">
+													<DataPath>Объект.ПорядокОкругления</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Округление</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<AutoEditMode>true</AutoEditMode>
+													<Width>6</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ПорядокОкругленияКонтекстноеМеню" id="52"/>
+													<ExtendedTooltip name="ПорядокОкругленияРасширеннаяПодсказка" id="53"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="СегментНоменклатуры" id="10">
+							<DataPath>Объект.СегментНоменклатуры</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отбирать по сегменту номенклатуры</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="СегментНоменклатурыКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="СегментНоменклатурыРасширеннаяПодсказка" id="12"/>
+							<Events>
+								<Event name="OnChange">СегментНоменклатурыПриИзменении</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="КолонкаПраво" id="122">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Колонка право</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="КолонкаПравоРасширеннаяПодсказка" id="123"/>
+					<ChildItems>
+						<InputField name="Родитель" id="45">
+							<DataPath>Объект.Parent</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа совместного применения</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Сложение&gt;</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="РодительКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="47">
+								<Title formatted="true">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Определяет вариант совместного применения правил</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</InputField>
+						<InputField name="Наименование" id="1">
+							<DataPath>Объект.Description</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<DropListButton>true</DropListButton>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Можно выбрать из списка&gt;</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+							<Events>
+								<Event name="OnChange">НаименованиеПриИзменении</Event>
+								<Event name="AutoComplete">НаименованиеАвтоПодбор</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="Недействителен" id="73">
+							<DataPath>Объект.Недействителен</DataPath>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="НедействителенКонтекстноеМеню" id="74"/>
+							<ExtendedTooltip name="НедействителенРасширеннаяПодсказка" id="75">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Правило, отмеченное как недействительное, скрывается из всех списков программы, но сведения о нем остаются.
+Для отображения недействительных, следует установить флаг "Показывать недействительные" в подменю "Еще" в списке правил.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУсловия" id="43">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия начисления</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<Behavior>Usual</Behavior>
+			<Representation>NormalSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаУсловияРасширеннаяПодсказка" id="44"/>
+			<ChildItems>
+				<Table name="УсловияНачисленияПремий" id="13">
+					<Representation>List</Representation>
+					<HeightInTableRows>1</HeightInTableRows>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.УсловияНачисленияПремий</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="УсловияНачисленияПремийКонтекстноеМеню" id="14"/>
+					<AutoCommandBar name="УсловияНачисленияПремийКоманднаяПанель" id="15">
+						<ChildItems>
+							<ButtonGroup name="УсловияГруппаПорядок" id="102">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Условия группа порядок</v8:content>
+									</v8:item>
+								</Title>
+								<Representation>Compact</Representation>
+								<ExtendedTooltip name="УсловияГруппаПорядокРасширеннаяПодсказка" id="103"/>
+								<ChildItems>
+									<Button name="УсловияПереместитьВверх" id="104">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.УсловияНачисленияПремий.StandardCommand.MoveUp</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="УсловияПереместитьВверхРасширеннаяПодсказка" id="105"/>
+									</Button>
+									<Button name="УсловияПереместитьВниз" id="106">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Item.УсловияНачисленияПремий.StandardCommand.MoveDown</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="УсловияПереместитьВнизРасширеннаяПодсказка" id="107"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Button name="УсловияУдалить" id="108">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.УсловияНачисленияПремий.StandardCommand.Delete</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="УсловияУдалитьРасширеннаяПодсказка" id="109"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="УсловияНачисленияПремийРасширеннаяПодсказка" id="16"/>
+					<SearchStringAddition name="УсловияНачисленияПремийСтрокаПоиска" id="17">
+						<AdditionSource>
+							<Item>УсловияНачисленияПремий</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УсловияНачисленияПремийСтрокаПоискаКонтекстноеМеню" id="18"/>
+						<ExtendedTooltip name="УсловияНачисленияПремийСтрокаПоискаРасширеннаяПодсказка" id="19"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="УсловияНачисленияПремийСостояниеПросмотра" id="20">
+						<AdditionSource>
+							<Item>УсловияНачисленияПремий</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УсловияНачисленияПремийСостояниеПросмотраКонтекстноеМеню" id="21"/>
+						<ExtendedTooltip name="УсловияНачисленияПремийСостояниеПросмотраРасширеннаяПодсказка" id="22"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="УсловияНачисленияПремийУправлениеПоиском" id="23">
+						<AdditionSource>
+							<Item>УсловияНачисленияПремий</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="УсловияНачисленияПремийУправлениеПоискомКонтекстноеМеню" id="24"/>
+						<ExtendedTooltip name="УсловияНачисленияПремийУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnChange">УсловияНачисленияПремийПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="УсловияНачисленияПремийУсловиеНачисления" id="26">
+							<DataPath>Объект.УсловияНачисленияПремий.УсловиеНачисления</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Условие начисления</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="УсловияНачисленияПремийУсловиеНачисленияКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="УсловияНачисленияПремийУсловиеНачисленияРасширеннаяПодсказка" id="28"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Комментарий" id="66">
+			<DataPath>Объект.Комментарий</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</Title>
+			<TitleLocation>None</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoEditMode>true</AutoEditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>52</MaxWidth>
+			<Height>2</Height>
+			<MaxHeight>51</MaxHeight>
+			<VerticalStretch>false</VerticalStretch>
+			<MultiLine>true</MultiLine>
+			<ChoiceButton>true</ChoiceButton>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="67">
+				<ChildItems>
+					<Button name="КомментарийКонтекстноеМенюРедактироватьКомментарий" id="110">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.РедактироватьКомментарий</CommandName>
+						<ExtendedTooltip name="КомментарийКонтекстноеМенюРедактироватьКомментарийРасширеннаяПодсказка" id="111"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="68"/>
+			<Events>
+				<Event name="StartChoice">КомментарийНачалоВыбора</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПравилаРасчетаПремийПоЛичнымПродажам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИспользуетсяАвтоНаименование" id="2">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НаименованиеИзмененоПользователем" id="3">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РедактироватьКомментарий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать комментарий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РедактироватьКомментарий</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<ShowTitle>true</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<ButtonGroup name="ФормаГруппаКомандыИзменитьСправка" id="122">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа команды изменить справка</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа команды изменить справка</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФормаГруппаКомандыИзменитьСправкаРасширеннаяПодсказка" id="123"/>
+			</ButtonGroup>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>WeakSeparation</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="39"/>
+			<Events>
+				<Event name="OnCurrentPageChange">ГруппаСтраницыПриСменеСтраницы</Event>
+			</Events>
+			<ChildItems>
+				<Page name="ГруппаДоходыРасходы" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доходы расходы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа доходы расходы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowTitle>true</ShowTitle>
+					<ExtendedTooltip name="ГруппаДоходыРасходыРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<Table name="Список" id="3">
+							<Representation>Tree</Representation>
+							<CommandBarLocation>Top</CommandBarLocation>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<Header>false</Header>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.НомерКартинкиСтроки</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.КоллекцияТипыПоказателей</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<Font ref="style:SmallTextFont" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>MoveItem</ExcludedCommand>
+							</CommandSet>
+							<ShowCommandBar>true</ShowCommandBar>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+								<ChildItems>
+									<Button name="ФормаВосстановитьСписокПоУмолчанию" id="33">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗагрузитьСтандартныйНаборПоказателей</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+											<xr:LoadTransparent>false</xr:LoadTransparent>
+										</Picture>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ФормаВосстановитьСписокПоУмолчаниюРасширеннаяПодсказка" id="34"/>
+									</Button>
+									<Button name="СписокИзменитьФорму" id="151">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.CustomizeForm</CommandName>
+										<ExtendedTooltip name="СписокИзменитьФормуРасширеннаяПодсказка" id="152"/>
+									</Button>
+									<Button name="СписокСправка" id="153">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.StandardCommand.Help</CommandName>
+										<ExtendedTooltip name="СписокСправкаРасширеннаяПодсказка" id="154"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+							<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+								<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+								<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+								<AdditionSource>
+									<Item>Список</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">СписокПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ПредставлениеПоказателя" id="19">
+									<DataPath>Список.ПредставлениеПоказателя</DataPath>
+									<TitleBackColor>style:FormBackColor</TitleBackColor>
+									<ContextMenu name="ПредставлениеПоказателяКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ПредставлениеПоказателяРасширеннаяПодсказка" id="21"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДенежныйПоток" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Денежный поток</v8:content>
+						</v8:item>
+					</Title>
+					<ShowTitle>true</ShowTitle>
+					<ExtendedTooltip name="ГруппаДенежныйПотокРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<Table name="СписокДенежныйПоток" id="55">
+							<Representation>Tree</Representation>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<Header>false</Header>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.НомерКартинкиСтроки</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.КоллекцияТипыПоказателей</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<Font ref="style:SmallTextFont" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>MoveItem</ExcludedCommand>
+							</CommandSet>
+							<SearchStringLocation>CommandBar</SearchStringLocation>
+							<SearchControlLocation>CommandBar</SearchControlLocation>
+							<ShowCommandBar>auto</ShowCommandBar>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокДенежныйПотокКонтекстноеМеню" id="56"/>
+							<AutoCommandBar name="СписокДенежныйПотокКоманднаяПанель" id="57">
+								<ChildItems>
+									<Button name="ФормаВосстановитьСписокПоУмолчаниюДП" id="120">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗагрузитьСтандартныйНаборПоказателей</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+											<xr:LoadTransparent>false</xr:LoadTransparent>
+										</Picture>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ФормаВосстановитьСписокПоУмолчаниюДПРасширеннаяПодсказка" id="121"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокДенежныйПотокРасширеннаяПодсказка" id="58"/>
+							<SearchStringAddition name="СписокДенежныйПотокСтрокаПоиска" id="59">
+								<AdditionSource>
+									<Item>СписокДенежныйПоток</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДенежныйПотокСтрокаПоискаКонтекстноеМеню" id="60"/>
+								<ExtendedTooltip name="СписокДенежныйПотокСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокДенежныйПотокСостояниеПросмотра" id="62">
+								<AdditionSource>
+									<Item>СписокДенежныйПоток</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДенежныйПотокСостояниеПросмотраКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="СписокДенежныйПотокСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокДенежныйПотокУправлениеПоиском" id="65">
+								<AdditionSource>
+									<Item>СписокДенежныйПоток</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДенежныйПотокУправлениеПоискомКонтекстноеМеню" id="66"/>
+								<ExtendedTooltip name="СписокДенежныйПотокУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">СписокДенежныйПотокПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ПредставлениеПоказателяДенежныйПоток" id="70">
+									<DataPath>Список.ПредставлениеПоказателя</DataPath>
+									<ContextMenu name="ПредставлениеПоказателяДенежныйПотокКонтекстноеМеню" id="71"/>
+									<ExtendedTooltip name="ПредставлениеПоказателяДенежныйПотокРасширеннаяПодсказка" id="72"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаБаланс" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Баланс</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа баланс</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowTitle>true</ShowTitle>
+					<ExtendedTooltip name="ГруппаБалансРасширеннаяПодсказка" id="48"/>
+					<ChildItems>
+						<Table name="СписокБаланс" id="74">
+							<Representation>Tree</Representation>
+							<RowSelectionMode>Row</RowSelectionMode>
+							<Header>false</Header>
+							<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<DataPath>Список</DataPath>
+							<RowPictureDataPath>Список.НомерКартинкиСтроки</RowPictureDataPath>
+							<RowsPicture>
+								<xr:Ref>CommonPicture.КоллекцияТипыПоказателей</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</RowsPicture>
+							<Font ref="style:SmallTextFont" kind="StyleItem"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Список</v8:content>
+								</v8:item>
+							</Title>
+							<CommandSet>
+								<ExcludedCommand>MoveItem</ExcludedCommand>
+							</CommandSet>
+							<ShowCommandBar>auto</ShowCommandBar>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СписокБалансКонтекстноеМеню" id="75"/>
+							<AutoCommandBar name="СписокБалансКоманднаяПанель" id="76">
+								<ChildItems>
+									<Button name="ФормаВосстановитьСписокПоУмолчаниюБаланс" id="95">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗагрузитьСтандартныйНаборПоказателей</CommandName>
+										<Picture>
+											<xr:Ref>CommonPicture.ЗаполнитьФорму</xr:Ref>
+											<xr:LoadTransparent>false</xr:LoadTransparent>
+										</Picture>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ФормаВосстановитьСписокПоУмолчаниюБалансРасширеннаяПодсказка" id="96"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокБалансРасширеннаяПодсказка" id="77"/>
+							<SearchStringAddition name="СписокБалансСтрокаПоиска" id="78">
+								<AdditionSource>
+									<Item>СписокБаланс</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокБалансСтрокаПоискаКонтекстноеМеню" id="79"/>
+								<ExtendedTooltip name="СписокБалансСтрокаПоискаРасширеннаяПодсказка" id="80"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокБалансСостояниеПросмотра" id="81">
+								<AdditionSource>
+									<Item>СписокБаланс</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокБалансСостояниеПросмотраКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="СписокБалансСостояниеПросмотраРасширеннаяПодсказка" id="83"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокБалансУправлениеПоиском" id="84">
+								<AdditionSource>
+									<Item>СписокБаланс</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокБалансУправлениеПоискомКонтекстноеМеню" id="85"/>
+								<ExtendedTooltip name="СписокБалансУправлениеПоискомРасширеннаяПодсказка" id="86"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">СписокБалансПередНачаломДобавления</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ПредставлениеПоказателяБаланс" id="89">
+									<DataPath>Список.ПредставлениеПоказателя</DataPath>
+									<TitleBackColor>style:FormBackColor</TitleBackColor>
+									<ContextMenu name="ПредставлениеПоказателяБалансКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="ПредставлениеПоказателяБалансРасширеннаяПодсказка" id="91"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ПредставлениеПоказателя</Field>
+				<Field>Список.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникПоказателиБизнеса.Ссылка КАК Ссылка,
+	СправочникПоказателиБизнеса.ПометкаУдаления КАК ПометкаУдаления,
+	СправочникПоказателиБизнеса.Родитель КАК Родитель,
+	СправочникПоказателиБизнеса.Код КАК Код,
+	СправочникПоказателиБизнеса.Наименование КАК Наименование,
+	СправочникПоказателиБизнеса.Порядок КАК Порядок,
+	СправочникПоказателиБизнеса.ТипПоказателя КАК ТипПоказателя,
+	СправочникПоказателиБизнеса.ПредставлениеФормулы КАК ПредставлениеФормулы,
+	СправочникПоказателиБизнеса.СтрокаФормулы КАК СтрокаФормулы,
+	СправочникПоказателиБизнеса.ВидОтчета КАК ВидОтчета,
+	СправочникПоказателиБизнеса.ИсточникДанных КАК ИсточникДанных,
+	СправочникПоказателиБизнеса.СпособПолученияДанныхИсточника КАК СпособПолученияДанныхИсточника,
+	СправочникПоказателиБизнеса.ИдентификаторПоказателя КАК ИдентификаторПоказателя,
+	СправочникПоказателиБизнеса.Описание КАК Описание,
+	СправочникПоказателиБизнеса.ЭтоПроцент КАК ЭтоПроцент,
+	СправочникПоказателиБизнеса.ПредставлениеПоказателя КАК ПредставлениеПоказателя,
+	ВЫБОР
+		КОГДА СправочникПоказателиБизнеса.ПометкаУдаления ТОГДА
+		ВЫБОР
+		КОГДА СправочникПоказателиБизнеса.ТипПоказателя = ЗНАЧЕНИЕ(Перечисление.ТипыПоказателейБизнеса.Доход)
+			ТОГДА 4
+		КОГДА СправочникПоказателиБизнеса.ТипПоказателя = ЗНАЧЕНИЕ(Перечисление.ТипыПоказателейБизнеса.Расход)
+			ТОГДА 5
+		КОГДА СправочникПоказателиБизнеса.ТипПоказателя = ЗНАЧЕНИЕ(Перечисление.ТипыПоказателейБизнеса.Группа)
+			ТОГДА 6
+		ИНАЧЕ 7
+		КОНЕЦ
+		ИНАЧЕ
+		ВЫБОР
+		КОГДА СправочникПоказателиБизнеса.ТипПоказателя = ЗНАЧЕНИЕ(Перечисление.ТипыПоказателейБизнеса.Доход)
+			ТОГДА 0
+		КОГДА СправочникПоказателиБизнеса.ТипПоказателя = ЗНАЧЕНИЕ(Перечисление.ТипыПоказателейБизнеса.Расход)
+			ТОГДА 1
+		КОГДА СправочникПоказателиБизнеса.ТипПоказателя = ЗНАЧЕНИЕ(Перечисление.ТипыПоказателейБизнеса.Группа)
+			ТОГДА 2
+		ИНАЧЕ 3
+	КОНЕЦ КОНЕЦ КАК НомерКартинкиСтроки
+ИЗ
+	Справочник.ПоказателиБизнеса КАК СправочникПоказателиБизнеса
+ГДЕ
+	СправочникПоказателиБизнеса.ВидОтчета = &amp;ВидОтчета</QueryText>
+				<MainTable>Catalog.ПоказателиБизнеса</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Родитель</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Порядок</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВидыОтчетов" id="2">
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:EnumRef.ВидыФинансовыхОтчетов</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="ВыбранныйОтчет" id="3">
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыФинансовыхОтчетов</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьСтандартныйНаборПоказателей" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить стандартный набор показателей</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить стандартный набор показателей</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьСтандартныйНаборПоказателей</Action>
+		</Command>
+	</Commands>
+</Form>

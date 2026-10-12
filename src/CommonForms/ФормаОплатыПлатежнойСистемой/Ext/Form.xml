@@ -1,0 +1,1670 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>Top</CommandBarLocation>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаПречек" id="639">
+				<Type>CommandBarButton</Type>
+				<Width>4</Width>
+				<Height>2</Height>
+				<CommandName>Form.Command.КомандаПречек</CommandName>
+				<ExtendedTooltip name="ФормаПречекРасширеннаяПодсказка" id="640"/>
+			</Button>
+			<Button name="ФормаИнструкция" id="643">
+				<Type>CommandBarButton</Type>
+				<Width>4</Width>
+				<Height>2</Height>
+				<CommandName>Form.Command.КомандаИнструкция</CommandName>
+				<ExtendedTooltip name="ФормаИнструкцияРасширеннаяПодсказка" id="644"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="ДекорацияПустаяСлужебная" id="887">
+			<Visible>false</Visible>
+			<Enabled>false</Enabled>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Служит для скрытия выделения текущего элемента</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ContextMenu name="ДекорацияПустаяСлужебнаяКонтекстноеМеню" id="888"/>
+			<ExtendedTooltip name="ДекорацияПустаяСлужебнаяРасширеннаяПодсказка" id="889"/>
+		</LabelDecoration>
+		<UsualGroup name="ГруппаПлатежнаяСистема" id="359">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа платежная система</v8:content>
+				</v8:item>
+			</Title>
+			<Width>70</Width>
+			<Height>35</Height>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПлатежнаяСистемаРасширеннаяПодсказка" id="360"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаПанельДействий" id="363">
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПанельДействийРасширеннаяПодсказка" id="364"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСлоевПанелиДействийПлатежнойСистемы" id="365">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа слоев панели действий платежной системы</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСлоевПанелиДействийПлатежнойСистемыРасширеннаяПодсказка" id="366"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаОсновнаяСтраница" id="367">
+									<Visible>false</Visible>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>Vertical</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОсновнаяСтраницаРасширеннаяПодсказка" id="368"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПродажа" id="369">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа продажа</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа продажа</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>HorizontalIfPossible</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПродажаРасширеннаяПодсказка" id="370"/>
+											<ChildItems>
+												<Table name="ВидыОплатПС" id="734">
+													<Representation>List</Representation>
+													<ReadOnly>true</ReadOnly>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<AutoMaxHeight>false</AutoMaxHeight>
+													<MaxHeight>7</MaxHeight>
+													<SelectionMode>SingleRow</SelectionMode>
+													<RowSelectionMode>Cell</RowSelectionMode>
+													<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+													<AutoInsertNewRow>true</AutoInsertNewRow>
+													<EnableStartDrag>true</EnableStartDrag>
+													<EnableDrag>true</EnableDrag>
+													<FileDragMode>AsFile</FileDragMode>
+													<DataPath>ПлатежнаяСистема_ВидыОплат</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Платежные системы</v8:content>
+														</v8:item>
+													</Title>
+													<SearchStringLocation>None</SearchStringLocation>
+													<ViewStatusLocation>None</ViewStatusLocation>
+													<SearchControlLocation>None</SearchControlLocation>
+													<RowFilter xsi:nil="true"/>
+													<ContextMenu name="ВидыОплатПСКонтекстноеМеню" id="735">
+														<Autofill>false</Autofill>
+													</ContextMenu>
+													<AutoCommandBar name="ВидыОплатПСКоманднаяПанель" id="736">
+														<Autofill>false</Autofill>
+													</AutoCommandBar>
+													<ExtendedTooltip name="ВидыОплатПСРасширеннаяПодсказка" id="737"/>
+													<SearchStringAddition name="ВидыОплатПССтрокаПоиска" id="738">
+														<AdditionSource>
+															<Item>ВидыОплатПС</Item>
+															<Type>SearchStringRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ВидыОплатПССтрокаПоискаКонтекстноеМеню" id="739"/>
+														<ExtendedTooltip name="ВидыОплатПССтрокаПоискаРасширеннаяПодсказка" id="740"/>
+													</SearchStringAddition>
+													<ViewStatusAddition name="ВидыОплатПССостояниеПросмотра" id="741">
+														<AdditionSource>
+															<Item>ВидыОплатПС</Item>
+															<Type>ViewStatusRepresentation</Type>
+														</AdditionSource>
+														<ContextMenu name="ВидыОплатПССостояниеПросмотраКонтекстноеМеню" id="742"/>
+														<ExtendedTooltip name="ВидыОплатПССостояниеПросмотраРасширеннаяПодсказка" id="743"/>
+													</ViewStatusAddition>
+													<SearchControlAddition name="ВидыОплатПСУправлениеПоиском" id="744">
+														<AdditionSource>
+															<Item>ВидыОплатПС</Item>
+															<Type>SearchControl</Type>
+														</AdditionSource>
+														<ContextMenu name="ВидыОплатПСУправлениеПоискомКонтекстноеМеню" id="745"/>
+														<ExtendedTooltip name="ВидыОплатПСУправлениеПоискомРасширеннаяПодсказка" id="746"/>
+													</SearchControlAddition>
+													<ChildItems>
+														<InputField name="ВидыОплатПСПредставление" id="749">
+															<DataPath>ПлатежнаяСистема_ВидыОплат.Представление</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Способы оплаты</v8:content>
+																</v8:item>
+															</Title>
+															<EditMode>EnterOnInput</EditMode>
+															<AutoEditMode>true</AutoEditMode>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<ContextMenu name="ВидыОплатПСПредставлениеКонтекстноеМеню" id="750"/>
+															<ExtendedTooltip name="ВидыОплатПСПредставлениеРасширеннаяПодсказка" id="751"/>
+														</InputField>
+													</ChildItems>
+												</Table>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаВозврат" id="371">
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа возврат</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа возврат</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаВозвратРасширеннаяПодсказка" id="372"/>
+											<ChildItems>
+												<UsualGroup name="ГруппаСуммаКВозврату" id="869">
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаСуммаКВозвратуРасширеннаяПодсказка" id="870"/>
+													<ChildItems>
+														<LabelDecoration name="ДекорацияСуммаКВозврату" id="874">
+															<Font ref="style:TitleLevel2" kind="StyleItem"/>
+															<ContextMenu name="ДекорацияСуммаКВозвратуКонтекстноеМеню" id="875"/>
+															<ExtendedTooltip name="ДекорацияСуммаКВозвратуРасширеннаяПодсказка" id="876"/>
+														</LabelDecoration>
+													</ChildItems>
+												</UsualGroup>
+												<InputField name="ИдентификаторОплаты" id="377">
+													<DataPath>ПлатежнаяСистема_ИдентификаторОплаты</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
+													<Font ref="style:ШрифтОбычныйПолужирный12РМК" kind="StyleItem"/>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Идентификатор оплаты</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="ИдентификаторОплатыКонтекстноеМеню" id="378"/>
+													<ExtendedTooltip name="ИдентификаторОплатыРасширеннаяПодсказка" id="379">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Сканируйте QR-код СБП с бумажного чека.</v8:content>
+															</v8:item>
+														</Title>
+														<HorizontalAlign>Center</HorizontalAlign>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ИдентификаторОплатыПриИзменении</Event>
+													</Events>
+												</InputField>
+												<InputField name="ПлатежнаяСистема_БанкКлиента" id="381">
+													<DataPath>ПлатежнаяСистема_БанкКлиента</DataPath>
+													<SkipOnInput>true</SkipOnInput>
+													<TitleLocation>None</TitleLocation>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<HorizontalStretch>true</HorizontalStretch>
+													<ListChoiceMode>true</ListChoiceMode>
+													<Font ref="style:ШрифтОбычныйПолужирный12РМК" kind="StyleItem"/>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Банк покупателя</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="ПлатежнаяСистема_БанкКлиентаКонтекстноеМеню" id="382"/>
+													<ExtendedTooltip name="ПлатежнаяСистема_БанкКлиентаРасширеннаяПодсказка" id="383">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Выберите банк покупателя, если требуется вернуть деньги в другой банк.</v8:content>
+															</v8:item>
+														</Title>
+														<HorizontalAlign>Center</HorizontalAlign>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="AutoComplete">ПлатежнаяСистемаАвтоПодбор</Event>
+													</Events>
+												</InputField>
+												<InputField name="ПлатежнаяСистема_ИдентификаторПС" id="624">
+													<DataPath>ПлатежнаяСистема_ИдентификаторПС</DataPath>
+													<Visible>false</Visible>
+													<TitleLocation>Top</TitleLocation>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ContextMenu name="ПлатежнаяСистема_ИдентификаторПСКонтекстноеМеню" id="625"/>
+													<ExtendedTooltip name="ПлатежнаяСистема_ИдентификаторПСРасширеннаяПодсказка" id="626"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПодтверждениеВозврата" id="388">
+									<Visible>false</Visible>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>Vertical</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПодтверждениеВозвратаРасширеннаяПодсказка" id="389"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияПодтверждениеВозврата" id="390">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;Подтверждение возврата&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияПодтверждениеВозвратаКонтекстноеМеню" id="391"/>
+											<ExtendedTooltip name="ДекорацияПодтверждениеВозвратаРасширеннаяПодсказка" id="392"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаДлительнаяОперация" id="393">
+									<Visible>false</Visible>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа длительная операция</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаДлительнаяОперацияРасширеннаяПодсказка" id="394"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияДлительнаяОперация" id="395">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация длительная операция</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.ДлительнаяОперацияРМК48</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияДлительнаяОперацияКонтекстноеМеню" id="396"/>
+											<ExtendedTooltip name="ДекорацияДлительнаяОперацияРасширеннаяПодсказка" id="397"/>
+										</PictureDecoration>
+										<LabelDecoration name="ДекорацияНадписьДлительнаяОперация" id="398">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выполнение операции в платежной системе. Пожалуйста, подождите...</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияНадписьДлительнаяОперацияКонтекстноеМеню" id="399"/>
+											<ExtendedTooltip name="ДекорацияНадписьДлительнаяОперацияРасширеннаяПодсказка" id="400"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаQRКод" id="401">
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа QRКод</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>Vertical</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаQRКодРасширеннаяПодсказка" id="402"/>
+									<ChildItems>
+										<PictureField name="ДанныеQRКода" id="420">
+											<DataPath>ПлатежнаяСистема_ДанныеQRКода</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<MaxWidth>26</MaxWidth>
+											<PictureSize>Proportionally</PictureSize>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+											</Border>
+											<ContextMenu name="ДанныеQRКодаКонтекстноеМеню" id="421"/>
+											<ExtendedTooltip name="ДанныеQRКодаРасширеннаяПодсказка" id="422"/>
+										</PictureField>
+										<LabelDecoration name="ДекорацияQRПодсказка" id="816">
+											<Font ref="style:TitleLevel1" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Наведите камеру</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияQRПодсказкаКонтекстноеМеню" id="817"/>
+											<ExtendedTooltip name="ДекорацияQRПодсказкаРасширеннаяПодсказка" id="818"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияСуммаЧека" id="409">
+											<ContextMenu name="ДекорацияСуммаЧекаКонтекстноеМеню" id="410"/>
+											<ExtendedTooltip name="ДекорацияСуммаЧекаРасширеннаяПодсказка" id="411"/>
+										</LabelDecoration>
+										<UsualGroup name="ГруппаАктивацияNFC" id="669">
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаАктивацияNFCРасширеннаяПодсказка" id="670"/>
+											<ChildItems>
+												<LabelDecoration name="ДекорацияНадписьКодNFC" id="673">
+													<Width>24</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отсканируйте QR-код или приложите телефон к NFC-метке</v8:content>
+														</v8:item>
+													</Title>
+													<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+													<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+													<HorizontalAlign>Center</HorizontalAlign>
+													<ContextMenu name="ДекорацияНадписьКодNFCКонтекстноеМеню" id="674"/>
+													<ExtendedTooltip name="ДекорацияНадписьКодNFCРасширеннаяПодсказка" id="675"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаИнструкция" id="447">
+									<Visible>false</Visible>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа инструкция</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>Vertical</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИнструкцияРасширеннаяПодсказка" id="448"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияИнструкцияЗаголовок" id="881">
+											<Width>45</Width>
+											<Font ref="style:TitleLevel2" kind="StyleItem"/>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оплачивайте покупки с помощью QR-кода в несколько простых действий:</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<ContextMenu name="ДекорацияИнструкцияЗаголовокКонтекстноеМеню" id="882"/>
+											<ExtendedTooltip name="ДекорацияИнструкцияЗаголовокРасширеннаяПодсказка" id="883"/>
+										</LabelDecoration>
+										<LabelDecoration name="ДекорацияОписание" id="449">
+											<Width>60</Width>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>1. Откройте на смартфоне приложение своего банка.	
+2. Нажмите кнопку «Оплата по QR-коду» (название может отличаться в разных мобильных банках).
+3. Камерой смартфона отсканируйте QR-код, сформированный на кассе. 
+4. Проверьте данные о покупке и нажмите кнопку "Оплатить" или "Подтвердить".
+Деньги спишутся с вашего счета, а продавец получит уведомление об оплате</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОписаниеКонтекстноеМеню" id="450"/>
+											<ExtendedTooltip name="ДекорацияОписаниеРасширеннаяПодсказка" id="451"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаИстеклоВремяОжидания" id="457">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа истекло время ожидания</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа истекло время ожидания</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаИстеклоВремяОжиданияРасширеннаяПодсказка" id="458"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияКартинкаВыполняется" id="459">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация картинка выполняется</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>StdPicture.DialogInformation</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияКартинкаВыполняетсяКонтекстноеМеню" id="460"/>
+											<ExtendedTooltip name="ДекорацияКартинкаВыполняетсяРасширеннаяПодсказка" id="461"/>
+										</PictureDecoration>
+										<LabelDecoration name="ДекорацияНадписьВыполняется" id="462">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подтверждение оплаты не получено от платежной системы.</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияНадписьВыполняетсяКонтекстноеМеню" id="463"/>
+											<ExtendedTooltip name="ДекорацияНадписьВыполняетсяРасширеннаяПодсказка" id="464"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОшибка" id="465">
+									<Visible>false</Visible>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОшибкаРасширеннаяПодсказка" id="466"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияКартинкаОшибки" id="469">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация картинка ошибки</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>StdPicture.DialogStop</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияКартинкаОшибкиКонтекстноеМеню" id="470"/>
+											<ExtendedTooltip name="ДекорацияКартинкаОшибкиРасширеннаяПодсказка" id="471"/>
+										</PictureDecoration>
+										<LabelDecoration name="ДекорацияОписаниеОшибки" id="472">
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;&lt;Ошибка подключения&gt;&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОписаниеОшибкиКонтекстноеМеню" id="473"/>
+											<ExtendedTooltip name="ДекорацияОписаниеОшибкиРасширеннаяПодсказка" id="474"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОшибкаПолученияСтатуса" id="475">
+									<Visible>false</Visible>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа ошибка получения статуса</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОшибкаПолученияСтатусаРасширеннаяПодсказка" id="476"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияКартинкаОшибкиПолученияСтатуса" id="479">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация картинка ошибки</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>StdPicture.DialogStop</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияКартинкаОшибкиПолученияСтатусаКонтекстноеМеню" id="480"/>
+											<ExtendedTooltip name="ДекорацияКартинкаОшибкиПолученияСтатусаРасширеннаяПодсказка" id="481"/>
+										</PictureDecoration>
+										<LabelDecoration name="ДекорацияОписаниеОшибкиПолученияСтатуса" id="482">
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;&lt;Ошибка подключения&gt;&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияОписаниеОшибкиПолученияСтатусаКонтекстноеМеню" id="483"/>
+											<ExtendedTooltip name="ДекорацияОписаниеОшибкиПолученияСтатусаРасширеннаяПодсказка" id="484"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаЗавершение" id="777">
+									<Visible>false</Visible>
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>true</VerticalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<VerticalAlign>Center</VerticalAlign>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЗавершениеРасширеннаяПодсказка" id="778"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияКартинкаУспешноеЗавершение" id="781">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Декорация картинка успешное завершение</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.РМКУспешно</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<ContextMenu name="ДекорацияКартинкаУспешноеЗавершениеКонтекстноеМеню" id="782"/>
+											<ExtendedTooltip name="ДекорацияКартинкаУспешноеЗавершениеРасширеннаяПодсказка" id="783"/>
+										</PictureDecoration>
+										<LabelDecoration name="ДекорацияНадписьУспешноеЗавершение" id="784">
+											<Title formatted="true">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>&lt;&lt;Успешное завершение операции&gt;&gt;</v8:content>
+												</v8:item>
+											</Title>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<ContextMenu name="ДекорацияНадписьУспешноеЗавершениеКонтекстноеМеню" id="785"/>
+											<ExtendedTooltip name="ДекорацияНадписьУспешноеЗавершениеРасширеннаяПодсказка" id="786"/>
+										</LabelDecoration>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПлатежнаяСистемаКоманднаяПанельНиз" id="501">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа выбор вида оплаты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа платежная система командная панель низ</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Height>3</Height>
+							<HorizontalStretch>true</HorizontalStretch>
+							<VerticalStretch>false</VerticalStretch>
+							<GroupVerticalAlign>Bottom</GroupVerticalAlign>
+							<Group>AlwaysHorizontal</Group>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<VerticalAlign>Center</VerticalAlign>
+							<Behavior>Usual</Behavior>
+							<Representation>WeakSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПлатежнаяСистемаКоманднаяПанельНизРасширеннаяПодсказка" id="502"/>
+							<ChildItems>
+								<Button name="ФормаСоздатьQRКод" id="770">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаСоздатьQRКод</CommandName>
+									<ExtendedTooltip name="ФормаСоздатьQRКодРасширеннаяПодсказка" id="771"/>
+								</Button>
+								<Button name="ФормаВозвратПлатежа" id="772">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаВозвратПлатежа</CommandName>
+									<ExtendedTooltip name="ФормаВозвратПлатежаРасширеннаяПодсказка" id="773"/>
+								</Button>
+								<Button name="ФормаПодтвердитьВозврат" id="774">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаПодтвердитьВозврат</CommandName>
+									<ExtendedTooltip name="ФормаПодтвердитьВозвратРасширеннаяПодсказка" id="775"/>
+								</Button>
+								<Button name="ФормаПовторить" id="507">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаПовторить</CommandName>
+									<ButtonImportance>Main</ButtonImportance>
+									<ExtendedTooltip name="ФормаПовторитьРасширеннаяПодсказка" id="508"/>
+								</Button>
+								<Button name="ФормаПодтвердитьОплату" id="511">
+									<Type>UsualButton</Type>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаПодтвердитьОплату</CommandName>
+									<RepresentationInContextMenu>None</RepresentationInContextMenu>
+									<ExtendedTooltip name="ФормаПодтвердитьОплатуРасширеннаяПодсказка" id="512"/>
+								</Button>
+								<Button name="ФормаОтложить" id="519">
+									<Type>UsualButton</Type>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаОтложить</CommandName>
+									<RepresentationInContextMenu>None</RepresentationInContextMenu>
+									<ExtendedTooltip name="ФормаОтложитьРасширеннаяПодсказка" id="520"/>
+								</Button>
+								<Button name="ФормаОтменитьОплату" id="515">
+									<Type>UsualButton</Type>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаОтменитьОплату</CommandName>
+									<ExtendedTooltip name="ФормаОтменитьОплатуРасширеннаяПодсказка" id="516"/>
+								</Button>
+								<Button name="ФормаЗакрытьОплату" id="917">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаЗакрытьОплату</CommandName>
+									<ExtendedTooltip name="ФормаЗакрытьОплатуРасширеннаяПодсказка" id="918"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВопросПредупреждение" id="562">
+					<Visible>false</Visible>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВопросПредупреждениеРасширеннаяПодсказка" id="563"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияЛинияВопросПредупреждение" id="758">
+							<HorizontalStretch>true</HorizontalStretch>
+							<PictureSize>Stretch</PictureSize>
+							<Picture>
+								<xr:Ref>CommonPicture.ЛинияПредупреждения</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияЛинияВопросПредупреждениеКонтекстноеМеню" id="759"/>
+							<ExtendedTooltip name="ДекорацияЛинияВопросПредупреждениеРасширеннаяПодсказка" id="760"/>
+						</PictureDecoration>
+						<UsualGroup name="ГруппаВопросПредупреждениеОписание" id="567">
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>WeakSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВопросПредупреждениеОписаниеРасширеннаяПодсказка" id="568"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияПредупреждениеВопроса" id="569">
+									<Picture>
+										<xr:Ref>CommonPicture.ДекорацияПредупреждениеЗаменаПрав</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияПредупреждениеВопросаКонтекстноеМеню" id="570"/>
+									<ExtendedTooltip name="ДекорацияПредупреждениеВопросаРасширеннаяПодсказка" id="571"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияЗаголовокГруппаВопросПредупреждение" id="572">
+									<Font ref="style:TitleLevel1" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оплата проведена по платежной системе</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияЗаголовокГруппаВопросПредупреждениеКонтекстноеМеню" id="573"/>
+									<ExtendedTooltip name="ДекорацияЗаголовокГруппаВопросПредупреждениеРасширеннаяПодсказка" id="574"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияТекстГруппаВопросПредупреждение" id="575">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Необходимо выполнить сторно оплаты</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияТекстГруппаВопросПредупреждениеКонтекстноеМеню" id="576"/>
+									<ExtendedTooltip name="ДекорацияТекстГруппаВопросПредупреждениеРасширеннаяПодсказка" id="577"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКомандыВопросПредупреждение" id="794">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды вопрос предупреждение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Height>3</Height>
+							<VerticalStretch>false</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыВопросПредупреждениеРасширеннаяПодсказка" id="795"/>
+							<ChildItems>
+								<Button name="ФормаЗакрытьПринудительно" id="578">
+									<Type>UsualButton</Type>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаЗакрытьПринудительно</CommandName>
+									<ExtendedTooltip name="ФормаЗакрытьПринудительноРасширеннаяПодсказка" id="579"/>
+								</Button>
+								<Button name="ФормаВернутьсяКОплате" id="792">
+									<Type>UsualButton</Type>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаВернутьсяКОплате</CommandName>
+									<ExtendedTooltip name="ФормаВернутьсяКОплатеРасширеннаяПодсказка" id="793"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаВопросОтложитьЧек" id="585">
+					<Visible>false</Visible>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВопросОтложитьЧекРасширеннаяПодсказка" id="586"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияЛинияВопросОтложитьЧек" id="761">
+							<HorizontalStretch>true</HorizontalStretch>
+							<PictureSize>Stretch</PictureSize>
+							<Picture>
+								<xr:Ref>CommonPicture.ЛинияПредупреждения</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияЛинияВопросОтложитьЧекКонтекстноеМеню" id="762"/>
+							<ExtendedTooltip name="ДекорацияЛинияВопросОтложитьЧекРасширеннаяПодсказка" id="763"/>
+						</PictureDecoration>
+						<UsualGroup name="ГруппаВопросОтложитьЧекИнформация" id="590">
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>WeakSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаВопросОтложитьЧекИнформацияРасширеннаяПодсказка" id="591"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияПредупреждениеОтложитьЧек" id="592">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация предупреждение замена прав</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ДекорацияПредупреждениеЗаменаПрав</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияПредупреждениеОтложитьЧекКонтекстноеМеню" id="593"/>
+									<ExtendedTooltip name="ДекорацияПредупреждениеОтложитьЧекРасширеннаяПодсказка" id="594"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияЗаголовокГруппаВопросОтложитьЧек" id="595">
+									<Font ref="style:TitleLevel1" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Отложить можно только оплаченный чек</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияЗаголовокГруппаВопросОтложитьЧекКонтекстноеМеню" id="596"/>
+									<ExtendedTooltip name="ДекорацияЗаголовокГруппаВопросОтложитьЧекРасширеннаяПодсказка" id="597"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияТекстГруппаВопросОтложитьЧек" id="598">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Необходимо проверить оплату чека покупателем</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияТекстГруппаВопросОтложитьЧекКонтекстноеМеню" id="599"/>
+									<ExtendedTooltip name="ДекорацияТекстГруппаВопросОтложитьЧекРасширеннаяПодсказка" id="600"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКомандыВопросОтложитьЧек" id="804">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды вопрос предупреждение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Height>3</Height>
+							<VerticalStretch>false</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыВопросОтложитьЧекРасширеннаяПодсказка" id="805"/>
+							<ChildItems>
+								<Button name="ФормаОтложитьПринудительно" id="601">
+									<Type>UsualButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаОтложитьПринудительно</CommandName>
+									<ExtendedTooltip name="ФормаОтложитьПринудительноРасширеннаяПодсказка" id="602"/>
+								</Button>
+								<Button name="ФормаВернутьсяКОплате2" id="802">
+									<Type>UsualButton</Type>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаВернутьсяКОплате</CommandName>
+									<ExtendedTooltip name="ФормаВернутьсяКОплате2РасширеннаяПодсказка" id="803"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПодтверждениеОплатыВозврата" id="838">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подтверждение оплаты возврата</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа подтверждение оплаты возврата</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Vertical</Group>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<VerticalAlign>Center</VerticalAlign>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПодтверждениеОплатыВозвратаРасширеннаяПодсказка" id="839"/>
+					<ChildItems>
+						<PictureDecoration name="ДекорацияЛинияПодтверждениеОплаты" id="840">
+							<HorizontalStretch>true</HorizontalStretch>
+							<PictureSize>Stretch</PictureSize>
+							<Picture>
+								<xr:Ref>CommonPicture.ЛинияПредупреждения</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ДекорацияЛинияПодтверждениеОплатыКонтекстноеМеню" id="841"/>
+							<ExtendedTooltip name="ДекорацияЛинияПодтверждениеОплатыРасширеннаяПодсказка" id="842"/>
+						</PictureDecoration>
+						<UsualGroup name="ГруппаПодтверждениеОплатыВозвратаИнформация" id="843">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подтверждение оплаты возврата информация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа подтверждение оплаты возврата информация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<VerticalStretch>true</VerticalStretch>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>WeakSeparation</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПодтверждениеОплатыВозвратаИнформацияРасширеннаяПодсказка" id="844"/>
+							<ChildItems>
+								<PictureDecoration name="ДекорацияПредупреждениеПодтвержденияОплаты" id="845">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Декорация предупреждение замена прав</v8:content>
+										</v8:item>
+									</Title>
+									<Picture>
+										<xr:Ref>CommonPicture.ДекорацияПредупреждениеЗаменаПрав</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<ContextMenu name="ДекорацияПредупреждениеПодтвержденияОплатыКонтекстноеМеню" id="846"/>
+									<ExtendedTooltip name="ДекорацияПредупреждениеПодтвержденияОплатыРасширеннаяПодсказка" id="847"/>
+								</PictureDecoration>
+								<LabelDecoration name="ДекорацияЗаголовокГруппаПодтверждениеОплатыВозврата" id="848">
+									<HorizontalStretch>true</HorizontalStretch>
+									<Font ref="style:TitleLevel1" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Попросите администратора подтвердить оплату</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияЗаголовокГруппаПодтверждениеОплатыВозвратаКонтекстноеМеню" id="849"/>
+									<ExtendedTooltip name="ДекорацияЗаголовокГруппаПодтверждениеОплатыВозвратаРасширеннаяПодсказка" id="850"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияТекстГруппаПодтверждениеОплатыВозврата" id="851">
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>сканированием карты или введя пароль</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияТекстГруппаПодтверждениеОплатыВозвратаКонтекстноеМеню" id="852"/>
+									<ExtendedTooltip name="ДекорацияТекстГруппаПодтверждениеОплатыВозвратаРасширеннаяПодсказка" id="853"/>
+								</LabelDecoration>
+								<LabelDecoration name="ДекорацияТекстПодтверждениеОплатыОшибка" id="858">
+									<TextColor>pal:Red</TextColor>
+									<HorizontalAlign>Center</HorizontalAlign>
+									<ContextMenu name="ДекорацияТекстПодтверждениеОплатыОшибкаКонтекстноеМеню" id="859"/>
+									<ExtendedTooltip name="ДекорацияТекстПодтверждениеОплатыОшибкаРасширеннаяПодсказка" id="860"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКомандыПодтверждениеОплаты" id="861">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команды вопрос предупреждение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Height>3</Height>
+							<VerticalStretch>false</VerticalStretch>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандыПодтверждениеОплатыРасширеннаяПодсказка" id="862"/>
+							<ChildItems>
+								<Button name="ФормаПодтвердитьОплатуВозвратПринудительно" id="863">
+									<Type>UsualButton</Type>
+									<Representation>Text</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаПодтвердитьОплатуВозвратПринудительно</CommandName>
+									<ExtendedTooltip name="ФормаПодтвердитьОплатуВозвратПринудительноРасширеннаяПодсказка" id="864"/>
+								</Button>
+								<Button name="ФормаВернутьсяКОплате3" id="865">
+									<Type>UsualButton</Type>
+									<Width>16</Width>
+									<VerticalStretch>true</VerticalStretch>
+									<CommandName>Form.Command.КомандаВернутьсяКОплате</CommandName>
+									<ExtendedTooltip name="ФормаВернутьсяКОплате3РасширеннаяПодсказка" id="866"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ПлатежнаяСистема_ДанныеQRКода" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПлатежнаяСистема_ВидОплаты" id="6">
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ВидОплатыРМК</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ПлатежнаяСистема_СанкционированноеЗакрытие" id="38">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПлатежнаяСистема_ИдентификаторОплаты" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>QR-код оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ПлатежнаяСистема_БанкКлиента" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежная система банк клиента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьПодключаемоеОборудование" id="16">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоддерживаемыеТипыПодключаемогоОборудования" id="18">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПлатежнаяСистема_НоваяЗаявка" id="51">
+			<Type/>
+		</Attribute>
+		<Attribute name="ПлатежнаяСистема_ИдентификаторПС" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ оплаты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ТекстОшибки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст ошибки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АктивацияNFC" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Активация NFC</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПереданныеПараметры" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переданные параметры</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ВыбранныйИдентификаторПС" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбранный идентификатор ПС</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="РежимКСО" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим КСО</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаКОплате" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма к оплате</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.Число15_2РМК</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ПлатежнаяСистема_ВидыОплат" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежная система виды оплат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВидОплаты" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид оплаты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ВидОплатыРМК</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="СсылочныйНомер" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылочный номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Представление" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Интеграция" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Интеграция</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="ПлатежнаяСистема" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Платежная система</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="Организация" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ОрганизацияРМК</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ИдентификаторПС" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор ПС</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СпособОплаты" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Способ оплаты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.СпособОплатыПлатежныхСистемРМК</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ПроцентКомиссии" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процент комиссии (при оплате)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПроцентКомиссииПриВозврате" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Процент комиссии (при возврате)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>5</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПлатежнаяСистема" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Платежная система</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.ТипПлатежнойСистемыРМК</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийСлойГруппы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий слой группы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИстеклоВремяОжидания" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Истекло время ожидания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВалютаПредставление" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Валюта представление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗапретитьОткладывание" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить откладывание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьКассовуюСсылку" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать кассовую ссылку</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаПовторить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повторить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Повторить операцию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПовторить</Action>
+		</Command>
+		<Command name="КомандаПодтвердитьОплату" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить оплату</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F7</Shortcut>
+			<Action>КомандаПодтвердитьОплату</Action>
+		</Command>
+		<Command name="КомандаОтменитьОплату" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить платеж</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить оплату</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтменитьОплату</Action>
+		</Command>
+		<Command name="КомандаОтложить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отложить чек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отложить оплату с чеком</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтложить</Action>
+		</Command>
+		<Command name="КомандаЗакрытьПринудительно" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗакрытьПринудительно</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="КомандаОтложитьПринудительно" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отложить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отложить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтложитьПринудительно</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="КомандаПречек" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пречек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать QR-кода на чековой ленте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Print</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаПречек</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="КомандаИнструкция" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать инструкцию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Information</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаИнструкция</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="КомандаСоздатьQRКод" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать QR-код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать QRКод</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСоздатьQRКод</Action>
+		</Command>
+		<Command name="КомандаВозвратПлатежа" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Возврат платежа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВозвратПлатежа</Action>
+		</Command>
+		<Command name="КомандаПодтвердитьВозврат" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить возврат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПодтвердитьВозврат</Action>
+		</Command>
+		<Command name="КомандаВернутьсяКОплате" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Назад</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вернуться к оплате</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВернутьсяКОплате</Action>
+		</Command>
+		<Command name="КомандаПодтвердитьОплатуВозвратПринудительно" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подтвердить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПодтвердитьОплатуВозвратПринудительно</Action>
+		</Command>
+		<Command name="КомандаЗакрытьОплату" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗакрытьОплату</Action>
+			<Representation>Text</Representation>
+		</Command>
+	</Commands>
+</Form>

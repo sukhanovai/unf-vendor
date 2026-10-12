@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<ShowTitle>true</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаАдресПубликации" id="156">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес публикации</v8:content>
+				</v8:item>
+			</Title>
+			<Group>AlwaysHorizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаАдресПубликацииРасширеннаяПодсказка" id="157"/>
+			<ChildItems>
+				<InputField name="АдресПубликацииСервисаТелефонии" id="158">
+					<DataPath>АдресПубликацииСервисаТелефонии</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="АдресПубликацииСервисаТелефонииКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="АдресПубликацииСервисаТелефонииРасширеннаяПодсказка" id="160"/>
+				</InputField>
+				<Button name="ПроверитьАдресПубликации" id="161">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ПроверитьАдресПубликации</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПроверитьАдресПубликацииРасширеннаяПодсказка" id="162"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаМобильныйТелефон" id="188">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Мобильный телефон</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаМобильныйТелефонРасширеннаяПодсказка" id="189"/>
+			<ChildItems>
+				<InputField name="НомерТелефона" id="20">
+					<DataPath>НомерТелефона</DataPath>
+					<HorizontalStretch>true</HorizontalStretch>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер телефона</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="НомерТелефонаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НомерТелефонаРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<Button name="Позвонить" id="23">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Позвонить</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Позвонить</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ПозвонитьРасширеннаяПодсказка" id="24"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="ВнутреннийНомерТелефонаТекущегоПользователя" id="25">
+			<DataPath>ВнутреннийНомерТелефонаТекущегоПользователя</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<MaxWidth>10</MaxWidth>
+			<ContextMenu name="ВнутреннийНомерТелефонаТекущегоПользователяКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ВнутреннийНомерТелефонаТекущегоПользователяРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<UsualGroup name="ГруппаПроверкаШаг3" id="151">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Для проверки опубликованного сервиса телефонии 1С</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПроверкаШаг3РасширеннаяПодсказка" id="152"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВнутреннийНомер" id="190">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Внутренний номер</v8:content>
+						</v8:item>
+					</Title>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВнутреннийНомерРасширеннаяПодсказка" id="191"/>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="186">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="187"/>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="193">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="194"/>
+			<ChildItems>
+				<Page name="ГруппаСтраницаЛог" id="195">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Журнал запросов/ответов между 1С и АТС</v8:content>
+						</v8:item>
+					</Title>
+					<ShowTitle>true</ShowTitle>
+					<ExtendedTooltip name="ГруппаСтраницаЛогРасширеннаяПодсказка" id="196"/>
+					<ChildItems>
+						<CommandBar name="ГруппаКомандыЖурнала" id="211">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Журнал</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ГруппаКомандыЖурналаРасширеннаяПодсказка" id="212"/>
+							<ChildItems>
+								<Button name="ФормаОбновить" id="1">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Обновить</CommandName>
+									<ExtendedTooltip name="ФормаОбновитьРасширеннаяПодсказка" id="2"/>
+								</Button>
+								<Button name="ФормаОчистить" id="6">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.Очистить</CommandName>
+									<ExtendedTooltip name="ФормаОчиститьРасширеннаяПодсказка" id="7"/>
+								</Button>
+								<Button name="СохранитьДляТехподдержки" id="142">
+									<Type>CommandBarButton</Type>
+									<CommandName>Form.Command.СохранитьДляТехподдержки</CommandName>
+									<ExtendedTooltip name="СохранитьДляТехподдержкиРасширеннаяПодсказка" id="143"/>
+								</Button>
+							</ChildItems>
+						</CommandBar>
+						<TextDocumentField name="ТекстовыйДокумент" id="3">
+							<DataPath>ТекстовыйДокумент</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<TitleLocation>None</TitleLocation>
+							<Height>8</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<ContextMenu name="ТекстовыйДокументКонтекстноеМеню" id="4"/>
+							<ExtendedTooltip name="ТекстовыйДокументРасширеннаяПодсказка" id="5"/>
+						</TextDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтраницаЗвонки" id="197">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Созданные в процессе отладки звонки</v8:content>
+						</v8:item>
+					</Title>
+					<ShowTitle>true</ShowTitle>
+					<ExtendedTooltip name="ГруппаСтраницаЗвонкиРасширеннаяПодсказка" id="198"/>
+					<ChildItems>
+						<Table name="СозданныеЗвонки" id="77">
+							<ReadOnly>true</ReadOnly>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<Height>4</Height>
+							<SelectionMode>SingleRow</SelectionMode>
+							<RowSelectionMode>Cell</RowSelectionMode>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>СозданныеЗвонки</DataPath>
+							<RowPictureDataPath>СозданныеЗвонки.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СозданныеЗвонкиКонтекстноеМеню" id="78"/>
+							<AutoCommandBar name="СозданныеЗвонкиКоманднаяПанель" id="79">
+								<ChildItems>
+									<Button name="СозданныеЗвонкиОткрытьСобытие" id="140">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<Representation>Text</Representation>
+										<CommandName>Form.Command.ОткрытьСобытие</CommandName>
+										<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+										<ExtendedTooltip name="СозданныеЗвонкиОткрытьСобытиеРасширеннаяПодсказка" id="141"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СозданныеЗвонкиРасширеннаяПодсказка" id="80"/>
+							<SearchStringAddition name="СозданныеЗвонкиСтрокаПоиска" id="81">
+								<AdditionSource>
+									<Item>СозданныеЗвонки</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СозданныеЗвонкиСтрокаПоискаКонтекстноеМеню" id="82"/>
+								<ExtendedTooltip name="СозданныеЗвонкиСтрокаПоискаРасширеннаяПодсказка" id="83"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СозданныеЗвонкиСостояниеПросмотра" id="84">
+								<AdditionSource>
+									<Item>СозданныеЗвонки</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СозданныеЗвонкиСостояниеПросмотраКонтекстноеМеню" id="85"/>
+								<ExtendedTooltip name="СозданныеЗвонкиСостояниеПросмотраРасширеннаяПодсказка" id="86"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СозданныеЗвонкиУправлениеПоиском" id="87">
+								<AdditionSource>
+									<Item>СозданныеЗвонки</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СозданныеЗвонкиУправлениеПоискомКонтекстноеМеню" id="88"/>
+								<ExtendedTooltip name="СозданныеЗвонкиУправлениеПоискомРасширеннаяПодсказка" id="89"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СозданныеЗвонкиДатаСозданияЗаписи" id="148">
+									<DataPath>СозданныеЗвонки.ДатаСозданияЗаписи</DataPath>
+									<Enabled>false</Enabled>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата записи</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СозданныеЗвонкиДатаСозданияЗаписиКонтекстноеМеню" id="149"/>
+									<ExtendedTooltip name="СозданныеЗвонкиДатаСозданияЗаписиРасширеннаяПодсказка" id="150"/>
+								</LabelField>
+								<LabelField name="СозданныеЗвонкиСобытие" id="90">
+									<DataPath>СозданныеЗвонки.Событие</DataPath>
+									<ContextMenu name="СозданныеЗвонкиСобытиеКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="СозданныеЗвонкиСобытиеРасширеннаяПодсказка" id="92"/>
+								</LabelField>
+								<LabelField name="СозданныеЗвонкиИдентификаторЗвонкаВАТС" id="93">
+									<DataPath>СозданныеЗвонки.ИдентификаторЗвонкаВАТС</DataPath>
+									<Enabled>false</Enabled>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Идентификатор ВАТС</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СозданныеЗвонкиИдентификаторЗвонкаВАТСКонтекстноеМеню" id="94"/>
+									<ExtendedTooltip name="СозданныеЗвонкиИдентификаторЗвонкаВАТСРасширеннаяПодсказка" id="95"/>
+								</LabelField>
+								<LabelField name="СозданныеЗвонкиВходящееИсходящее" id="96">
+									<DataPath>СозданныеЗвонки.ВходящееИсходящее</DataPath>
+									<Enabled>false</Enabled>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Входящее/исходящее</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СозданныеЗвонкиВходящееИсходящееКонтекстноеМеню" id="97"/>
+									<ExtendedTooltip name="СозданныеЗвонкиВходящееИсходящееРасширеннаяПодсказка" id="98"/>
+								</LabelField>
+								<LabelField name="СозданныеЗвонкиДатаСобытия" id="99">
+									<DataPath>СозданныеЗвонки.ДатаСобытия</DataPath>
+									<Enabled>false</Enabled>
+									<ContextMenu name="СозданныеЗвонкиДатаСобытияКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="СозданныеЗвонкиДатаСобытияРасширеннаяПодсказка" id="101"/>
+								</LabelField>
+								<LabelField name="СозданныеЗвонкиНачалоРазговора" id="102">
+									<DataPath>СозданныеЗвонки.НачалоРазговора</DataPath>
+									<Enabled>false</Enabled>
+									<ContextMenu name="СозданныеЗвонкиНачалоРазговораКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="СозданныеЗвонкиНачалоРазговораРасширеннаяПодсказка" id="104"/>
+								</LabelField>
+								<LabelField name="СозданныеЗвонкиДлительностьРазговора" id="105">
+									<DataPath>СозданныеЗвонки.ДлительностьРазговора</DataPath>
+									<Enabled>false</Enabled>
+									<ContextMenu name="СозданныеЗвонкиДлительностьРазговораКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="СозданныеЗвонкиДлительностьРазговораРасширеннаяПодсказка" id="107"/>
+								</LabelField>
+								<LabelField name="СозданныеЗвонкиКонтрагент" id="108">
+									<DataPath>СозданныеЗвонки.Контрагент</DataPath>
+									<Enabled>false</Enabled>
+									<ContextMenu name="СозданныеЗвонкиКонтрагентКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="СозданныеЗвонкиКонтрагентРасширеннаяПодсказка" id="110"/>
+								</LabelField>
+								<CheckBoxField name="СозданныеЗвонкиНеотвеченный" id="111">
+									<DataPath>СозданныеЗвонки.Неотвеченный</DataPath>
+									<Enabled>false</Enabled>
+									<ContextMenu name="СозданныеЗвонкиНеотвеченныйКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="СозданныеЗвонкиНеотвеченныйРасширеннаяПодсказка" id="113"/>
+								</CheckBoxField>
+								<LabelField name="СозданныеЗвонкиНомерКому" id="114">
+									<DataPath>СозданныеЗвонки.НомерКому</DataPath>
+									<Enabled>false</Enabled>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кому (номер)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СозданныеЗвонкиНомерКомуКонтекстноеМеню" id="115"/>
+									<ExtendedTooltip name="СозданныеЗвонкиНомерКомуРасширеннаяПодсказка" id="116"/>
+								</LabelField>
+								<LabelField name="СозданныеЗвонкиНомерОтКого" id="117">
+									<DataPath>СозданныеЗвонки.НомерОтКого</DataPath>
+									<Enabled>false</Enabled>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>От кого (номер)</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СозданныеЗвонкиНомерОтКогоКонтекстноеМеню" id="118"/>
+									<ExtendedTooltip name="СозданныеЗвонкиНомерОтКогоРасширеннаяПодсказка" id="119"/>
+								</LabelField>
+								<LabelField name="СозданныеЗвонкиНомерОрганизации" id="120">
+									<DataPath>СозданныеЗвонки.НомерОрганизации</DataPath>
+									<Enabled>false</Enabled>
+									<ContextMenu name="СозданныеЗвонкиНомерОрганизацииКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="СозданныеЗвонкиНомерОрганизацииРасширеннаяПодсказка" id="122"/>
+								</LabelField>
+								<LabelField name="СозданныеЗвонкиСсылкаНаЗаписьРазговора" id="123">
+									<DataPath>СозданныеЗвонки.СсылкаНаЗаписьРазговора</DataPath>
+									<Enabled>false</Enabled>
+									<ContextMenu name="СозданныеЗвонкиСсылкаНаЗаписьРазговораКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="СозданныеЗвонкиСсылкаНаЗаписьРазговораРасширеннаяПодсказка" id="125"/>
+								</LabelField>
+								<CheckBoxField name="СозданныеЗвонкиВызовЗавершен" id="126">
+									<DataPath>СозданныеЗвонки.ВызовЗавершен</DataPath>
+									<Enabled>false</Enabled>
+									<ContextMenu name="СозданныеЗвонкиВызовЗавершенКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="СозданныеЗвонкиВызовЗавершенРасширеннаяПодсказка" id="128"/>
+								</CheckBoxField>
+								<LabelField name="СозданныеЗвонкиСотрудник" id="129">
+									<DataPath>СозданныеЗвонки.Сотрудник</DataPath>
+									<Enabled>false</Enabled>
+									<ContextMenu name="СозданныеЗвонкиСотрудникКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="СозданныеЗвонкиСотрудникРасширеннаяПодсказка" id="131"/>
+								</LabelField>
+								<CheckBoxField name="СозданныеЗвонкиТребуетсяЗапроситьЗаписьРазговора" id="132">
+									<DataPath>СозданныеЗвонки.ТребуетсяЗапроситьЗаписьРазговора</DataPath>
+									<Enabled>false</Enabled>
+									<ContextMenu name="СозданныеЗвонкиТребуетсяЗапроситьЗаписьРазговораКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="СозданныеЗвонкиТребуетсяЗапроситьЗаписьРазговораРасширеннаяПодсказка" id="134"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ОтладкаТелефонии</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТекстовыйДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текстовый документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НомерТелефона" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Позвонить на мобильный телефон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВнутреннийНомерТелефонаТекущегоПользователя" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Внутренний номер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СозданныеЗвонки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Созданные звонки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>~СозданныеЗвонки.МаркерЛогирования</Field>
+				<Field>СозданныеЗвонки.Событие</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>InformationRegister.ДанныеЗвонков</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="МаркерЛогированияТелефонии" id="6">
+			<Type>
+				<v8:Type>v8:UUID</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборДатаЛогирования" id="7">
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>DateTime</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресПубликацииСервисаТелефонии" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес публикации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Обновить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Обновить</Action>
+		</Command>
+		<Command name="Очистить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Очистить</Action>
+		</Command>
+		<Command name="Позвонить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Позвонить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Позвонить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Позвонить</Action>
+		</Command>
+		<Command name="ОткрытьСобытие" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть событие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть событие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьСобытие</Action>
+			<AssociatedTableElementId xsi:type="xs:string">СозданныеЗвонки</AssociatedTableElementId>
+		</Command>
+		<Command name="СохранитьДляТехподдержки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить для техподдержки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьДляТехподдержки</Action>
+		</Command>
+		<Command name="ПроверитьАдресПубликации" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить адрес публикации</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроверитьАдресПубликации</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Group>Vertical</Group>
+	<ShowTitle>true</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Double</VerticalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="74"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСравнениеПоказателя" id="71">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа сравнение показателя</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Single</VerticalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСравнениеПоказателяРасширеннаяПодсказка" id="72"/>
+					<ChildItems>
+						<InputField name="ВидПоказателя" id="4">
+							<DataPath>Запись.ВидПоказателя</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Реквизит заявки</v8:content>
+								</v8:item>
+							</Title>
+							<MaxWidth>15</MaxWidth>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="ВидПоказателяКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ВидПоказателяРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="OnChange">ВидПоказателяПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ВидСравнения" id="7">
+							<DataPath>Запись.ВидСравнения</DataPath>
+							<MaxWidth>20</MaxWidth>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидСравненияЗначений.EnumValue.Равно</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидСравненияЗначений.EnumValue.Больше</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидСравненияЗначений.EnumValue.БольшеИлиРавно</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидСравненияЗначений.EnumValue.Меньше</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation/>
+										<Value xsi:type="xr:DesignTimeRef">Enum.ВидСравненияЗначений.EnumValue.МеньшеИлиРавно</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ВидСравненияКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ВидСравненияРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="ЗначениеДляСравнения" id="10">
+							<DataPath>Запись.ЗначениеДляСравнения</DataPath>
+							<ChooseType>false</ChooseType>
+							<ContextMenu name="ЗначениеДляСравненияКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ЗначениеДляСравненияРасширеннаяПодсказка" id="12"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаМаршрут" id="75">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа маршрут</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Single</VerticalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаМаршрутРасширеннаяПодсказка" id="76"/>
+					<ChildItems>
+						<InputField name="Маршрут" id="1">
+							<DataPath>Запись.Маршрут</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Маршрут</v8:content>
+								</v8:item>
+							</Title>
+							<MaxWidth>30</MaxWidth>
+							<ContextMenu name="МаршрутКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="МаршрутРасширеннаяПодсказка" id="3"/>
+						</InputField>
+						<UsualGroup name="ГруппаДанныеМаршрута" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Данные маршрута</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<Behavior>Usual</Behavior>
+							<Collapsed>true</Collapsed>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаДанныеМаршрутаРасширеннаяПодсказка" id="33"/>
+							<ChildItems>
+								<InputField name="ПриоритетМаршрута" id="13">
+									<DataPath>Запись.Маршрут.Приоритет</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Приоритет</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMarkIncomplete>false</AutoMarkIncomplete>
+									<ContextMenu name="ПриоритетМаршрутаКонтекстноеМеню" id="14"/>
+									<ExtendedTooltip name="ПриоритетМаршрутаРасширеннаяПодсказка" id="15"/>
+								</InputField>
+								<Table name="УчастникиМаршрута" id="16">
+									<Representation>List</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<ReadOnly>true</ReadOnly>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<MaxWidth>60</MaxWidth>
+									<HeightControlVariant>UseContentHeight</HeightControlVariant>
+									<SelectionMode>SingleRow</SelectionMode>
+									<RowSelectionMode>Cell</RowSelectionMode>
+									<AutoMarkIncomplete>false</AutoMarkIncomplete>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>Запись.Маршрут.УчастникиМаршрута</DataPath>
+									<AutoMaxCardHeight>false</AutoMaxCardHeight>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="УчастникиМаршрутаКонтекстноеМеню" id="18"/>
+									<AutoCommandBar name="УчастникиМаршрутаКоманднаяПанель" id="17"/>
+									<ExtendedTooltip name="УчастникиМаршрутаРасширеннаяПодсказка" id="19"/>
+									<SearchStringAddition name="УчастникиМаршрутаСтрокаПоиска" id="20">
+										<AdditionSource>
+											<Item>УчастникиМаршрута</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="УчастникиМаршрутаСтрокаПоискаКонтекстноеМеню" id="21"/>
+										<ExtendedTooltip name="УчастникиМаршрутаСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="УчастникиМаршрутаСостояниеПросмотра" id="26">
+										<AdditionSource>
+											<Item>УчастникиМаршрута</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="УчастникиМаршрутаСостояниеПросмотраКонтекстноеМеню" id="27"/>
+										<ExtendedTooltip name="УчастникиМаршрутаСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="УчастникиМаршрутаУправлениеПоиском" id="23">
+										<AdditionSource>
+											<Item>УчастникиМаршрута</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="УчастникиМаршрутаУправлениеПоискомКонтекстноеМеню" id="24"/>
+										<ExtendedTooltip name="УчастникиМаршрутаУправлениеПоискомРасширеннаяПодсказка" id="25"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="УчастникиМаршрутаНомерСтроки" id="49">
+											<DataPath>Запись.Маршрут.УчастникиМаршрута.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ContextMenu name="УчастникиМаршрутаНомерСтрокиКонтекстноеМеню" id="50"/>
+											<ExtendedTooltip name="УчастникиМаршрутаНомерСтрокиРасширеннаяПодсказка" id="51"/>
+										</InputField>
+										<InputField name="УчастникиМаршрутаПользователь" id="53">
+											<DataPath>Запись.Маршрут.УчастникиМаршрута.Пользователь</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ContextMenu name="УчастникиМаршрутаПользовательКонтекстноеМеню" id="54"/>
+											<ExtendedTooltip name="УчастникиМаршрутаПользовательРасширеннаяПодсказка" id="55"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.ПравилаМаршрутизацииЗаявок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ВидПоказателяВидОперации" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид показателя вид операции</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыПоказателейЗаявкиНаРасходДС</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидПоказателяСумма" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид показателя сумма</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыПоказателейЗаявкиНаРасходДС</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидыОперацийПустаяСсылка" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды операций пустая ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыОперацийРасходДСПлан</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидПоказателяАвтор" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид показателя автор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыПоказателейЗаявкиНаРасходДС</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПользователиПустаяСсылка" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователи пустая ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидПоказателяСтатья" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид показателя статья</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыПоказателейЗаявкиНаРасходДС</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтатьяПустаяссылка" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статья пустая ссылка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.СтатьиДвиженияДенежныхСредств</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УчастникиМаршрута" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участники маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Пользователь" id="15">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пользователь</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="НомерСтроки" id="17">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>N</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>9</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ПриоритетМаршрута" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приоритет маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеЗаявки" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные заявки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Parameters>
+		<Parameter name="Маршрут">
+			<Type>
+				<v8:Type>cfg:CatalogRef.МаршрутыСогласованияЗаявок</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ВидПоказателя">
+			<Type>
+				<v8:Type>cfg:EnumRef.ВидыПоказателейЗаявкиНаРасходДС</v8:Type>
+			</Type>
+		</Parameter>
+		<Parameter name="ДанныеЗаявки">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

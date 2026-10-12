@@ -1,0 +1,849 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>HorizontalIfPossible</Group>
+	<ShowTitle>true</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ЛеваяКолонка" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Левая колонка</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ЛеваяКолонкаРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа пользовательских настроек</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalStretch>false</VerticalStretch>
+					<Group>Vertical</Group>
+					<Behavior>Usual</Behavior>
+					<Representation>WeakSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+				</UsualGroup>
+				<Table name="Список" id="3">
+					<DefaultItem>true</DefaultItem>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<InitialTreeView>ExpandTopLevel</InitialTreeView>
+					<InitialRowActivation>Activate</InitialRowActivation>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Список</DataPath>
+					<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список</v8:content>
+						</v8:item>
+					</Title>
+					<ShowCommandBar>auto</ShowCommandBar>
+					<AutoRefresh>false</AutoRefresh>
+					<AutoRefreshPeriod>60</AutoRefreshPeriod>
+					<Period>
+						<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+						<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+						<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+					</Period>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<RestoreCurrentRow>false</RestoreCurrentRow>
+					<TopLevelParent xsi:nil="true"/>
+					<ShowRoot>true</ShowRoot>
+					<AllowRootChoice>false</AllowRootChoice>
+					<UpdateOnDataChange>Auto</UpdateOnDataChange>
+					<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+					<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+					<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+					<AutoCommandBar name="СписокКоманднаяПанель" id="5"/>
+					<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+					<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+						<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+						<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+						<AdditionSource>
+							<Item>Список</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+						<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnActivateRow">СписокПриАктивизацииСтроки</Event>
+						<Event name="OnHover">СписокПриНаведении</Event>
+					</Events>
+					<ChildItems>
+						<LabelField name="Наименование" id="16">
+							<DataPath>Список.Description</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="18"/>
+						</LabelField>
+						<LabelField name="Ссылка" id="22">
+							<DataPath>Список.Ref</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="СсылкаКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="24"/>
+						</LabelField>
+						<LabelField name="РеквизитДопУпорядочивания" id="94">
+							<DataPath>Список.РеквизитДопУпорядочивания</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="РеквизитДопУпорядочиванияКонтекстноеМеню" id="95"/>
+							<ExtendedTooltip name="РеквизитДопУпорядочиванияРасширеннаяПодсказка" id="96"/>
+						</LabelField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ПраваяПанель" id="142">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Правая панель</v8:content>
+				</v8:item>
+			</Title>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ShowAsCard>true</ShowAsCard>
+			<ExtendedTooltip name="ПраваяПанельРасширеннаяПодсказка" id="143"/>
+			<ChildItems>
+				<UsualGroup name="ПраваяПанельСвернутая" id="144">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая панель свернутая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая панель свернутая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<VerticalStretch>false</VerticalStretch>
+					<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Double</VerticalSpacing>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПраваяПанельСвернутаяРасширеннаяПодсказка" id="145"/>
+					<ChildItems>
+						<PictureDecoration name="ЗначокСервис" id="148">
+							<Width>2</Width>
+							<Height>1</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Значок сервис</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<PictureSize>Proportionally</PictureSize>
+							<Picture>
+								<xr:Ref>CommonPicture.ЛоготипСервисРаботаСНоменклатурой48</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="ЗначокСервисКонтекстноеМеню" id="149"/>
+							<ExtendedTooltip name="ЗначокСервисРасширеннаяПодсказка" id="150"/>
+							<Events>
+								<Event name="Click">ЗначокСервисНажатие</Event>
+							</Events>
+						</PictureDecoration>
+						<InputField name="ИндексыФильтры" id="273">
+							<DataPath>ИндексыФильтры</DataPath>
+							<Visible>false</Visible>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<ContextMenu name="ИндексыФильтрыКонтекстноеМеню" id="274"/>
+							<ExtendedTooltip name="ИндексыФильтрыРасширеннаяПодсказка" id="275"/>
+						</InputField>
+						<LabelDecoration name="ИндексФильтрыТакси" id="277">
+							<Visible>false</Visible>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<ContextMenu name="ИндексФильтрыТаксиКонтекстноеМеню" id="278"/>
+							<ExtendedTooltip name="ИндексФильтрыТаксиРасширеннаяПодсказка" id="279"/>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<Pages name="ПраваяПанельСтраницы" id="166">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Правая панель страницы</v8:content>
+						</v8:item>
+					</Title>
+					<Width>39</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ПраваяПанельСтраницыРасширеннаяПодсказка" id="167"/>
+					<ChildItems>
+						<Page name="ФильтрыНастройкиИДопИнфо" id="168">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Фильтры</v8:content>
+								</v8:item>
+							</Title>
+							<VerticalStretch>true</VerticalStretch>
+							<Picture>
+								<xr:Ref>CommonPicture.ФильтрПустой</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<Group>Vertical</Group>
+							<ShowTitle>true</ShowTitle>
+							<TitleDataPath>ПодключенаИнтернетПоддержка</TitleDataPath>
+							<ScrollOnCompress>true</ScrollOnCompress>
+							<ExtendedTooltip name="ФильтрыНастройкиИДопИнфоРасширеннаяПодсказка" id="169"/>
+							<ChildItems>
+								<UsualGroup name="ВиджетСервисРаботаСНоменклатурой" id="34">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Виджет "Сервис 1С:Номенклатура"</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ВиджетСервисРаботаСНоменклатуройРасширеннаяПодсказка" id="35"/>
+									<ChildItems>
+										<UsualGroup name="ВиджетСервисРаботаСНоменклатуройВертикальная" id="140">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Виджет сервис работа с номенклатурой вертикальная</v8:content>
+												</v8:item>
+											</Title>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ВиджетСервисРаботаСНоменклатуройВертикальнаяРасширеннаяПодсказка" id="141"/>
+											<ChildItems>
+												<UsualGroup name="НаименованиеСервиса" id="36">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Наименование сервиса</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<HorizontalSpacing>Double</HorizontalSpacing>
+													<VerticalSpacing>Single</VerticalSpacing>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="НаименованиеСервисаРасширеннаяПодсказка" id="37"/>
+													<ChildItems>
+														<PictureDecoration name="ДекорацияЛогоСервиса" id="38">
+															<Width>7</Width>
+															<Height>2</Height>
+															<Title formatted="false">
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Декорация лого сервиса</v8:content>
+																</v8:item>
+															</Title>
+															<PictureSize>Proportionally</PictureSize>
+															<Picture>
+																<xr:Ref>CommonPicture.ЛоготипСервисРаботаСНоменклатурой</xr:Ref>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
+															</Picture>
+															<FileDragMode>AsFile</FileDragMode>
+															<ContextMenu name="ДекорацияЛогоСервисаКонтекстноеМеню" id="39"/>
+															<ExtendedTooltip name="ДекорацияЛогоСервисаРасширеннаяПодсказка" id="40"/>
+														</PictureDecoration>
+														<UsualGroup name="ГруппаНаименованиеИЛичныйКабинет" id="311">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа наименование и личный кабинет</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаНаименованиеИЛичныйКабинетРасширеннаяПодсказка" id="312"/>
+															<ChildItems>
+																<LabelDecoration name="ДекорацияНаименованиеСервиса" id="41">
+																	<Title formatted="true">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>&lt;b&gt;&lt;font Arial&gt;&lt;fontsize 14&gt;1С:Номенклатура&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;fontsize 10&gt;
+Каталог стандартизированных описаний товаров в "1С:Предприятии 8".&lt;/&gt;</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ContextMenu name="ДекорацияНаименованиеСервисаКонтекстноеМеню" id="42"/>
+																	<ExtendedTooltip name="ДекорацияНаименованиеСервисаРасширеннаяПодсказка" id="43"/>
+																</LabelDecoration>
+																<LabelDecoration name="ЛичныйКабинет" id="75">
+																	<Title formatted="true">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>&lt;link https://catalog-api.1c.ru/lk&gt;Личный кабинет&lt;/&gt;</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Информация о подключенных пакетах, количестве доступных для покупки и уже купленных карточках 1С:Номенклатуры.</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<ContextMenu name="ЛичныйКабинетКонтекстноеМеню" id="76"/>
+																	<ExtendedTooltip name="ЛичныйКабинетРасширеннаяПодсказка" id="77"/>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаРаботаСНоменклатуройБиллинг" id="46">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Работа с номенклатурой биллинг</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Usual</Behavior>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаРаботаСНоменклатуройБиллингРасширеннаяПодсказка" id="47"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаУведомленияСервиса" id="48">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Уведомления сервиса</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Horizontal</Group>
+															<HorizontalSpacing>Half</HorizontalSpacing>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаУведомленияСервисаРасширеннаяПодсказка" id="49"/>
+															<ChildItems>
+																<PictureDecoration name="ГруппаУведомленияСервисаИзображение" id="50">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа уведомления сервиса изображение</v8:content>
+																		</v8:item>
+																	</Title>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="ГруппаУведомленияСервисаИзображениеКонтекстноеМеню" id="51"/>
+																	<ExtendedTooltip name="ГруппаУведомленияСервисаИзображениеРасширеннаяПодсказка" id="52"/>
+																</PictureDecoration>
+																<UsualGroup name="ГруппаУведомленияСервисаКонтекст" id="53">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Уведомления сервиса контекст</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Vertical</Group>
+																	<Behavior>Usual</Behavior>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаУведомленияСервисаКонтекстРасширеннаяПодсказка" id="54"/>
+																	<ChildItems>
+																		<LabelDecoration name="ГруппаУведомленияСервисаКонтекстЗаголовок" id="55">
+																			<Font ref="style:TextLevel1" kind="StyleItem"/>
+																			<GroupVerticalAlign>Center</GroupVerticalAlign>
+																			<ContextMenu name="ГруппаУведомленияСервисаКонтекстЗаголовокКонтекстноеМеню" id="56"/>
+																			<ExtendedTooltip name="ГруппаУведомленияСервисаКонтекстЗаголовокРасширеннаяПодсказка" id="57"/>
+																		</LabelDecoration>
+																		<LabelDecoration name="ГруппаУведомленияСервисаКонтекстИнформация" id="58">
+																			<Title formatted="true"/>
+																			<ContextMenu name="ГруппаУведомленияСервисаКонтекстИнформацияКонтекстноеМеню" id="59"/>
+																			<ExtendedTooltip name="ГруппаУведомленияСервисаКонтекстИнформацияРасширеннаяПодсказка" id="60"/>
+																		</LabelDecoration>
+																		<LabelDecoration name="ГруппаУведомленияСервисаКонтекстКоманда" id="61">
+																			<Height>1</Height>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<Hyperlink>true</Hyperlink>
+																			<ContextMenu name="ГруппаУведомленияСервисаКонтекстКомандаКонтекстноеМеню" id="62"/>
+																			<ExtendedTooltip name="ГруппаУведомленияСервисаКонтекстКомандаРасширеннаяПодсказка" id="63">
+																				<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																			</ExtendedTooltip>
+																			<Events>
+																				<Event name="Click">ГруппаУведомленияСервисаКонтекстКомандаНажатие</Event>
+																			</Events>
+																		</LabelDecoration>
+																		<LabelDecoration name="ГруппаУведомленияСервисаУсловияИспользованияСервиса" id="64">
+																			<TextColor>style:ПоясняющийТекст</TextColor>
+																			<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																			<Title formatted="true"/>
+																			<ContextMenu name="ГруппаУведомленияСервисаУсловияИспользованияСервисаКонтекстноеМеню" id="65"/>
+																			<ExtendedTooltip name="ГруппаУведомленияСервисаУсловияИспользованияСервисаРасширеннаяПодсказка" id="66"/>
+																		</LabelDecoration>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаПодключениеПакета" id="67">
+															<Visible>false</Visible>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Подключение пакета</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Horizontal</Group>
+															<Behavior>Usual</Behavior>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПодключениеПакетаРасширеннаяПодсказка" id="68"/>
+															<ChildItems>
+																<PictureDecoration name="ИзображениеПодключение" id="69">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Изображение подключение</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Picture>
+																		<xr:Ref>CommonPicture.ДлительнаяОперация48</xr:Ref>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<ContextMenu name="ИзображениеПодключениеКонтекстноеМеню" id="70"/>
+																	<ExtendedTooltip name="ИзображениеПодключениеРасширеннаяПодсказка" id="71"/>
+																</PictureDecoration>
+																<LabelDecoration name="НадписьПодключениеСтартовогоПакета" id="72">
+																	<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Подключение стартового пакета...</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<GroupVerticalAlign>Center</GroupVerticalAlign>
+																	<ContextMenu name="НадписьПодключениеСтартовогоПакетаКонтекстноеМеню" id="73"/>
+																	<ExtendedTooltip name="НадписьПодключениеСтартовогоПакетаРасширеннаяПодсказка" id="74">
+																		<Font ref="style:SmallTextFont" kind="StyleItem"/>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Подождите пожалуйста</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</LabelDecoration>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<Button name="ПодключитьСервис1СНоменклатура" id="83">
+													<Type>UsualButton</Type>
+													<Visible>false</Visible>
+													<CommandName>Form.Command.ПодключитьСервис1СНоменклатура</CommandName>
+													<ExtendedTooltip name="ПодключитьСервис1СНоменклатураРасширеннаяПодсказка" id="84"/>
+												</Button>
+												<Button name="ДобавитьКатегориюИзСервиса1СНоменклатура" id="78">
+													<Type>UsualButton</Type>
+													<Visible>false</Visible>
+													<Height>1</Height>
+													<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+													<GroupVerticalAlign>Center</GroupVerticalAlign>
+													<CommandName>Form.Command.ДобавитьКатегориюИзСервиса1СНоменклатура</CommandName>
+													<ExtendedTooltip name="ДобавитьКатегориюИзСервиса1СНоменклатураРасширеннаяПодсказка" id="79"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаОпросРаботаСНоменклатурой" id="85">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Опрос</v8:content>
+										</v8:item>
+									</Title>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаОпросРаботаСНоменклатуройРасширеннаяПодсказка" id="86"/>
+									<ChildItems>
+										<PictureDecoration name="Декорация30" id="110">
+											<Visible>false</Visible>
+											<TextColor>pal:LightBlue</TextColor>
+											<Picture>
+												<xr:Ref>StdPicture.Information</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<PictureColor>pal:LightBlue</PictureColor>
+											<ContextMenu name="Декорация30КонтекстноеМеню" id="111"/>
+											<ExtendedTooltip name="Декорация30РасширеннаяПодсказка" id="112"/>
+										</PictureDecoration>
+										<UsualGroup name="Группа16" id="113">
+											<Group>Vertical</Group>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа16РасширеннаяПодсказка" id="114"/>
+											<ChildItems>
+												<Button name="ОткрытьОпрос" id="87">
+													<Type>Hyperlink</Type>
+													<CommandName>Form.Command.ОткрытьОпрос</CommandName>
+													<ExtendedTooltip name="ОткрытьОпросРасширеннаяПодсказка" id="88"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<UsualGroup name="ГруппаОтступ" id="266">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отступ</v8:content>
+						</v8:item>
+					</Title>
+					<VerticalStretch>true</VerticalStretch>
+					<Group>Horizontal</Group>
+					<HorizontalAlign>Left</HorizontalAlign>
+					<VerticalAlign>Bottom</VerticalAlign>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаОтступРасширеннаяПодсказка" id="267"/>
+					<ChildItems>
+						<Button name="СвернутьПравуюПанель" id="268">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СвернутьПравуюПанель</CommandName>
+							<ButtonImportance>Supplementary</ButtonImportance>
+							<ExtendedTooltip name="СвернутьПравуюПанельРасширеннаяПодсказка" id="269"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Ref</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.КатегорииНоменклатуры</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>РеквизитДопУпорядочивания</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДоступенСтартовыйПакет" id="2">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьДоступныеОпции" id="3">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИдентификаторЗадания" id="4">
+			<Type/>
+		</Attribute>
+		<Attribute name="ИспользоватьСервисРаботаСНоменклатурой" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОшибкаОпределенияСостояния" id="6">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПодключенаИнтернетПоддержка" id="7">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешеноРедактированиеНоменклатуры" id="8">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешеноПодключениеПодсистемыРаботаСНоменклатурой" id="9">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазрешенаРаботаСПодсистемойРаботаСНоменклатурой" id="10">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РазделениеВключено" id="11">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИндексыФильтры" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индексы фильтры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоличествоФильтров" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество фильтров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеМеток" id="14">
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+			<Columns>
+				<Column name="Метка" id="1">
+					<Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:TypeSet>cfg:AnyIBRef</v8:TypeSet>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПредставлениеМетки" id="2">
+					<Type/>
+				</Column>
+				<Column name="ИмяПоляОтбора" id="3">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяГруппыРодителя" id="4">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяОтбора" id="5">
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="КоличествоФильтровИндекс" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество фильтров</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИндексыФильтрыТакси" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Индексы фильтры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьКатегориюИзСервиса1СНоменклатура" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить категорию из сервиса</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.ДобавитьРаботаСНоменклатурой</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьКатегориюИзСервиса1СНоменклатура</Action>
+			<Representation>Text</Representation>
+		</Command>
+		<Command name="ПодключитьСервис1СНоменклатура" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить сервис</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить сервис1 с номенклатура</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодключитьСервис1СНоменклатура</Action>
+		</Command>
+		<Command name="ОткрытьОпрос" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предлагаем принять участие в опросе!</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть опрос</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьОпрос</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СвернутьПравуюПанель" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть правую панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.СвернутьПравуюПанель</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>СвернутьПравуюПанель</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

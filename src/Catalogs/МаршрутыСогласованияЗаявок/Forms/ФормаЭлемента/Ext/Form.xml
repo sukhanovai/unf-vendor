@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Group>Vertical</Group>
+	<ShowTitle>true</ShowTitle>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шапка</v8:content>
+				</v8:item>
+			</Title>
+			<Width>54</Width>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>AlwaysHorizontal</Group>
+			<HorizontalSpacing>Double</HorizontalSpacing>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="27"/>
+			<ChildItems>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Приоритет" id="34">
+					<DataPath>Объект.Приоритет</DataPath>
+					<SpinButton>true</SpinButton>
+					<ContextMenu name="ПриоритетКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ПриоритетРасширеннаяПодсказка" id="36"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаУчастники" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Участники маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>true</ShowTitle>
+			<ExtendedTooltip name="ГруппаУчастникиРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Table name="УчастникиМаршрута" id="7">
+					<Representation>List</Representation>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>Объект.УчастникиМаршрута</DataPath>
+					<AutoMaxCardHeight>false</AutoMaxCardHeight>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="УчастникиМаршрутаКонтекстноеМеню" id="8"/>
+					<AutoCommandBar name="УчастникиМаршрутаКоманднаяПанель" id="9">
+						<ChildItems>
+							<Button name="УчастникиМаршрутаУдалить" id="43">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Item.УчастникиМаршрута.StandardCommand.Delete</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Участники маршрута удалить</v8:content>
+									</v8:item>
+								</Title>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="УчастникиМаршрутаУдалитьРасширеннаяПодсказка" id="44"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="УчастникиМаршрутаРасширеннаяПодсказка" id="10"/>
+					<SearchStringAddition name="УчастникиМаршрутаСтрокаПоиска" id="11">
+						<AdditionSource>
+							<Item>УчастникиМаршрута</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УчастникиМаршрутаСтрокаПоискаКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="УчастникиМаршрутаСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="УчастникиМаршрутаСостояниеПросмотра" id="14">
+						<AdditionSource>
+							<Item>УчастникиМаршрута</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="УчастникиМаршрутаСостояниеПросмотраКонтекстноеМеню" id="15"/>
+						<ExtendedTooltip name="УчастникиМаршрутаСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="УчастникиМаршрутаУправлениеПоиском" id="17">
+						<AdditionSource>
+							<Item>УчастникиМаршрута</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="УчастникиМаршрутаУправлениеПоискомКонтекстноеМеню" id="18"/>
+						<ExtendedTooltip name="УчастникиМаршрутаУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="OnChange">УчастникиМаршрутаПриИзменении</Event>
+					</Events>
+					<ChildItems>
+						<InputField name="УчастникиМаршрутаНомерСтроки" id="40">
+							<DataPath>Объект.УчастникиМаршрута.LineNumber</DataPath>
+							<Width>2</Width>
+							<MaxWidth>2</MaxWidth>
+							<ContextMenu name="УчастникиМаршрутаНомерСтрокиКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="УчастникиМаршрутаНомерСтрокиРасширеннаяПодсказка" id="42"/>
+						</InputField>
+						<InputField name="УчастникиМаршрутаПользователь" id="23">
+							<DataPath>Объект.УчастникиМаршрута.Пользователь</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="УчастникиМаршрутаПользовательКонтекстноеМеню" id="24"/>
+							<ExtendedTooltip name="УчастникиМаршрутаПользовательРасширеннаяПодсказка" id="25"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.МаршрутыСогласованияЗаявок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТаблицаУчастникиИзменена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица участники изменена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+</Form>

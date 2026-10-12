@@ -1,0 +1,661 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="СтраницыНастройки" id="34">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы настройки</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыНастройкиРасширеннаяПодсказка" id="35"/>
+			<ChildItems>
+				<Page name="СтраницаВыбораОборудования" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница выбора оборудования</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаВыбораОборудованияРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<CheckBoxField name="НастройкаСканер" id="40">
+							<DataPath>НастройкаСканер</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сканер штрихкодов</v8:content>
+								</v8:item>
+							</Title>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="НастройкаСканерКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="НастройкаСканерРасширеннаяПодсказка" id="42"/>
+							<Events>
+								<Event name="OnChange">НастройкаСканерПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="НастройкаСчитывательМагнитныхКарт" id="44">
+							<DataPath>НастройкаСчитывательМагнитныхКарт</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="НастройкаСчитывательМагнитныхКартКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="НастройкаСчитывательМагнитныхКартРасширеннаяПодсказка" id="46"/>
+							<Events>
+								<Event name="OnChange">НастройкаСчитывательМагнитныхКартПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="НастройкаККТ" id="48">
+							<DataPath>НастройкаККТ</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="НастройкаККТКонтекстноеМеню" id="49"/>
+							<ExtendedTooltip name="НастройкаККТРасширеннаяПодсказка" id="50"/>
+							<Events>
+								<Event name="OnChange">НастройкаККТПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="НастройкаПринтерЧеков" id="52">
+							<DataPath>НастройкаПринтерЧеков</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="НастройкаПринтерЧековКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="НастройкаПринтерЧековРасширеннаяПодсказка" id="54"/>
+							<Events>
+								<Event name="OnChange">НастройкаПринтерЧековПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="НастройкаЭквайринг" id="56">
+							<DataPath>НастройкаЭквайринг</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="НастройкаЭквайрингКонтекстноеМеню" id="57"/>
+							<ExtendedTooltip name="НастройкаЭквайрингРасширеннаяПодсказка" id="58"/>
+							<Events>
+								<Event name="OnChange">НастройкаЭквайрингПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="НастройкаДисплейПокупателей" id="60">
+							<DataPath>НастройкаДисплейПокупателей</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="НастройкаДисплейПокупателейКонтекстноеМеню" id="61"/>
+							<ExtendedTooltip name="НастройкаДисплейПокупателейРасширеннаяПодсказка" id="62"/>
+							<Events>
+								<Event name="OnChange">НастройкаДисплейПокупателейПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="НастройкаЭлектронныеВесы" id="82">
+							<DataPath>НастройкаЭлектронныеВесы</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="НастройкаЭлектронныеВесыКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="НастройкаЭлектронныеВесыРасширеннаяПодсказка" id="84"/>
+							<Events>
+								<Event name="OnChange">НастройкаЭлектронныеВесыПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<CheckBoxField name="НастройкаУстройствоРаспознования" id="64">
+							<DataPath>НастройкаУстройствоРаспознования</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<ContextMenu name="НастройкаУстройствоРаспознованияКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="НастройкаУстройствоРаспознованияРасширеннаяПодсказка" id="66"/>
+							<Events>
+								<Event name="OnChange">НастройкаУстройствоРаспознованияПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="ГруппаКомандВыбора" id="70">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команд выбора</v8:content>
+								</v8:item>
+							</Title>
+							<HorizontalStretch>true</HorizontalStretch>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандВыбораРасширеннаяПодсказка" id="71"/>
+							<ChildItems>
+								<Button name="ПерейтиКСозданиюОборудования" id="68">
+									<Type>UsualButton</Type>
+									<DefaultButton>true</DefaultButton>
+									<Enabled>false</Enabled>
+									<CommandName>Form.Command.ПерейтиКСозданиюОборудования</CommandName>
+									<ButtonImportance>Main</ButtonImportance>
+									<ExtendedTooltip name="ПерейтиКСозданиюОборудованияРасширеннаяПодсказка" id="69"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаНастройки" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница настройки</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="СтраницаНастройкиРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<RadioButtonField name="СписокПереключатели" id="28">
+							<DataPath>НомерСтраницы</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<AutoWidthInTable>None</AutoWidthInTable>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<Orientation>HorizontalIfPossible</Orientation>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="СписокПереключателиКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="СписокПереключателиРасширеннаяПодсказка" id="30"/>
+							<Events>
+								<Event name="OnChange">СписокПереключателиПриИзменении</Event>
+							</Events>
+						</RadioButtonField>
+						<UsualGroup name="ГруппаЭлементыНастроек" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа элементы настроек</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЭлементыНастроекРасширеннаяПодсказка" id="33"/>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКоманда" id="72">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа команда</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКомандаРасширеннаяПодсказка" id="73"/>
+							<ChildItems>
+								<Button name="ЗаписатьНастройки" id="15">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ЗаписатьНастройки</CommandName>
+									<ExtendedTooltip name="ЗаписатьНастройкиРасширеннаяПодсказка" id="16"/>
+								</Button>
+								<Button name="БольшеНастроек" id="17">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.БольшеНастроек</CommandName>
+									<ExtendedTooltip name="БольшеНастроекРасширеннаяПодсказка" id="18"/>
+								</Button>
+								<Button name="Автонастройка" id="19">
+									<Type>UsualButton</Type>
+									<Visible>false</Visible>
+									<CommandName>Form.Command.Автонастройка</CommandName>
+									<ExtendedTooltip name="АвтонастройкаРасширеннаяПодсказка" id="20"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПомощникНастройкиКассовогоМестаРМК</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТекущееРабочееМесто" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее рабочее место</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:TypeSet>cfg:DefinedType.РабочееМестоРМК</v8:TypeSet>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаОборудование" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица оборудование</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ПодключаемоеОборудование" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Подключаемое оборудование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ПодключаемоеОборудованиеРМК</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="КассаККМ" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Касса ККМ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.КассаККМРМК</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ТипОборудования" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип оборудования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ТипПодключаемогоОборудованияРМК</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="ЭквайринговыйТерминал" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Эквайринговый терминал</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ЭквайринговыйТерминалРМК</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="НомерЭлемента" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер элемента</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПараметрыСканера" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Параметры сканера</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8:ValueListType</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Организация" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ОрганизацияРМК</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДрайверОборудования" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Драйвер оборудования</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ДрайверОборудованияРМК</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НомерСтраницы" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер страницы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Производитель" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОткрытиеОборудования" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открытие оборудования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПодключенТерминал" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключен терминал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаСканер" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сканер штрихкодов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаСчитывательМагнитныхКарт" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Считыватель магнитных карт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаККТ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фискальные регистраторы (ККТ)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаПринтерЧеков" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принтер чеков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаЭквайринг" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эквайринговые терминалы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаДисплейПокупателей" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дисплей покупателей</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаЭлектронныеВесы" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Электронные весы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НастройкаУстройствоРаспознования" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Устройство распознования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаКассыККМ" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица кассы ККМ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="КассаККМ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Касса ККМ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.КассаККМРМК</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Организация" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ОрганизацияРМК</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаЭквайринг" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица эквайринг</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Эквайринг" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Эквайринг</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ЭквайринговыйТерминалРМК</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Организация" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Организация</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DefinedType.ОрганизацияРМК</v8:TypeSet>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать настройки</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗаписатьНастройки</Action>
+		</Command>
+		<Command name="БольшеНастроек" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Больше настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Action>БольшеНастроек</Action>
+		</Command>
+		<Command name="Автонастройка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автонастройка</v8:content>
+				</v8:item>
+			</Title>
+			<Action>Автонастройка</Action>
+		</Command>
+		<Command name="ПроизводительАтол" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Атол</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.РМКЛоготипАтол</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроизводительАтол</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПроизводительПосЦентр" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель пос центр</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.РМКЛоготипПОСЦентр</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроизводительПосЦентр</Action>
+		</Command>
+		<Command name="ПроизводительДримкас" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель дримкас</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.РМКЛоготипДримкас</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроизводительДримкас</Action>
+		</Command>
+		<Command name="ПроизводительВсе" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель все</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроизводительВсе</Action>
+		</Command>
+		<Command name="ПроизводительСбер" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель сбер</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>CommonPicture.РМКЛоготипСбербанк</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроизводительСбер</Action>
+		</Command>
+		<Command name="ПроизводительВсеЭквайринг" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Производитель все эквайринг</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроизводительВсеЭквайринг</Action>
+		</Command>
+		<Command name="ПерейтиКСозданиюОборудования" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПерейтиКСозданиюОборудования</Action>
+		</Command>
+	</Commands>
+</Form>

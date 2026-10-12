@@ -1,0 +1,1721 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>ФГИС "Сатурн"</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<ShowTitle>true</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ВыполнитьОбмен" id="5">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьОбмен</CommandName>
+				<ExtendedTooltip name="ВыполнитьОбменРасширеннаяПодсказка" id="6"/>
+			</Button>
+			<Button name="Обновить" id="7">
+				<Type>CommandBarButton</Type>
+				<Representation>Picture</Representation>
+				<Width>3</Width>
+				<CommandName>Form.Command.Обновить</CommandName>
+				<ExtendedTooltip name="ОбновитьРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="ПерейтиВЛичныйКабинет" id="1050">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПерейтиВЛичныйКабинет</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ПерейтиВЛичныйКабинетРасширеннаяПодсказка" id="1051"/>
+			</Button>
+			<Button name="ПерейтиВЛичныйКабинетТестовыйКонтур" id="1052">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПерейтиВЛичныйКабинетТестовыйКонтур</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ПерейтиВЛичныйКабинетТестовыйКонтурРасширеннаяПодсказка" id="1053"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="URLProcessing">ОбработкаНавигационнойСсылки</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Панель" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отборы</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПанельРасширеннаяПодсказка" id="24"/>
+			<ChildItems>
+				<Pages name="СтраницыОтборОрганизация" id="25">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страницы отбора по организации</v8:content>
+						</v8:item>
+					</Title>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="СтраницыОтборОрганизацияРасширеннаяПодсказка" id="26"/>
+					<ChildItems>
+						<Page name="СтраницаОтборОрганизации" id="27">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница организации</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>true</ShowTitle>
+							<ScrollOnCompress>false</ScrollOnCompress>
+							<ExtendedTooltip name="СтраницаОтборОрганизацииРасширеннаяПодсказка" id="28"/>
+							<ChildItems>
+								<InputField name="ОтборОрганизации" id="29">
+									<DataPath>ОрганизацииСАТУРНПредставление</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Организации</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<DropListButton>true</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ClearButton>true</ClearButton>
+									<QuickChoice>false</QuickChoice>
+									<ChooseType>false</ChooseType>
+									<TextEdit>false</TextEdit>
+									<ChoiceParameters>
+										<app:item name="Отбор.СоответствуетОрганизации">
+											<app:value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:boolean">true</Value>
+											</app:value>
+										</app:item>
+									</ChoiceParameters>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;по всем организациям&gt;</v8:content>
+										</v8:item>
+									</InputHint>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="ОтборОрганизацииКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ОтборОрганизацииРасширеннаяПодсказка" id="31"/>
+									<Events>
+										<Event name="OnChange">ОтборОрганизацииПриИзменении</Event>
+										<Event name="StartChoice">ОтборОрганизацииНачалоВыбора</Event>
+										<Event name="Clearing">ОтборОрганизацииОчистка</Event>
+										<Event name="ChoiceProcessing">ОтборОрганизацииОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаОтборОрганизация" id="32">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница организация</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ShowTitle>true</ShowTitle>
+							<ScrollOnCompress>false</ScrollOnCompress>
+							<ExtendedTooltip name="СтраницаОтборОрганизацияРасширеннаяПодсказка" id="33"/>
+							<ChildItems>
+								<InputField name="ОтборОрганизация" id="34">
+									<DataPath>ОрганизацияСАТУРН</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Организация</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>None</TitleLocation>
+									<EditMode>EnterOnInput</EditMode>
+									<AutoEditMode>true</AutoEditMode>
+									<DropListButton>true</DropListButton>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<ClearButton>true</ClearButton>
+									<OpenButton>false</OpenButton>
+									<QuickChoice>false</QuickChoice>
+									<ChooseType>false</ChooseType>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>&lt;по всем организациям&gt;</v8:content>
+										</v8:item>
+									</InputHint>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="ОтборОрганизацияКонтекстноеМеню" id="35"/>
+									<ExtendedTooltip name="ОтборОрганизацияРасширеннаяПодсказка" id="36"/>
+									<Events>
+										<Event name="OnChange">ОтборОрганизацияПриИзменении</Event>
+										<Event name="StartChoice">ОтборОрганизацияНачалоВыбора</Event>
+										<Event name="Clearing">ОтборОрганизацияОчистка</Event>
+										<Event name="ChoiceProcessing">ОтборОрганизацияОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+				<InputField name="Ответственный" id="37">
+					<DataPath>Ответственный</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ClearButton>true</ClearButton>
+					<OpenButton>false</OpenButton>
+					<InputHint>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>&lt;по всем ответственным&gt;</v8:content>
+						</v8:item>
+					</InputHint>
+					<ContextMenu name="ОтветственныйКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="39"/>
+					<Events>
+						<Event name="OnChange">ОтветственныйПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОсновное" id="1145">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основное</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основное</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>false</HorizontalStretch>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновноеРасширеннаяПодсказка" id="1146"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаИнформация" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<GroupVerticalAlign>Center</GroupVerticalAlign>
+					<Group>Horizontal</Group>
+					<VerticalSpacing>Half</VerticalSpacing>
+					<VerticalAlign>Center</VerticalAlign>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаИнформацияРасширеннаяПодсказка" id="2"/>
+					<ChildItems>
+						<Pages name="ГруппаДекорацияСостояниеОбмена" id="847">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа декорация состояние обмена</v8:content>
+								</v8:item>
+							</Title>
+							<PagesRepresentation>None</PagesRepresentation>
+							<ExtendedTooltip name="ГруппаДекорацияСостояниеОбменаРасширеннаяПодсказка" id="848"/>
+							<ChildItems>
+								<Page name="СостояниеОбменаКрасный" id="849">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние обмена красный</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ShowTitle>true</ShowTitle>
+									<ScrollOnCompress>false</ScrollOnCompress>
+									<ExtendedTooltip name="СостояниеОбменаКрасныйРасширеннаяПодсказка" id="850"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияСостояниеОбменаКрасный" id="851">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сообщения ожидающие отправки</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.КритическаяОшибкаГосИС</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияСостояниеОбменаКрасныйКонтекстноеМеню" id="852"/>
+											<ExtendedTooltip name="ДекорацияСостояниеОбменаКрасныйРасширеннаяПодсказка" id="853"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СостояниеОбменаЖелтый" id="854">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние обмена желтый</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ShowTitle>true</ShowTitle>
+									<ScrollOnCompress>false</ScrollOnCompress>
+									<ExtendedTooltip name="СостояниеОбменаЖелтыйРасширеннаяПодсказка" id="855"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияСостояниеОбменаЖелтый" id="856">
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сообщения ожидающие отправки</v8:content>
+												</v8:item>
+											</Title>
+											<Picture>
+												<xr:Ref>CommonPicture.Внимание16</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияСостояниеОбменаЖелтыйКонтекстноеМеню" id="857"/>
+											<ExtendedTooltip name="ДекорацияСостояниеОбменаЖелтыйРасширеннаяПодсказка" id="858"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+								<Page name="СостояниеОбменаИнформация" id="859">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Состояние обмена информация</v8:content>
+										</v8:item>
+									</Title>
+									<Group>Vertical</Group>
+									<ShowTitle>true</ShowTitle>
+									<ScrollOnCompress>false</ScrollOnCompress>
+									<ExtendedTooltip name="СостояниеОбменаИнформацияРасширеннаяПодсказка" id="860"/>
+									<ChildItems>
+										<PictureDecoration name="ДекорацияСостояниеОбменаИнформация" id="861">
+											<Picture>
+												<xr:Ref>CommonPicture.ИнформацияГосИС</xr:Ref>
+												<xr:LoadTransparent>false</xr:LoadTransparent>
+											</Picture>
+											<FileDragMode>AsFile</FileDragMode>
+											<ContextMenu name="ДекорацияСостояниеОбменаИнформацияКонтекстноеМеню" id="862"/>
+											<ExtendedTooltip name="ДекорацияСостояниеОбменаИнформацияРасширеннаяПодсказка" id="863"/>
+										</PictureDecoration>
+									</ChildItems>
+								</Page>
+							</ChildItems>
+						</Pages>
+						<LabelDecoration name="НадписьСостояниеОбмена" id="12">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Есть сообщения, ожидающие отправки (4), выполните обмен.</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+							<ContextMenu name="НадписьСостояниеОбменаКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="НадписьСостояниеОбменаРасширеннаяПодсказка" id="14">
+								<AutoMaxWidth>false</AutoMaxWidth>
+							</ExtendedTooltip>
+							<Events>
+								<Event name="URLProcessing">НадписьСостояниеОбменаОбработкаНавигационнойСсылки</Event>
+							</Events>
+						</LabelDecoration>
+					</ChildItems>
+				</UsualGroup>
+				<Button name="ПанельАдминистрирования" id="554">
+					<Type>Hyperlink</Type>
+					<CommandName>Form.Command.ПанельАдминистрирования</CommandName>
+					<ExtendedTooltip name="ПанельАдминистрированияРасширеннаяПодсказка" id="555">
+						<Height>2</Height>
+					</ExtendedTooltip>
+				</Button>
+				<UsualGroup name="Документы" id="54">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документы</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<VerticalSpacing>Single</VerticalSpacing>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ДокументыРасширеннаяПодсказка" id="55"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗакупки" id="56">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Закупки</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Half</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<Representation>NormalSeparation</Representation>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗакупкиРасширеннаяПодсказка" id="57"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаИмпортПродукцииСАТУРН" id="864">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаИмпортПродукцииСАТУРНРасширеннаяПодсказка" id="865"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаИмпортПродукцииСАТУРНЗаголовок" id="866">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа</v8:content>
+												</v8:item>
+											</Title>
+											<Group>HorizontalIfPossible</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаИмпортПродукцииСАТУРНЗаголовокРасширеннаяПодсказка" id="867"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьИмпортПродукцииСАТУРН" id="1058">
+													<Width>40</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Импорт продукции (3)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьИмпортПродукцииСАТУРНКонтекстноеМеню" id="1059"/>
+													<ExtendedTooltip name="ОткрытьИмпортПродукцииСАТУРНРасширеннаяПодсказка" id="1060"/>
+													<Events>
+														<Event name="Click">ОткрытьИмпортПродукцииНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаИмпортПродукцииСАТУРНОформите" id="868">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оформите</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаИмпортПродукцииСАТУРНОформитеРасширеннаяПодсказка" id="869"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьИмпортПродукцииСАТУРНОформите" id="1097">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оформите (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьИмпортПродукцииСАТУРНОформитеКонтекстноеМеню" id="1098"/>
+													<ExtendedTooltip name="ОткрытьИмпортПродукцииСАТУРНОформитеРасширеннаяПодсказка" id="1099"/>
+													<Events>
+														<Event name="Click">ОткрытьИмпортПродукцииОформитеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="ОткрытьИмпортПродукцииСАТУРНОформитеДекорация" id="870">
+													<ContextMenu name="ОткрытьИмпортПродукцииСАТУРНОформитеДекорацияКонтекстноеМеню" id="871"/>
+													<ExtendedTooltip name="ОткрытьИмпортПродукцииСАТУРНОформитеДекорацияРасширеннаяПодсказка" id="872"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаИмпортПродукцииСАТУРНОтработайте" id="873">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отработайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаИмпортПродукцииСАТУРНОтработайтеРасширеннаяПодсказка" id="874"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьИмпортПродукцииСАТУРНОтработайте" id="1100">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отработайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьИмпортПродукцииСАТУРНОтработайтеКонтекстноеМеню" id="1101"/>
+													<ExtendedTooltip name="ОткрытьИмпортПродукцииСАТУРНОтработайтеРасширеннаяПодсказка" id="1102"/>
+													<Events>
+														<Event name="Click">ОткрытьИмпортПродукцииОтработайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаИмпортПродукцииСАТУРНОжидайте" id="875">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ожидайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаИмпортПродукцииСАТУРНОжидайтеРасширеннаяПодсказка" id="876"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьИмпортПродукцииСАТУРНОжидайте" id="1121">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ожидайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьИмпортПродукцииСАТУРНОжидайтеКонтекстноеМеню" id="1122"/>
+													<ExtendedTooltip name="ОткрытьИмпортПродукцииСАТУРНОжидайтеРасширеннаяПодсказка" id="1123"/>
+													<Events>
+														<Event name="Click">ОткрытьИмпортПродукцииОжидайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаСклад" id="892">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Склад</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Half</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаСкладРасширеннаяПодсказка" id="893"/>
+							<ChildItems>
+								<LabelDecoration name="ОткрытьОстаткиПартий" id="1142">
+									<Width>40</Width>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Остатки партий</v8:content>
+										</v8:item>
+									</Title>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="ОткрытьОстаткиПартийКонтекстноеМеню" id="1143"/>
+									<ExtendedTooltip name="ОткрытьОстаткиПартийРасширеннаяПодсказка" id="1144"/>
+									<Events>
+										<Event name="Click">ОткрытьОстаткиПартийНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<UsualGroup name="ГруппаПланПримененияСАТУРН" id="1029">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаПланПримененияСАТУРНРасширеннаяПодсказка" id="1030"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПланПримененияСАТУРНЗаголовок" id="1031">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа</v8:content>
+												</v8:item>
+											</Title>
+											<Group>HorizontalIfPossible</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПланПримененияСАТУРНЗаголовокРасширеннаяПодсказка" id="1032"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьПланПримененияСАТУРН" id="1061">
+													<Width>40</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Планы применения (3)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьПланПримененияСАТУРНКонтекстноеМеню" id="1062"/>
+													<ExtendedTooltip name="ОткрытьПланПримененияСАТУРНРасширеннаяПодсказка" id="1063"/>
+													<Events>
+														<Event name="Click">ОткрытьПланПримененияНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПланПримененияСАТУРНОформите" id="1035">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оформите</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПланПримененияСАТУРНОформитеРасширеннаяПодсказка" id="1036"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьПланПримененияСАТУРНОформите" id="1094">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оформите (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьПланПримененияСАТУРНОформитеКонтекстноеМеню" id="1095"/>
+													<ExtendedTooltip name="ОткрытьПланПримененияСАТУРНОформитеРасширеннаяПодсказка" id="1096"/>
+													<Events>
+														<Event name="Click">ОткрытьПланПримененияОформитеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="ОткрытьПланПримененияСАТУРНОформитеДекорация" id="1039">
+													<ContextMenu name="ОткрытьПланПримененияСАТУРНОформитеДекорацияКонтекстноеМеню" id="1040"/>
+													<ExtendedTooltip name="ОткрытьПланПримененияСАТУРНОформитеДекорацияРасширеннаяПодсказка" id="1041"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПланПримененияСАТУРНОтработайте" id="1042">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отработайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПланПримененияСАТУРНОтработайтеРасширеннаяПодсказка" id="1043"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьПланПримененияСАТУРНОтработайте" id="1103">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отработайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьПланПримененияСАТУРНОтработайтеКонтекстноеМеню" id="1104"/>
+													<ExtendedTooltip name="ОткрытьПланПримененияСАТУРНОтработайтеРасширеннаяПодсказка" id="1105"/>
+													<Events>
+														<Event name="Click">ОткрытьПланПримененияОтработайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПланПримененияСАТУРНОжидайте" id="1046">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ожидайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПланПримененияСАТУРНОжидайтеРасширеннаяПодсказка" id="1047"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьПланПримененияСАТУРНОжидайте" id="1124">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ожидайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьПланПримененияСАТУРНОжидайтеКонтекстноеМеню" id="1125"/>
+													<ExtendedTooltip name="ОткрытьПланПримененияСАТУРНОжидайтеРасширеннаяПодсказка" id="1126"/>
+													<Events>
+														<Event name="Click">ОткрытьПланПримененияОжидайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаАктИнвентаризацииСАТУРН" id="894">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаАктИнвентаризацииСАТУРНРасширеннаяПодсказка" id="895"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаАктИнвентаризацииСАТУРНЗаголовок" id="896">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа</v8:content>
+												</v8:item>
+											</Title>
+											<Group>HorizontalIfPossible</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаАктИнвентаризацииСАТУРНЗаголовокРасширеннаяПодсказка" id="897"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьАктИнвентаризацииСАТУРН" id="1064">
+													<Width>40</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Акты инвентаризации (3)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьАктИнвентаризацииСАТУРНКонтекстноеМеню" id="1065"/>
+													<ExtendedTooltip name="ОткрытьАктИнвентаризацииСАТУРНРасширеннаяПодсказка" id="1066"/>
+													<Events>
+														<Event name="Click">ОткрытьАктИнвентаризацииНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаАктИнвентаризацииСАТУРНОформите" id="900">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оформите</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаАктИнвентаризацииСАТУРНОформитеРасширеннаяПодсказка" id="901"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьАктИнвентаризацииСАТУРНОформите" id="1091">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оформите (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьАктИнвентаризацииСАТУРНОформитеКонтекстноеМеню" id="1092"/>
+													<ExtendedTooltip name="ОткрытьАктИнвентаризацииСАТУРНОформитеРасширеннаяПодсказка" id="1093"/>
+													<Events>
+														<Event name="Click">ОткрытьАктИнвентаризацииОформитеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="ОткрытьАктИнвентаризацииСАТУРНОформитеДекорация" id="904">
+													<ContextMenu name="ОткрытьАктИнвентаризацииСАТУРНОформитеДекорацияКонтекстноеМеню" id="905"/>
+													<ExtendedTooltip name="ОткрытьАктИнвентаризацииСАТУРНОформитеДекорацияРасширеннаяПодсказка" id="906"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаАктИнвентаризацииСАТУРНОтработайте" id="907">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отработайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаАктИнвентаризацииСАТУРНОтработайтеРасширеннаяПодсказка" id="908"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьАктИнвентаризацииСАТУРНОтработайте" id="1106">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отработайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьАктИнвентаризацииСАТУРНОтработайтеКонтекстноеМеню" id="1107"/>
+													<ExtendedTooltip name="ОткрытьАктИнвентаризацииСАТУРНОтработайтеРасширеннаяПодсказка" id="1108"/>
+													<Events>
+														<Event name="Click">ОткрытьАктИнвентаризацииОтработайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаАктИнвентаризацииСАТУРНОжидайте" id="911">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ожидайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаАктИнвентаризацииСАТУРНОжидайтеРасширеннаяПодсказка" id="912"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьАктИнвентаризацииСАТУРНОжидайте" id="1127">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ожидайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьАктИнвентаризацииСАТУРНОжидайтеКонтекстноеМеню" id="1128"/>
+													<ExtendedTooltip name="ОткрытьАктИнвентаризацииСАТУРНОжидайтеРасширеннаяПодсказка" id="1129"/>
+													<Events>
+														<Event name="Click">ОткрытьАктИнвентаризацииОжидайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаАктПримененияСАТУРН" id="938">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаАктПримененияСАТУРНРасширеннаяПодсказка" id="939"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаАктПримененияСАТУРНЗаголовок" id="940">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа</v8:content>
+												</v8:item>
+											</Title>
+											<Group>HorizontalIfPossible</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаАктПримененияСАТУРНЗаголовокРасширеннаяПодсказка" id="941"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьАктПримененияСАТУРН" id="1067">
+													<Width>40</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Акты применения (3)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьАктПримененияСАТУРНКонтекстноеМеню" id="1068"/>
+													<ExtendedTooltip name="ОткрытьАктПримененияСАТУРНРасширеннаяПодсказка" id="1069"/>
+													<Events>
+														<Event name="Click">ОткрытьАктПримененияНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаАктПримененияСАТУРНОформите" id="944">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оформите</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаАктПримененияСАТУРНОформитеРасширеннаяПодсказка" id="945"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьАктПримененияСАТУРНОформите" id="1088">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оформите (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьАктПримененияСАТУРНОформитеКонтекстноеМеню" id="1089"/>
+													<ExtendedTooltip name="ОткрытьАктПримененияСАТУРНОформитеРасширеннаяПодсказка" id="1090"/>
+													<Events>
+														<Event name="Click">ОткрытьАктПримененияОформитеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="ОткрытьАктПримененияСАТУРНОформитеДекорация" id="948">
+													<ContextMenu name="ОткрытьАктПримененияСАТУРНОформитеДекорацияКонтекстноеМеню" id="949"/>
+													<ExtendedTooltip name="ОткрытьАктПримененияСАТУРНОформитеДекорацияРасширеннаяПодсказка" id="950"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаАктПримененияСАТУРНОтработайте" id="951">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отработайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаАктПримененияСАТУРНОтработайтеРасширеннаяПодсказка" id="952"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьАктПримененияСАТУРНОтработайте" id="1118">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отработайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьАктПримененияСАТУРНОтработайтеКонтекстноеМеню" id="1119"/>
+													<ExtendedTooltip name="ОткрытьАктПримененияСАТУРНОтработайтеРасширеннаяПодсказка" id="1120"/>
+													<Events>
+														<Event name="Click">ОткрытьАктПримененияОтработайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаАктПримененияСАТУРНОжидайте" id="955">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ожидайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаАктПримененияСАТУРНОжидайтеРасширеннаяПодсказка" id="956"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьАктПримененияСАТУРНОжидайте" id="1130">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ожидайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьАктПримененияСАТУРНОжидайтеКонтекстноеМеню" id="1131"/>
+													<ExtendedTooltip name="ОткрытьАктПримененияСАТУРНОжидайтеРасширеннаяПодсказка" id="1132"/>
+													<Events>
+														<Event name="Click">ОткрытьАктПримененияОжидайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаПроизводственнаяОперацияСАТУРН" id="959">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаПроизводственнаяОперацияСАТУРНРасширеннаяПодсказка" id="960"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПроизводственнаяОперацияСАТУРНЗаголовок" id="961">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа</v8:content>
+												</v8:item>
+											</Title>
+											<Group>HorizontalIfPossible</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПроизводственнаяОперацияСАТУРНЗаголовокРасширеннаяПодсказка" id="962"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьПроизводственнаяОперацияСАТУРН" id="1070">
+													<Width>40</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Производственные операции (3)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьПроизводственнаяОперацияСАТУРНКонтекстноеМеню" id="1071"/>
+													<ExtendedTooltip name="ОткрытьПроизводственнаяОперацияСАТУРНРасширеннаяПодсказка" id="1072"/>
+													<Events>
+														<Event name="Click">ОткрытьПроизводственнаяОперацияНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПроизводственнаяОперацияСАТУРНОформите" id="965">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оформите</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПроизводственнаяОперацияСАТУРНОформитеРасширеннаяПодсказка" id="966"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьПроизводственнаяОперацияСАТУРНОформите" id="1085">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оформите (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьПроизводственнаяОперацияСАТУРНОформитеКонтекстноеМеню" id="1086"/>
+													<ExtendedTooltip name="ОткрытьПроизводственнаяОперацияСАТУРНОформитеРасширеннаяПодсказка" id="1087"/>
+													<Events>
+														<Event name="Click">ОткрытьПроизводственнаяОперацияОформитеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="ОткрытьПроизводственнаяОперацияСАТУРНОформитеДекорация" id="969">
+													<ContextMenu name="ОткрытьПроизводственнаяОперацияСАТУРНОформитеДекорацияКонтекстноеМеню" id="970"/>
+													<ExtendedTooltip name="ОткрытьПроизводственнаяОперацияСАТУРНОформитеДекорацияРасширеннаяПодсказка" id="971"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПроизводственнаяОперацияСАТУРНОтработайте" id="972">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отработайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПроизводственнаяОперацияСАТУРНОтработайтеРасширеннаяПодсказка" id="973"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьПроизводственнаяОперацияСАТУРНОтработайте" id="1109">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отработайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьПроизводственнаяОперацияСАТУРНОтработайтеКонтекстноеМеню" id="1110"/>
+													<ExtendedTooltip name="ОткрытьПроизводственнаяОперацияСАТУРНОтработайтеРасширеннаяПодсказка" id="1111"/>
+													<Events>
+														<Event name="Click">ОткрытьПроизводственнаяОперацияОтработайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаПроизводственнаяОперацияСАТУРНОжидайте" id="976">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ожидайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаПроизводственнаяОперацияСАТУРНОжидайтеРасширеннаяПодсказка" id="977"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьПроизводственнаяОперацияСАТУРНОжидайте" id="1133">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ожидайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьПроизводственнаяОперацияСАТУРНОжидайтеКонтекстноеМеню" id="1134"/>
+													<ExtendedTooltip name="ОткрытьПроизводственнаяОперацияСАТУРНОжидайтеРасширеннаяПодсказка" id="1135"/>
+													<Events>
+														<Event name="Click">ОткрытьПроизводственнаяОперацияОжидайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаЗапросОстатковПартийСАТУРН" id="980">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаЗапросОстатковПартийСАТУРНРасширеннаяПодсказка" id="981"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаЗапросОстатковПартийСАТУРНЗаголовок" id="982">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа</v8:content>
+												</v8:item>
+											</Title>
+											<Group>HorizontalIfPossible</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЗапросОстатковПартийСАТУРНЗаголовокРасширеннаяПодсказка" id="983"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьЗапросОстатковПартийСАТУРН" id="1073">
+													<Width>40</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Запросы остатков партий (3)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьЗапросОстатковПартийСАТУРНКонтекстноеМеню" id="1074"/>
+													<ExtendedTooltip name="ОткрытьЗапросОстатковПартийСАТУРНРасширеннаяПодсказка" id="1075"/>
+													<Events>
+														<Event name="Click">ОткрытьЗапросОстатковПартийНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаЗапросОстатковПартийСАТУРНОформите" id="986">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оформите</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЗапросОстатковПартийСАТУРНОформитеРасширеннаяПодсказка" id="987"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьЗапросОстатковПартийСАТУРНОформите" id="1082">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оформите (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьЗапросОстатковПартийСАТУРНОформитеКонтекстноеМеню" id="1083"/>
+													<ExtendedTooltip name="ОткрытьЗапросОстатковПартийСАТУРНОформитеРасширеннаяПодсказка" id="1084"/>
+													<Events>
+														<Event name="Click">ОткрытьЗапросОстатковПартийОформитеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="ОткрытьЗапросОстатковПартийСАТУРНОформитеДекорация" id="990">
+													<ContextMenu name="ОткрытьЗапросОстатковПартийСАТУРНОформитеДекорацияКонтекстноеМеню" id="991"/>
+													<ExtendedTooltip name="ОткрытьЗапросОстатковПартийСАТУРНОформитеДекорацияРасширеннаяПодсказка" id="992"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаЗапросОстатковПартийСАТУРНОтработайте" id="993">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отработайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЗапросОстатковПартийСАТУРНОтработайтеРасширеннаяПодсказка" id="994"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьЗапросОстатковПартийСАТУРНОтработайте" id="1115">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отработайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьЗапросОстатковПартийСАТУРНОтработайтеКонтекстноеМеню" id="1116"/>
+													<ExtendedTooltip name="ОткрытьЗапросОстатковПартийСАТУРНОтработайтеРасширеннаяПодсказка" id="1117"/>
+													<Events>
+														<Event name="Click">ОткрытьЗапросОстатковПартийОтработайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаЗапросОстатковПартийСАТУРНОжидайте" id="997">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ожидайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЗапросОстатковПартийСАТУРНОжидайтеРасширеннаяПодсказка" id="998"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьЗапросОстатковПартийСАТУРНОжидайте" id="1136">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ожидайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьЗапросОстатковПартийСАТУРНОжидайтеКонтекстноеМеню" id="1137"/>
+													<ExtendedTooltip name="ОткрытьЗапросОстатковПартийСАТУРНОжидайтеРасширеннаяПодсказка" id="1138"/>
+													<Events>
+														<Event name="Click">ОткрытьЗапросОстатковПартийОжидайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПродажи" id="915">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Продажи</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<VerticalSpacing>Half</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаПродажиРасширеннаяПодсказка" id="916"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаНакладнаяСАТУРН" id="1001">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа</v8:content>
+										</v8:item>
+									</Title>
+									<Group>AlwaysHorizontal</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ThroughAlign>Use</ThroughAlign>
+									<ExtendedTooltip name="ГруппаНакладнаяСАТУРНРасширеннаяПодсказка" id="1002"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаНакладнаяСАТУРНЗаголовок" id="1003">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа</v8:content>
+												</v8:item>
+											</Title>
+											<Group>HorizontalIfPossible</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаНакладнаяСАТУРНЗаголовокРасширеннаяПодсказка" id="1004"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьНакладнаяСАТУРН" id="1076">
+													<Width>40</Width>
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Накладные (3)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьНакладнаяСАТУРНКонтекстноеМеню" id="1077"/>
+													<ExtendedTooltip name="ОткрытьНакладнаяСАТУРНРасширеннаяПодсказка" id="1078"/>
+													<Events>
+														<Event name="Click">ОткрытьНакладнаяНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаНакладнаяСАТУРНОформите" id="1007">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Оформите</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>AlwaysHorizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаНакладнаяСАТУРНОформитеРасширеннаяПодсказка" id="1008"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьНакладнаяСАТУРНОформите" id="1079">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Оформите (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьНакладнаяСАТУРНОформитеКонтекстноеМеню" id="1080"/>
+													<ExtendedTooltip name="ОткрытьНакладнаяСАТУРНОформитеРасширеннаяПодсказка" id="1081"/>
+													<Events>
+														<Event name="Click">ОткрытьНакладнаяОформитеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+												<LabelDecoration name="ОткрытьНакладнаяСАТУРНОформитеДекорация" id="1011">
+													<ContextMenu name="ОткрытьНакладнаяСАТУРНОформитеДекорацияКонтекстноеМеню" id="1012"/>
+													<ExtendedTooltip name="ОткрытьНакладнаяСАТУРНОформитеДекорацияРасширеннаяПодсказка" id="1013"/>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаНакладнаяСАТУРНОтработайте" id="1014">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отработайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаНакладнаяСАТУРНОтработайтеРасширеннаяПодсказка" id="1015"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьНакладнаяСАТУРНОтработайте" id="1112">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отработайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьНакладнаяСАТУРНОтработайтеКонтекстноеМеню" id="1113"/>
+													<ExtendedTooltip name="ОткрытьНакладнаяСАТУРНОтработайтеРасширеннаяПодсказка" id="1114"/>
+													<Events>
+														<Event name="Click">ОткрытьНакладнаяОтработайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаНакладнаяСАТУРНОжидайте" id="1018">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ожидайте</v8:content>
+												</v8:item>
+											</Title>
+											<Width>14</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Behavior>Usual</Behavior>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаНакладнаяСАТУРНОжидайтеРасширеннаяПодсказка" id="1019"/>
+											<ChildItems>
+												<LabelDecoration name="ОткрытьНакладнаяСАТУРНОжидайте" id="1139">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Ожидайте (1)</v8:content>
+														</v8:item>
+													</Title>
+													<Hyperlink>true</Hyperlink>
+													<ContextMenu name="ОткрытьНакладнаяСАТУРНОжидайтеКонтекстноеМеню" id="1140"/>
+													<ExtendedTooltip name="ОткрытьНакладнаяСАТУРНОжидайтеРасширеннаяПодсказка" id="1141"/>
+													<Events>
+														<Event name="Click">ОткрытьНакладнаяОжидайтеНажатие</Event>
+													</Events>
+												</LabelDecoration>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Прочее" id="271">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Прочее</v8:content>
+						</v8:item>
+					</Title>
+					<Group>Vertical</Group>
+					<Behavior>Collapsible</Behavior>
+					<Collapsed>true</Collapsed>
+					<Representation>NormalSeparation</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ПрочееРасширеннаяПодсказка" id="272"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаСервис" id="273">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сервис</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Horizontal</Group>
+							<VerticalSpacing>Half</VerticalSpacing>
+							<Behavior>Usual</Behavior>
+							<Collapsed>true</Collapsed>
+							<ControlRepresentation>Button</ControlRepresentation>
+							<ShowTitle>true</ShowTitle>
+							<ExtendedTooltip name="ГруппаСервисРасширеннаяПодсказка" id="274"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСмТакжеЛево" id="275">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа см. также (лево)</v8:content>
+										</v8:item>
+									</Title>
+									<Width>40</Width>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСмТакжеЛевоРасширеннаяПодсказка" id="276"/>
+									<ChildItems>
+										<LabelField name="ПредставлениеЛогированияЗапросов" id="1024">
+											<DataPath>ПредставлениеЛогированияЗапросов</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<EditMode>EnterOnInput</EditMode>
+											<AutoEditMode>true</AutoEditMode>
+											<ContextMenu name="ПредставлениеЛогированияЗапросовКонтекстноеМеню" id="1025"/>
+											<ExtendedTooltip name="ПредставлениеЛогированияЗапросовРасширеннаяПодсказка" id="1026">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Логирование запросов позволяет получить подробную техническую информацию по взаимодействию с ФГИС "Сатурн" (протокол получения данных, создание и обработка документов).</v8:content>
+													</v8:item>
+												</Title>
+												<Events>
+													<Event name="URLProcessing">ПредставлениеЛогированияЗапросовРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
+												</Events>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="URLProcessing">ПредставлениеЛогированияЗапросовОбработкаНавигационнойСсылки</Event>
+											</Events>
+										</LabelField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСмТакжеПраво" id="281">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа см. также (право)</v8:content>
+										</v8:item>
+									</Title>
+									<Width>40</Width>
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаСмТакжеПравоРасширеннаяПодсказка" id="282"/>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПанельОбменСАТУРН</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Ответственный" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответственный</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АдресРезультатаОбменаВоВременномХранилище" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес результата обмена во временном хранилище</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПерейтиВЛичныйКабинет" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти в личный кабинет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьТолькоСообщенияОжидающиеОтправки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть только сообщения ожидающие отправки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПредставлениеЛогированияЗапросов" id="14">
+			<Type>
+				<v8:Type>v8ui:FormattedString</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрыЛогирования" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры логирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="ОрганизацииСАТУРНПредставление" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организации представление</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацияСАТУРН" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.КлассификаторОрганизацийСАТУРН</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОрганизацииСАТУРН" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Организации САТУРН</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.КлассификаторОрганизацийСАТУРН</v8:Type>
+			</Settings>
+		</Attribute>
+		<Attribute name="СопоставленныеОрганизации" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сопоставленные организации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:TypeSet>cfg:DefinedType.Организация</v8:TypeSet>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьОбмен" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить обмен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ВыполнитьОбменГосИС</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыполнитьОбмен</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Обновить" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Обновить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПанельАдминистрирования" id="76">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки и справочники</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки подключения, учетные данные.</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПанельАдминистрирования</Action>
+		</Command>
+		<Command name="ПерейтиВЛичныйКабинет" id="110">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти в ЛК ФГИС "Сатурн"</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПерейтиВЛичныйКабинет</Action>
+		</Command>
+		<Command name="ПерейтиВЛичныйКабинетТестовыйКонтур" id="111">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти в ЛК ФГИС "Сатурн" (тестовый контур)</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПерейтиВЛичныйКабинетТестовыйКонтур</Action>
+		</Command>
+	</Commands>
+</Form>

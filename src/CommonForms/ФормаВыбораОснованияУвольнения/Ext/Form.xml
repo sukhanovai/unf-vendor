@@ -1,0 +1,698 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Основания увольнения</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="21"/>
+		</UsualGroup>
+		<UsualGroup name="СписокНастройкиОтбора" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнительные условия</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<ExtendedTooltip name="СписокНастройкиОтбораРасширеннаяПодсказка" id="23"/>
+		</UsualGroup>
+		<Table name="Список" id="1">
+			<Representation>List</Representation>
+			<DefaultItem>true</DefaultItem>
+			<ChoiceMode>true</ChoiceMode>
+			<SelectionMode>SingleRow</SelectionMode>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.Картинка</RowPictureDataPath>
+			<RowsPicture>
+				<xr:Ref>CommonPicture.ПиктограммыЭлементов</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</RowsPicture>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список</v8:content>
+				</v8:item>
+			</Title>
+			<ShowCommandBar>auto</ShowCommandBar>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+			<ContextMenu name="СписокКонтекстноеМеню" id="2">
+				<ChildItems>
+					<Button name="СписокСкопировать" id="41">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Скопировать</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СписокСкопироватьРасширеннаяПодсказка" id="42"/>
+					</Button>
+					<Button name="СписокИзменить" id="43">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Изменить</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СписокИзменитьРасширеннаяПодсказка" id="44"/>
+					</Button>
+					<Button name="СписокПометитьНаУдаление" id="45">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПометитьНаУдаление</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="СписокПометитьНаУдалениеРасширеннаяПодсказка" id="46"/>
+					</Button>
+				</ChildItems>
+			</ContextMenu>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="3">
+				<ChildItems>
+					<ButtonGroup name="КомандыСписка" id="79">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Команды списка</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Команды списка</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="КомандыСпискаРасширеннаяПодсказка" id="80"/>
+						<ChildItems>
+							<Button name="СписокСоздать" id="39">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Создать</CommandName>
+								<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+								<ExtendedTooltip name="СписокСоздатьРасширеннаяПодсказка" id="40"/>
+							</Button>
+							<ButtonGroup name="НастройкиСпискаГруппа" id="61">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Настройки списка</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="НастройкиСпискаГруппаРасширеннаяПодсказка" id="62"/>
+								<ChildItems>
+									<Button name="ФормаПоказатьНеИспользуемые" id="63">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПоказатьНеИспользуемые</CommandName>
+										<RepresentationInContextMenu>None</RepresentationInContextMenu>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ФормаПоказатьНеИспользуемыеРасширеннаяПодсказка" id="64"/>
+									</Button>
+									<Button name="ФормаТолькоДействующие" id="65">
+										<Type>CommandBarButton</Type>
+										<Check>true</Check>
+										<CommandName>Form.Command.ТолькоДействующие</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ФормаТолькоДействующиеРасширеннаяПодсказка" id="66"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="8"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">СписокВыбор</Event>
+			</Events>
+			<ChildItems>
+				<ColumnGroup name="ПредставлениеГруппа" id="82">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление группа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление группа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="ПредставлениеГруппаРасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<LabelField name="Наименование" id="4">
+							<DataPath>Список.Наименование</DataPath>
+							<DefaultItem>true</DefaultItem>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование</v8:content>
+								</v8:item>
+							</Title>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>30</Width>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="9"/>
+						</LabelField>
+						<LabelField name="ТекстДляПриказа" id="6">
+							<DataPath>Список.ТекстОснования</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Текст для приказа</v8:content>
+								</v8:item>
+							</Title>
+							<AutoCellHeight>true</AutoCellHeight>
+							<ShowInFooter>false</ShowInFooter>
+							<Width>70</Width>
+							<ContextMenu name="ТекстДляПриказаКонтекстноеМеню" id="7"/>
+							<ExtendedTooltip name="ТекстДляПриказаРасширеннаяПодсказка" id="10"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ДокументОснование" id="31">
+					<DataPath>Список.ДокументОснование</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Нормативный документ</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДокументОснованиеКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ДокументОснованиеРасширеннаяПодсказка" id="33"/>
+				</LabelField>
+				<LabelField name="Ссылка" id="28">
+					<DataPath>Список.Ссылка</DataPath>
+					<UserVisible>
+						<xr:Common>false</xr:Common>
+					</UserVisible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="СсылкаКонтекстноеМеню" id="29"/>
+					<ExtendedTooltip name="СсылкаРасширеннаяПодсказка" id="30"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.ВАрхиве</Field>
+				<Field>Список.Картинка</Field>
+				<Field>Список.ПометкаУдаления</Field>
+				<Field>Список.СрокДействия</Field>
+				<Field>Список.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<AutoFillAvailableFields>false</AutoFillAvailableFields>
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	ЕСТЬNULL(ОснованияУвольненияПользовательские.Ссылка, ОснованияУвольненияПереопределяемый.Ссылка) КАК Ссылка,
+	ЕСТЬNULL(ОснованияУвольненияПользовательские.ПометкаУдаления, ОснованияУвольненияПереопределяемый.ПометкаУдаления) КАК ПометкаУдаления,
+	ЕСТЬNULL(ОснованияУвольненияПользовательские.Наименование, ВЫБОР
+			КОГДА Представления.Использовать
+				ТОГДА Представления.Наименование
+			ИНАЧЕ ОснованияУвольненияПереопределяемый.Наименование
+		КОНЕЦ) КАК Наименование,
+	ЕСТЬNULL(ОснованияУвольненияПользовательские.ТекстОснования, ВЫБОР
+			КОГДА Представления.Использовать
+				ТОГДА Представления.ТекстОснования
+			ИНАЧЕ ОснованияУвольненияПереопределяемый.ТекстОснования
+		КОНЕЦ) КАК ТекстОснования,
+	ЕСТЬNULL(ОснованияУвольненияПользовательские.ДокументОснование, ОснованияУвольненияПереопределяемый.ДокументОснование) КАК ДокументОснование,
+	ЕСТЬNULL(ВЫБОР
+			КОГДА ОснованияУвольненияПользовательские.ДокументОснование = ЗНАЧЕНИЕ(Перечисление.НормативныеДокументыОснованийКадровыхПриказов.ПустаяСсылка)
+				ТОГДА ОснованияУвольненияПользовательские.НаименованиеДокументаОснования
+			ИНАЧЕ ОснованияУвольненияПользовательские.ДокументОснование
+		КОНЕЦ, ОснованияУвольненияПереопределяемый.ДокументОснование) КАК ПредставлениеДокументОснование,
+	ВЫБОР
+		КОГДА ЕСТЬNULL(ОснованияУвольненияПользовательские.ПометкаУдаления, ОснованияУвольненияПереопределяемый.ПометкаУдаления)
+			ТОГДА 4
+		КОГДА ОснованияУвольненияПереопределяемый.Ссылка ЕСТЬ NULL
+			ТОГДА 3
+		ИНАЧЕ 5
+	КОНЕЦ КАК Картинка,
+	ЕСТЬNULL(ОснованияУвольненияПользовательские.ВерсияДанных, ОснованияУвольненияПереопределяемый.ВерсияДанных) КАК ВерсияДанных,
+	ЕСТЬNULL(ОснованияУвольненияПользовательские.Предопределенный, ОснованияУвольненияПереопределяемый.Предопределенный) КАК Предопределенный,
+	ЕСТЬNULL(ОснованияУвольненияПользовательские.ИмяПредопределенныхДанных, ОснованияУвольненияПереопределяемый.ИмяПредопределенныхДанных) КАК ИмяПредопределенныхДанных,
+	ЕСТЬNULL(ОснованияУвольненияПользовательские.Представление, ОснованияУвольненияПереопределяемый.Представление) КАК Представление,
+	ЕСТЬNULL(ОснованияУвольненияПереопределяемый.СрокДействия, ДАТАВРЕМЯ(1, 1, 1)) КАК СрокДействия,
+	ВЫБОР
+		КОГДА ОснованияУвольненияВАрхиве.ОснованиеУвольнения ЕСТЬ NULL
+			ТОГДА ЛОЖЬ
+		ИНАЧЕ ИСТИНА
+	КОНЕЦ КАК ВАрхиве
+{ВЫБРАТЬ
+	Ссылка.*,
+	ПометкаУдаления,
+	Наименование,
+	ТекстОснования,
+	ДокументОснование.*,
+	Картинка,
+	ВерсияДанных,
+	Предопределенный,
+	ИмяПредопределенныхДанных,
+	Представление,
+	ПредставлениеДокументОснование.*,
+	СрокДействия,
+	ВАрхиве}
+ИЗ
+	Справочник.ОснованияУвольненияПользовательские КАК ОснованияУвольненияПользовательские
+		ПОЛНОЕ СОЕДИНЕНИЕ Справочник.ОснованияУвольнения КАК ОснованияУвольненияПереопределяемый
+			ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПредставленияОснованийУвольнения КАК Представления
+			ПО ОснованияУвольненияПереопределяемый.Ссылка = Представления.Объект
+		ПО ОснованияУвольненияПользовательские.Ссылка = ОснованияУвольненияПереопределяемый.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ОснованияУвольненияВАрхиве КАК ОснованияУвольненияВАрхиве
+		ПО (ЕСТЬNULL(ОснованияУвольненияПользовательские.Ссылка, ОснованияУвольненияПереопределяемый.Ссылка) = ОснованияУвольненияВАрхиве.ОснованиеУвольнения)
+{ГДЕ
+	(ВЫБОР
+			КОГДА ОснованияУвольненияВАрхиве.ОснованиеУвольнения ЕСТЬ NULL
+				ТОГДА ЛОЖЬ
+			ИНАЧЕ ИСТИНА
+		КОНЕЦ = &amp;ВАрхиве),
+	(ЕСТЬNULL(ОснованияУвольненияПереопределяемый.СрокДействия, ДАТАВРЕМЯ(1, 1, 1)) = ДАТАВРЕМЯ(1, 1, 1)
+			ИЛИ ЕСТЬNULL(ОснованияУвольненияПереопределяемый.СрокДействия, ДАТАВРЕМЯ(1, 1, 1)) &gt; &amp;РабочаяДата),
+	(ЕСТЬNULL(ОснованияУвольненияПользовательские.ДокументОснование, ОснованияУвольненияПереопределяемый.ДокументОснование) В (&amp;ДокументОснование)
+			ИЛИ ЕСТЬNULL(ОснованияУвольненияПользовательские.ДокументОснование, НЕОПРЕДЕЛЕНО) = ЗНАЧЕНИЕ(Перечисление.НормативныеДокументыОснованийКадровыхПриказов.ПустаяСсылка)),
+	(ЕСТЬNULL(ОснованияУвольненияПользовательские.Ссылка, ОснованияУвольненияПереопределяемый.Ссылка)).* КАК Ссылка,
+	(ЕСТЬNULL(ОснованияУвольненияПользовательские.ПометкаУдаления, ОснованияУвольненияПереопределяемый.ПометкаУдаления)) КАК ПометкаУдаления,
+	(ЕСТЬNULL(ОснованияУвольненияПользовательские.Наименование, ВЫБОР
+				КОГДА Представления.Использовать
+					ТОГДА Представления.Наименование
+				ИНАЧЕ ОснованияУвольненияПереопределяемый.Наименование
+			КОНЕЦ)) КАК Наименование,
+	(ЕСТЬNULL(ОснованияУвольненияПользовательские.ТекстОснования, ВЫБОР
+				КОГДА Представления.Использовать
+					ТОГДА Представления.ТекстОснования
+				ИНАЧЕ ОснованияУвольненияПереопределяемый.ТекстОснования
+			КОНЕЦ)) КАК ТекстОснования,
+	(ЕСТЬNULL(ОснованияУвольненияПользовательские.ДокументОснование, ОснованияУвольненияПереопределяемый.ДокументОснование)).* КАК ДокументОснование,
+	(ВЫБОР
+			КОГДА ЕСТЬNULL(ОснованияУвольненияПользовательские.ПометкаУдаления, ОснованияУвольненияПереопределяемый.ПометкаУдаления)
+				ТОГДА 4
+			КОГДА ОснованияУвольненияПользовательские.Ссылка ЕСТЬ NULL
+				ТОГДА 3
+			ИНАЧЕ 5
+		КОНЕЦ) КАК Картинка,
+	(ЕСТЬNULL(ОснованияУвольненияПользовательские.ВерсияДанных, ОснованияУвольненияПереопределяемый.ВерсияДанных)) КАК ВерсияДанных,
+	(ЕСТЬNULL(ОснованияУвольненияПользовательские.Предопределенный, ОснованияУвольненияПереопределяемый.Предопределенный)) КАК Предопределенный,
+	(ЕСТЬNULL(ОснованияУвольненияПользовательские.ИмяПредопределенныхДанных, ОснованияУвольненияПереопределяемый.ИмяПредопределенныхДанных)) КАК ИмяПредопределенныхДанных,
+	(ЕСТЬNULL(ОснованияУвольненияПользовательские.Представление, ОснованияУвольненияПереопределяемый.Представление)) КАК Представление,
+	(ЕСТЬNULL(ВЫБОР
+				КОГДА ОснованияУвольненияПользовательские.ДокументОснование = ЗНАЧЕНИЕ(Перечисление.НормативныеДокументыОснованийКадровыхПриказов.ПустаяСсылка)
+					ТОГДА ОснованияУвольненияПользовательские.НаименованиеДокументаОснования
+				ИНАЧЕ ОснованияУвольненияПользовательские.ДокументОснование
+			КОНЕЦ, ОснованияУвольненияПереопределяемый.ДокументОснование)).* КАК ПредставлениеДокументОснование}</QueryText>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Ссылка</dcssch:dataPath>
+					<dcssch:field>Ссылка</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ИмяПредопределенныхДанных</dcssch:dataPath>
+					<dcssch:field>ИмяПредопределенныхДанных</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя предопределенных данных</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ДокументОснование</dcssch:dataPath>
+					<dcssch:field>ДокументОснование</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ основание</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПометкаУдаления</dcssch:dataPath>
+					<dcssch:field>ПометкаУдаления</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка удаления</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Предопределенный</dcssch:dataPath>
+					<dcssch:field>Предопределенный</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Предопределенный</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВерсияДанных</dcssch:dataPath>
+					<dcssch:field>ВерсияДанных</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Версия данных</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Наименование</dcssch:dataPath>
+					<dcssch:field>Наименование</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ТекстОснования</dcssch:dataPath>
+					<dcssch:field>ТекстОснования</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст основания</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Картинка</dcssch:dataPath>
+					<dcssch:field>Картинка</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>Представление</dcssch:dataPath>
+					<dcssch:field>Представление</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ПредставлениеДокументОснование</dcssch:dataPath>
+					<dcssch:field>ПредставлениеДокументОснование</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление документ основание</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>СрокДействия</dcssch:dataPath>
+					<dcssch:field>СрокДействия</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Срок действия</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Field xsi:type="dcssch:DataSetFieldField">
+					<dcssch:dataPath>ВАрхиве</dcssch:dataPath>
+					<dcssch:field>ВАрхиве</dcssch:field>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В архиве</v8:content>
+						</v8:item>
+					</dcssch:title>
+				</Field>
+				<Parameter>
+					<dcssch:name>ВАрхиве</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В архиве</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:boolean</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:boolean">false</dcssch:value>
+					<dcssch:useRestriction>false</dcssch:useRestriction>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>ДокументОснование</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Документ основание</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>cfg:EnumRef.НормативныеДокументыОснованийКадровыхПриказов</v8:Type>
+					</dcssch:valueType>
+					<dcssch:value xsi:nil="true"/>
+					<dcssch:useRestriction>false</dcssch:useRestriction>
+					<dcssch:valueListAllowed>true</dcssch:valueListAllowed>
+				</Parameter>
+				<Parameter>
+					<dcssch:name>РабочаяДата</dcssch:name>
+					<dcssch:title xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Рабочая дата</v8:content>
+						</v8:item>
+					</dcssch:title>
+					<dcssch:valueType>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</dcssch:valueType>
+					<dcssch:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcssch:value>
+					<dcssch:useRestriction>false</dcssch:useRestriction>
+				</Parameter>
+				<KeyType>FieldValue</KeyType>
+				<KeyField>Ссылка</KeyField>
+				<AutoSaveUserSettings>false</AutoSaveUserSettings>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemField">
+							<dcsset:field>Наименование</dcsset:field>
+							<dcsset:orderType>Asc</dcsset:orderType>
+							<dcsset:viewMode>Normal</dcsset:viewMode>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:use>false</dcsset:use>
+								<dcsset:field>ПредставлениеДокументОснование</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+					</dcsset:item>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ПолноеИмяКлассификатора" id="3">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РабочаяДата" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Рабочая дата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Создать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Создать</Action>
+			<Representation>TextPicture</Representation>
+			<ActionPurpose>Create</ActionPurpose>
+		</Command>
+		<Command name="Скопировать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скопировать</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.CloneListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Скопировать</Action>
+			<Representation>Picture</Representation>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
+			<ActionPurpose>Create</ActionPurpose>
+		</Command>
+		<Command name="Изменить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Изменить</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
+		</Command>
+		<Command name="ПометитьНаУдаление" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление / Снять пометку</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПометитьНаУдаление</Action>
+			<CurrentRowUse>Use</CurrentRowUse>
+			<AssociatedTableElementId xsi:type="xs:string">Список</AssociatedTableElementId>
+		</Command>
+		<Command name="ПоказатьНеИспользуемые" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать не используемые</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПоказатьНеИспользуемые</Action>
+		</Command>
+		<Command name="ТолькоДействующие" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только действующие</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ТолькоДействующие</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="ТипОснования">
+			<Type/>
+		</Parameter>
+	</Parameters>
+</Form>

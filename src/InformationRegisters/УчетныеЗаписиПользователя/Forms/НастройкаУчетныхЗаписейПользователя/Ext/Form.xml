@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Width>75</Width>
+	<WindowOpeningMode>LockOwner</WindowOpeningMode>
+	<Group>Vertical</Group>
+	<ShowTitle>true</ShowTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Баннер" id="50">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Баннер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Баннер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="БаннерРасширеннаяПодсказка" id="51"/>
+		</UsualGroup>
+		<Table name="УчетныеЗаписи" id="1">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<SelectionMode>SingleRow</SelectionMode>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<InitialRowActivation>Activate</InitialRowActivation>
+			<RowActionsShowType>ShowOnHover</RowActionsShowType>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>УчетныеЗаписи</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетные записи</v8:content>
+				</v8:item>
+			</Title>
+			<CommandSet>
+				<ExcludedCommand>Add</ExcludedCommand>
+				<ExcludedCommand>Change</ExcludedCommand>
+				<ExcludedCommand>Copy</ExcludedCommand>
+				<ExcludedCommand>Delete</ExcludedCommand>
+				<ExcludedCommand>EndEdit</ExcludedCommand>
+				<ExcludedCommand>MoveDown</ExcludedCommand>
+				<ExcludedCommand>MoveUp</ExcludedCommand>
+				<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+				<ExcludedCommand>SortListAsc</ExcludedCommand>
+				<ExcludedCommand>SortListDesc</ExcludedCommand>
+			</CommandSet>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="УчетныеЗаписиКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="УчетныеЗаписиКоманднаяПанель" id="3">
+				<ChildItems>
+					<Button name="УчетныеЗаписиПодключитьПочтовуюСлужбу" id="44">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПодключитьПочтовуюСлужбу</CommandName>
+						<ExtendedTooltip name="УчетныеЗаписиПодключитьПочтовуюСлужбуРасширеннаяПодсказка" id="45"/>
+					</Button>
+					<Button name="УчетныеЗаписиПерейтиКИнструкции" id="48">
+						<Type>CommandBarButton</Type>
+						<Visible>false</Visible>
+						<CommandName>Form.Command.ПерейтиКИнструкции</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="УчетныеЗаписиПерейтиКИнструкцииРасширеннаяПодсказка" id="49"/>
+					</Button>
+					<Button name="УчетныеЗаписиУстановитьОсновнуюУчетнуюЗапись" id="59">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УстановитьОсновнуюУчетнуюЗапись</CommandName>
+						<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+						<ExtendedTooltip name="УчетныеЗаписиУстановитьОсновнуюУчетнуюЗаписьРасширеннаяПодсказка" id="60"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="УчетныеЗаписиРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="УчетныеЗаписиСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>УчетныеЗаписи</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УчетныеЗаписиСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="УчетныеЗаписиСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="УчетныеЗаписиСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>УчетныеЗаписи</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="УчетныеЗаписиСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="УчетныеЗаписиСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="УчетныеЗаписиУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>УчетныеЗаписи</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="УчетныеЗаписиУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="УчетныеЗаписиУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="Selection">УчетныеЗаписиВыбор</Event>
+			</Events>
+			<ChildItems>
+				<PictureField name="ОсновнаяДляОтправкиПочты" id="23">
+					<DataPath>УчетныеЗаписи.ОсновнаяДляОтправкиПочты</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>Directly</EditMode>
+					<HeaderPicture>
+						<xr:Ref>CommonPicture.Успех24Зеленый</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</HeaderPicture>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.Успех24Зеленый</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</ValuesPicture>
+					<ContextMenu name="ОсновнаяДляОтправкиПочтыКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ОсновнаяДляОтправкиПочтыРасширеннаяПодсказка" id="25"/>
+				</PictureField>
+				<CheckBoxField name="ЗагружатьПочту" id="17">
+					<DataPath>УчетныеЗаписи.ЗагружатьПочту</DataPath>
+					<EditMode>Directly</EditMode>
+					<ContextMenu name="ЗагружатьПочтуКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ЗагружатьПочтуРасширеннаяПодсказка" id="19"/>
+					<Events>
+						<Event name="OnChange">ЗагружатьПочтуПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<LabelField name="УчетнаяЗапись" id="14">
+					<DataPath>УчетныеЗаписи.УчетнаяЗапись</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CellHyperlink>true</CellHyperlink>
+					<AutoEditMode>true</AutoEditMode>
+					<CellHyperlinkRepresentation>Show</CellHyperlinkRepresentation>
+					<CellHyperlinkDisplayVariant>Always</CellHyperlinkDisplayVariant>
+					<ContextMenu name="УчетнаяЗаписьКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="УчетнаяЗаписьРасширеннаяПодсказка" id="16"/>
+				</LabelField>
+				<LabelField name="Комментарий" id="26">
+					<DataPath>УчетныеЗаписи.Комментарий</DataPath>
+					<Visible>false</Visible>
+					<EditMode>EnterOnInput</EditMode>
+					<CellHyperlink>true</CellHyperlink>
+					<AutoCellHeight>true</AutoCellHeight>
+					<AutoEditMode>true</AutoEditMode>
+					<CellHyperlinkRepresentation>Show</CellHyperlinkRepresentation>
+					<CellHyperlinkDisplayVariant>Always</CellHyperlinkDisplayVariant>
+					<ContextMenu name="КомментарийКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="УчетныеЗаписиСписокВсехОшибок" id="29">
+					<DataPath>УчетныеЗаписи.СписокВсехОшибок</DataPath>
+					<Visible>false</Visible>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<CellHyperlink>true</CellHyperlink>
+					<AutoEditMode>true</AutoEditMode>
+					<CellHyperlinkRepresentation>Show</CellHyperlinkRepresentation>
+					<CellHyperlinkDisplayVariant>Always</CellHyperlinkDisplayVariant>
+					<Hiperlink>true</Hiperlink>
+					<ContextMenu name="УчетныеЗаписиСписокВсехОшибокКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="УчетныеЗаписиСписокВсехОшибокРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="УчетныеЗаписи" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Учетные записи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="УчетнаяЗапись" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Учетная запись</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.УчетныеЗаписиЭлектроннойПочты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЗагружатьПочту" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Загружать почту</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+					<FunctionalOptions>
+						<Item>FunctionalOption.ИспользоватьЗагрузкуЭлектроннойПочты</Item>
+					</FunctionalOptions>
+				</Column>
+				<Column name="ОсновнаяДляОтправкиПочты" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основная для отправки почты</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СписокВсехОшибок" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Список всех ошибок</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПодключитьПочтовуюСлужбу" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить новую учетную запись</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить новую учетную запись</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодключитьПочтовуюСлужбу</Action>
+		</Command>
+		<Command name="ПерейтиКИнструкции" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструкция по устранению</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перейти к инструкции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерейтиКИнструкции</Action>
+			<AssociatedTableElementId xsi:type="xs:string">УчетныеЗаписи</AssociatedTableElementId>
+			<SelectedRowsUse>DontUse</SelectedRowsUse>
+		</Command>
+		<Command name="УстановитьОсновнуюУчетнуюЗапись" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать как основную</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить основную учетную запись</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.Успех24</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьОсновнуюУчетнуюЗаписьКоманда</Action>
+			<Representation>TextPicture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">УчетныеЗаписи</AssociatedTableElementId>
+			<SelectedRowsUse>DontUse</SelectedRowsUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,830 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:pal="http://v8.1c.ru/8.1/data/ui/colors/palette" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.21">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Некорректные чеки</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>DontBlock</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<Group>Vertical</Group>
+	<CommandBarLocation>Bottom</CommandBarLocation>
+	<ShowTitle>true</ShowTitle>
+	<ShowCommandBar>true</ShowCommandBar>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаПродолжитьЗакрытие" id="31">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<Enabled>false</Enabled>
+				<CommandName>Form.Command.ПродолжитьЗакрытие</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ФормаПродолжитьЗакрытиеРасширеннаяПодсказка" id="32"/>
+			</Button>
+			<Button name="ФормаИсправитьЧекиСДвижениями" id="151">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ИсправитьЧекиСДвижениями</CommandName>
+				<ButtonImportance>Main</ButtonImportance>
+				<ExtendedTooltip name="ФормаИсправитьЧекиСДвижениямиРасширеннаяПодсказка" id="152"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="ГруппаСтраницы" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="74"/>
+			<Events>
+				<Event name="OnCurrentPageChange">ГруппаСтраницыПриСменеСтраницы</Event>
+			</Events>
+		</Pages>
+		<UsualGroup name="ГруппаНепробитыеЧеки" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Непробитые чеки</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>true</ShowTitle>
+			<ExtendedTooltip name="ГруппаНепробитыеЧекиРасширеннаяПодсказка" id="76"/>
+			<ChildItems>
+				<Table name="НепробитыеЧеки" id="1">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<Width>60</Width>
+					<MultipleChoice>true</MultipleChoice>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>НепробитыеЧеки</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Эти чеки не были пробиты в течение смены. Необходимо пробить их, либо отложить, или удалить.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowAuto</ToolTipRepresentation>
+					<ShowCommandBar>false</ShowCommandBar>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="НепробитыеЧекиКонтекстноеМеню" id="2"/>
+					<AutoCommandBar name="НепробитыеЧекиКоманднаяПанель" id="3">
+						<ChildItems>
+							<Button name="НепробитыеЧекиОтложитьЧеки" id="149">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОтложитьЧеки</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="НепробитыеЧекиОтложитьЧекиРасширеннаяПодсказка" id="150"/>
+							</Button>
+							<Button name="НепробитыеЧекиПометитьНаУдаление" id="147">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПометитьНаУдаление2</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="НепробитыеЧекиПометитьНаУдалениеРасширеннаяПодсказка" id="148"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="НепробитыеЧекиРасширеннаяПодсказка" id="4">
+						<AutoMaxWidth>false</AutoMaxWidth>
+					</ExtendedTooltip>
+					<SearchStringAddition name="НепробитыеЧекиСтрокаПоиска" id="5">
+						<AdditionSource>
+							<Item>НепробитыеЧеки</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НепробитыеЧекиСтрокаПоискаКонтекстноеМеню" id="6"/>
+						<ExtendedTooltip name="НепробитыеЧекиСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="НепробитыеЧекиСостояниеПросмотра" id="8">
+						<AdditionSource>
+							<Item>НепробитыеЧеки</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="НепробитыеЧекиСостояниеПросмотраКонтекстноеМеню" id="9"/>
+						<ExtendedTooltip name="НепробитыеЧекиСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="НепробитыеЧекиУправлениеПоиском" id="11">
+						<AdditionSource>
+							<Item>НепробитыеЧеки</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="НепробитыеЧекиУправлениеПоискомКонтекстноеМеню" id="12"/>
+						<ExtendedTooltip name="НепробитыеЧекиУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">СписокЧековВыбор</Event>
+					</Events>
+					<ChildItems>
+						<PictureField name="СписокЧековКартинка" id="33">
+							<DataPath>НепробитыеЧеки.Картинка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<AutoEditMode>true</AutoEditMode>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</Border>
+							<ContextMenu name="СписокЧековКартинкаКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="СписокЧековКартинкаРасширеннаяПодсказка" id="35"/>
+						</PictureField>
+						<InputField name="СписокЧековЧек" id="14">
+							<DataPath>НепробитыеЧеки.Чек</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<Width>25</Width>
+							<ContextMenu name="СписокЧековЧекКонтекстноеМеню" id="15"/>
+							<ExtendedTooltip name="СписокЧековЧекРасширеннаяПодсказка" id="16"/>
+						</InputField>
+						<InputField name="СписокЧековСтатус" id="17">
+							<DataPath>НепробитыеЧеки.Статус</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<Width>20</Width>
+							<ContextMenu name="СписокЧековСтатусКонтекстноеМеню" id="18"/>
+							<ExtendedTooltip name="СписокЧековСтатусРасширеннаяПодсказка" id="19"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаЧекиБезФискальногоНомера" id="77">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чеки без фискального номера</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<Behavior>Usual</Behavior>
+			<ShowTitle>true</ShowTitle>
+			<ExtendedTooltip name="ГруппаЧекиБезФискальногоНомераРасширеннаяПодсказка" id="78"/>
+			<ChildItems>
+				<Table name="ЧекиБезФискальногоНомера" id="51">
+					<Representation>List</Representation>
+					<CommandBarLocation>None</CommandBarLocation>
+					<ChangeRowSet>false</ChangeRowSet>
+					<ChangeRowOrder>false</ChangeRowOrder>
+					<MultipleChoice>true</MultipleChoice>
+					<RowSelectionMode>Cell</RowSelectionMode>
+					<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<DataPath>ЧекиБезФискальногоНомера</DataPath>
+					<CommandSet>
+						<ExcludedCommand>Add</ExcludedCommand>
+						<ExcludedCommand>Change</ExcludedCommand>
+						<ExcludedCommand>Copy</ExcludedCommand>
+						<ExcludedCommand>Delete</ExcludedCommand>
+						<ExcludedCommand>EndEdit</ExcludedCommand>
+						<ExcludedCommand>MoveDown</ExcludedCommand>
+						<ExcludedCommand>MoveUp</ExcludedCommand>
+						<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+					</CommandSet>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Эти чеки имеют статус "Пробит", но номер фискального чека в них не заполнен. Необходимо заполнить номер - кнопка "Исправить".</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>ShowAuto</ToolTipRepresentation>
+					<ShowCommandBar>false</ShowCommandBar>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ЧекиБезФискальногоНомераКонтекстноеМеню" id="52"/>
+					<AutoCommandBar name="ЧекиБезФискальногоНомераКоманднаяПанель" id="53">
+						<ChildItems>
+							<Button name="ЧекиБезФискальногоНомераИсправить" id="140">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.Исправить</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="ЧекиБезФискальногоНомераИсправитьРасширеннаяПодсказка" id="141"/>
+							</Button>
+							<Button name="ЧекиБезФискальногоНомераПометитьНаУдаление" id="142">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПометитьНаУдаление</CommandName>
+								<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+								<ExtendedTooltip name="ЧекиБезФискальногоНомераПометитьНаУдалениеРасширеннаяПодсказка" id="143"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ЧекиБезФискальногоНомераРасширеннаяПодсказка" id="54">
+						<AutoMaxWidth>false</AutoMaxWidth>
+					</ExtendedTooltip>
+					<SearchStringAddition name="ЧекиБезФискальногоНомераСтрокаПоиска" id="55">
+						<AdditionSource>
+							<Item>ЧекиБезФискальногоНомера</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЧекиБезФискальногоНомераСтрокаПоискаКонтекстноеМеню" id="56"/>
+						<ExtendedTooltip name="ЧекиБезФискальногоНомераСтрокаПоискаРасширеннаяПодсказка" id="57"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ЧекиБезФискальногоНомераСостояниеПросмотра" id="58">
+						<AdditionSource>
+							<Item>ЧекиБезФискальногоНомера</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ЧекиБезФискальногоНомераСостояниеПросмотраКонтекстноеМеню" id="59"/>
+						<ExtendedTooltip name="ЧекиБезФискальногоНомераСостояниеПросмотраРасширеннаяПодсказка" id="60"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ЧекиБезФискальногоНомераУправлениеПоиском" id="61">
+						<AdditionSource>
+							<Item>ЧекиБезФискальногоНомера</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ЧекиБезФискальногоНомераУправлениеПоискомКонтекстноеМеню" id="62"/>
+						<ExtendedTooltip name="ЧекиБезФискальногоНомераУправлениеПоискомРасширеннаяПодсказка" id="63"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<PictureField name="ЧекиБезФискальногоНомераКартинка" id="70">
+							<DataPath>ЧекиБезФискальногоНомера.Картинка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ShowInHeader>false</ShowInHeader>
+							<AutoEditMode>true</AutoEditMode>
+							<ValuesPicture>
+								<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</ValuesPicture>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+							</Border>
+							<ContextMenu name="ЧекиБезФискальногоНомераКартинкаКонтекстноеМеню" id="71"/>
+							<ExtendedTooltip name="ЧекиБезФискальногоНомераКартинкаРасширеннаяПодсказка" id="72"/>
+						</PictureField>
+						<InputField name="ЧекиБезФискальногоНомераЧек" id="64">
+							<DataPath>ЧекиБезФискальногоНомера.Чек</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="ЧекиБезФискальногоНомераЧекКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="ЧекиБезФискальногоНомераЧекРасширеннаяПодсказка" id="66"/>
+						</InputField>
+						<InputField name="ЧекиБезФискальногоНомераСтатус" id="67">
+							<DataPath>ЧекиБезФискальногоНомера.Статус</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<ContextMenu name="ЧекиБезФискальногоНомераСтатусКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ЧекиБезФискальногоНомераСтатусРасширеннаяПодсказка" id="69"/>
+						</InputField>
+						<InputField name="ЧекиБезФискальногоНомераНомерЧекаККМ" id="90">
+							<DataPath>ЧекиБезФискальногоНомера.НомерЧекаККМ</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=</v8:content>
+								</v8:item>
+							</Format>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧН=</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="ЧекиБезФискальногоНомераНомерЧекаККМКонтекстноеМеню" id="91"/>
+							<ExtendedTooltip name="ЧекиБезФискальногоНомераНомерЧекаККМРасширеннаяПодсказка" id="92"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ЧекиСДвижениями" id="93">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<ChoiceMode>true</ChoiceMode>
+			<RowSelectionMode>Cell</RowSelectionMode>
+			<UseAlternationRowColorBWA>false</UseAlternationRowColorBWA>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ЧекиСДвижениями</DataPath>
+			<ToolTipRepresentation>ShowAuto</ToolTipRepresentation>
+			<ShowCommandBar>false</ShowCommandBar>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЧекиСДвижениямиКонтекстноеМеню" id="94"/>
+			<AutoCommandBar name="ЧекиСДвижениямиКоманднаяПанель" id="95"/>
+			<ExtendedTooltip name="ЧекиСДвижениямиРасширеннаяПодсказка" id="96">
+				<AutoMaxWidth>false</AutoMaxWidth>
+			</ExtendedTooltip>
+			<SearchStringAddition name="ЧекиСДвижениямиСтрокаПоиска" id="97">
+				<Enabled>false</Enabled>
+				<AdditionSource>
+					<Item>ЧекиСДвижениями</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЧекиСДвижениямиСтрокаПоискаКонтекстноеМеню" id="98"/>
+				<ExtendedTooltip name="ЧекиСДвижениямиСтрокаПоискаРасширеннаяПодсказка" id="99"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЧекиСДвижениямиСостояниеПросмотра" id="100">
+				<Enabled>false</Enabled>
+				<AdditionSource>
+					<Item>ЧекиСДвижениями</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЧекиСДвижениямиСостояниеПросмотраКонтекстноеМеню" id="101"/>
+				<ExtendedTooltip name="ЧекиСДвижениямиСостояниеПросмотраРасширеннаяПодсказка" id="102"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЧекиСДвижениямиУправлениеПоиском" id="103">
+				<Enabled>false</Enabled>
+				<AdditionSource>
+					<Item>ЧекиСДвижениями</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЧекиСДвижениямиУправлениеПоискомКонтекстноеМеню" id="104"/>
+				<ExtendedTooltip name="ЧекиСДвижениямиУправлениеПоискомРасширеннаяПодсказка" id="105"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<PictureField name="ЧекиСДвижениямиКартинка" id="112">
+					<DataPath>ЧекиСДвижениями.Картинка</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ValuesPicture>
+						<xr:Ref>CommonPicture.СостоянияДокумента</xr:Ref>
+						<xr:LoadTransparent>false</xr:LoadTransparent>
+					</ValuesPicture>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">WithoutBorder</v8ui:style>
+					</Border>
+					<ContextMenu name="ЧекиСДвижениямиКартинкаКонтекстноеМеню" id="113"/>
+					<ExtendedTooltip name="ЧекиСДвижениямиКартинкаРасширеннаяПодсказка" id="114"/>
+				</PictureField>
+				<InputField name="ЧекиСДвижениямиЧек" id="106">
+					<DataPath>ЧекиСДвижениями.Чек</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="ЧекиСДвижениямиЧекКонтекстноеМеню" id="107"/>
+					<ExtendedTooltip name="ЧекиСДвижениямиЧекРасширеннаяПодсказка" id="108"/>
+				</InputField>
+				<InputField name="ЧекиСДвижениямиСтатус" id="109">
+					<DataPath>ЧекиСДвижениями.Статус</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoEditMode>true</AutoEditMode>
+					<ContextMenu name="ЧекиСДвижениямиСтатусКонтекстноеМеню" id="110"/>
+					<ExtendedTooltip name="ЧекиСДвижениямиСтатусРасширеннаяПодсказка" id="111"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<UsualGroup name="ГруппаПодвал" id="38">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подвал</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Vertical</Group>
+			<HorizontalAlign>Right</HorizontalAlign>
+			<Behavior>Usual</Behavior>
+			<Representation>None</Representation>
+			<United>false</United>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодвалРасширеннаяПодсказка" id="39"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаСуммы" id="40">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Суммы</v8:content>
+						</v8:item>
+					</Title>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<Group>AlwaysHorizontal</Group>
+					<HorizontalAlign>Right</HorizontalAlign>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСуммыРасширеннаяПодсказка" id="41"/>
+					<ChildItems>
+						<InputField name="СуммаОтчета" id="42">
+							<DataPath>СуммаОтчета</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Сумма отчета о розничных продажах</v8:content>
+								</v8:item>
+							</ToolTip>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="СуммаОтчетаКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="СуммаОтчетаРасширеннаяПодсказка" id="44"/>
+						</InputField>
+						<InputField name="СуммаЧеков" id="45">
+							<DataPath>СуммаЧеков</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Общая сумма пробитых чеков</v8:content>
+								</v8:item>
+							</ToolTip>
+							<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<AutoEditMode>true</AutoEditMode>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЧДЦ=2</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="СуммаЧековКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="СуммаЧековРасширеннаяПодсказка" id="47"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НепробитыеЧеки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Непробитые чеки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Чек" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чек</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЧекККМВозврат</v8:Type>
+						<v8:Type>cfg:DocumentRef.ЧекККМ</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Статус" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыЧековККМ</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СуммаОтчета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма отчета</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СуммаЧеков" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма чеков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="УдалитьЧеки" id="4">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="УдалитьДвижения" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтчетОРозничныхПродажах" id="6">
+			<Type>
+				<v8:Type>cfg:DocumentRef.ОтчетОРозничныхПродажах</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЧекиБезФискальногоНомера" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чеки без фискального номера</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Чек" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чек</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЧекККМВозврат</v8:Type>
+						<v8:Type>cfg:DocumentRef.ЧекККМ</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Статус" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыЧековККМ</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="НомерЧекаККМ" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер чека ККМ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЧекиСДвижениями" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чеки с движениями</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Чек" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Чек</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.ЧекККМВозврат</v8:Type>
+						<v8:Type>cfg:DocumentRef.ЧекККМ</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Статус" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.СтатусыЧековККМ</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ЭтоИнтерфейсТакси" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это интерфейс такси</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПометитьНаУдаление" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПометитьНаУдаление</Action>
+			<Representation>TextPicture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">ЧекиБезФискальногоНомера</AssociatedTableElementId>
+			<SelectedRowsUse>Use</SelectedRowsUse>
+		</Command>
+		<Command name="ПродолжитьЗакрытие" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить закрытие</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить закрытие</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПродолжитьЗакрытие</Action>
+			<ActionPurpose>Finish</ActionPurpose>
+		</Command>
+		<Command name="Исправить" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исправить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чеку будет назначен фискальный номер "1"</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Parameters</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Исправить</Action>
+			<Representation>TextPicture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">ЧекиБезФискальногоНомера</AssociatedTableElementId>
+			<SelectedRowsUse>Use</SelectedRowsUse>
+		</Command>
+		<Command name="ОтложитьЧеки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отложить чек</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Чек будет убран из текущей кассовой смены, его можно будет пробить в другой смене</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.SetTime</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОтложитьЧеки</Action>
+			<Representation>TextPicture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">НепробитыеЧеки</AssociatedTableElementId>
+			<SelectedRowsUse>Use</SelectedRowsUse>
+		</Command>
+		<Command name="ПометитьНаУдаление2" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПометитьНаУдаление</Action>
+			<Representation>TextPicture</Representation>
+			<AssociatedTableElementId xsi:type="xs:string">НепробитыеЧеки</AssociatedTableElementId>
+			<SelectedRowsUse>Use</SelectedRowsUse>
+		</Command>
+		<Command name="ИсправитьЧекиСДвижениями" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исправить и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исправить чеки с движениями</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИсправитьЧекиСДвижениями</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+			<ActionPurpose>Finish</ActionPurpose>
+			<SelectedRowsUse>DontUse</SelectedRowsUse>
+		</Command>
+	</Commands>
+</Form>
